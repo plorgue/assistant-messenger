@@ -5,10 +5,11 @@
 ### 1. Récupération des messages
 
 Il faut dans un premier temps que je récupère les informations à propos des messages d'une conversation Messenger.
--emojis
--auteur
--heure d'envoie
--contenu
+
+- emojis
+- auteur
+- heure d'envoie
+- contenu
 
 ### 2 Traitement des messages
 
@@ -16,7 +17,7 @@ Utilisation de plotly.js pour tracer l'évolution des différents critères au c
 
 ### 3 Analyse du contenu pour obtenir les mots clé / sujet de conversation
 
-## Avancé
+## Avancement
 
 ### 08/02/2021
 
@@ -33,3 +34,10 @@ main.js est le script principale actuellement en debug, je fais mes test deçu.
 Il permet actuellement d'accéder à mon compte messenger et de changer de conversation.
 
 getHash.js et crypto.js me permettent d'éviter de mettre mon mot de passe dans le code source et donc sur github.
+
+## Test
+
+Après avoir cloné le projet il faut ajouter les dépendances suivantes:
+
+- Puppeteer: `npm i puppeteer`
+- Crypto: `npm i crypto `

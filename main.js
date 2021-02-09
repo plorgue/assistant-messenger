@@ -2,6 +2,7 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const { decrypt } = require("./crypto.js");
 const readline = require("readline");
+const { Console } = require("console");
 
 let rl = readline.createInterface({
   input: process.stdin,
@@ -72,21 +73,41 @@ let scrapping = async function () {
 
   await gotoPage("https://www.messenger.com/");
 
-  //await page.screenshot({ path: "page.png" });
+  // check de la page de login
+  // await saveHTML();
+  // await page.screenshot({ path: "page.png" });
 
   // accepter les cookies
-  await page.click("#u_0_j"); // #u_0_h pour facebook
+  if (await page.$("#u_0_j")) {
+    await page.click("#u_0_j"); // #u_0_h pour facebook
+    console.log("cookies accepted");
+  } else if (await page.$("#u_0_g")) {
+    await page.click("#u_0_g");
+    console.log("cookies accepted");
+  } else {
+    console.log("Error cookies: Relancer !");
+    await browser.close();
+    return;
+  }
   await page.screenshot({ path: "loginPage.png" });
-  console.log("cookies accepted");
 
   // remplir les champs de connexion et submit le form
   await page.type("#email", "paullorgue@gmail.com");
   await page.type("#pass", password);
   console.log("fields completed");
-  await Promise.all([
-    page.waitForNavigation({ timeout: 120000, waitUntil: "networkidle0" }),
-    page.click("#loginbutton"),
-  ]);
+  try {
+    await Promise.all([
+      page.waitForNavigation({
+        timeout: 100000,
+        waitUntil: "domcontentloaded",
+      }),
+      page.click("#loginbutton"),
+    ]);
+  } catch (err) {
+    console.log("Timout error: relancer !");
+    await browser.close();
+    return;
+  }
 
   // si mauvais code
   if ((await page.url()) === "https://www.messenger.com/login/password/") {
@@ -95,6 +116,8 @@ let scrapping = async function () {
     );
     await browser.close();
     return;
+  } else {
+    console.log("Code valide");
   }
 
   // nouvelle page censée être celle d'une conversation

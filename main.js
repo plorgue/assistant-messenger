@@ -74,7 +74,7 @@ let scrapping = async function () {
   await gotoPage("https://www.messenger.com/");
 
   // check de la page de login
-  // await saveHTML();
+  await saveHTML();
   // await page.screenshot({ path: "page.png" });
 
   // accepter les cookies
@@ -86,8 +86,17 @@ let scrapping = async function () {
     console.log("cookies accepted");
   } else {
     console.log("Error cookies: Relancer !");
-    await browser.close();
-    return;
+    let buttonId = await page.evaluate(() => {
+      btn = document.querySelector('button[title="Tout accepter"]');
+      return btn.id;
+    });
+    console.log(buttonId);
+    await page.click(`#${buttonId}`);
+    //let button = await page.$$eval('button[title="Tout accepter"]');
+    //console.log(button);
+    //button.click();
+    //await browser.close();
+    //return;
   }
   await page.screenshot({ path: "loginPage.png" });
 
@@ -132,17 +141,19 @@ let scrapping = async function () {
   // récupération et stockage de l'html de la nouvelle page pour debug
   await saveHTML();
 
-  let messages = await page.evaluate(() => {
-    nodes = document.querySelectorAll('div[data-testid="incoming_group"]');
-    let messages = [];
-    nodes.forEach((node) => {
-      const regexp = '(<img height="16" width="16" alt=").';
-      let contenu = node.innerText;
-      //let rea = [...node.matchAll(regexp).slice(-1)];
-      //messages.push({ content: contenu, react: rea });
-    });
-    return messages;
-  });
+  // let messages = await page.evaluate(() => {
+  //   nodes = document.querySelectorAll('div[data-testid="incoming_group"]');
+  //   let messages = [];
+  //   nodes.forEach((node) => {
+  //     const regexp = '(<img height="16" width="16" alt=").';
+  //     let contenu = node.innerText;
+  //     //let rea = [...node.matchAll(regexp).slice(-1)];
+  //     //messages.push({ content: contenu, react: rea });
+  //   });
+  //   return messages;
+  // });
+  let messages = await page.$$('div[data-testid="incoming_group"]');
+  console.log("Len: " + messages.length);
   console.log(messages);
   console.log("finish");
   await browser.close();

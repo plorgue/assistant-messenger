@@ -74,7 +74,7 @@ let scrapping = async function () {
   await gotoPage("https://www.messenger.com/");
 
   // check de la page de login
-  await saveHTML();
+  // await saveHTML();
   // await page.screenshot({ path: "page.png" });
 
   // accepter les cookies
@@ -127,10 +127,19 @@ let scrapping = async function () {
     nodes = document.querySelectorAll('div[data-testid="incoming_group"]');
     let messages = [];
     nodes.forEach((node) => {
+      let text = node.innerText.split("\n");
+      let who = text[0];
+      let when = text[1].replace(", date d'envoi : ", "").replace(who, "");
+      let content = text.slice(2).join(" ");
       const regexp = '(<img height="16" width="16" alt=").';
-      let contenu = node.innerText;
-      //let rea = [...node.matchAll(regexp).slice(-1)];
-      //messages.push({ content: contenu, react: rea });
+      let rea = [...node.innerHTML.matchAll(regexp)][0];
+      let reaction = rea ? rea[0].slice(-1) : "";
+      messages.push({
+        who: who,
+        when: when,
+        reaction: reaction,
+        content: content,
+      });
     });
     return messages;
   });

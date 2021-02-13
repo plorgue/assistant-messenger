@@ -78,26 +78,8 @@ let scrapping = async function () {
   // await page.screenshot({ path: "page.png" });
 
   // accepter les cookies
-  if (await page.$("#u_0_j")) {
-    await page.click("#u_0_j"); // #u_0_h pour facebook
-    console.log("cookies accepted");
-  } else if (await page.$("#u_0_g")) {
-    await page.click("#u_0_g");
-    console.log("cookies accepted");
-  } else {
-    console.log("Error cookies: Relancer !");
-    let buttonId = await page.evaluate(() => {
-      btn = document.querySelector('button[title="Tout accepter"]');
-      return btn.id;
-    });
-    console.log(buttonId);
-    await page.click(`#${buttonId}`);
-    //let button = await page.$$eval('button[title="Tout accepter"]');
-    //console.log(button);
-    //button.click();
-    //await browser.close();
-    //return;
-  }
+  await page.click('button[title="Tout accepter"]'); // #u_0_j #u_0_g
+
   await page.screenshot({ path: "loginPage.png" });
 
   // remplir les champs de connexion et submit le form
@@ -141,19 +123,17 @@ let scrapping = async function () {
   // récupération et stockage de l'html de la nouvelle page pour debug
   await saveHTML();
 
-  // let messages = await page.evaluate(() => {
-  //   nodes = document.querySelectorAll('div[data-testid="incoming_group"]');
-  //   let messages = [];
-  //   nodes.forEach((node) => {
-  //     const regexp = '(<img height="16" width="16" alt=").';
-  //     let contenu = node.innerText;
-  //     //let rea = [...node.matchAll(regexp).slice(-1)];
-  //     //messages.push({ content: contenu, react: rea });
-  //   });
-  //   return messages;
-  // });
-  let messages = await page.$$('div[data-testid="incoming_group"]');
-  console.log("Len: " + messages.length);
+  let messages = await page.evaluate(() => {
+    nodes = document.querySelectorAll('div[data-testid="incoming_group"]');
+    let messages = [];
+    nodes.forEach((node) => {
+      const regexp = '(<img height="16" width="16" alt=").';
+      let contenu = node.innerText;
+      //let rea = [...node.matchAll(regexp).slice(-1)];
+      //messages.push({ content: contenu, react: rea });
+    });
+    return messages;
+  });
   console.log(messages);
   console.log("finish");
   await browser.close();

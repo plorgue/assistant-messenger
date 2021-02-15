@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const { decrypt } = require("./crypto.js");
 const readline = require("readline");
-const { Console } = require("console");
+const { type } = require("os");
 
 let rl = readline.createInterface({
   input: process.stdin,
@@ -33,7 +33,6 @@ const getUrlByThreadId = (id) => {
   return "https://www.messenger.com/t/" + id;
 };
 
-//let hash = encrypt("i89uFX0H?SmM>Exj", secretKey.repeat(32).slice(0, 32));
 const hash = {
   iv: "1a67c7b49816c2d563839428d98b6125",
   content: "b43191ad93d7978f8a2532b410b739",
@@ -167,15 +166,26 @@ let scrapping = async function () {
         what = what.substring(indx + who.length + 18);
       }
 
-      let nfeed = line.length === 4 || line.length === 6 ? what.slice(-1) : 0;
-      what = what.slice(0, what.charAt(what.length - 2) === " " ? -2 : 0);
-
+      let nfeed = 0;
+      let feedback = "";
       const regexp = '(<img height="16" width="16" alt=").';
       let rea = [...node.innerHTML.matchAll(regexp)][0];
-      let feedback = rea ? rea[0].slice(-1) : "";
+      if (rea) {
+        feedback = rea[0].slice(-1);
+        nfeed = what.slice(-1);
+        what = what.slice(0, -2);
+      }
+
+      if (what.length !== 0) {
+        whatType = "Texte";
+      } else {
+        whatType = "Non Texte";
+      }
+
       messages.push({
         who: who,
         when: when,
+        whatType: whatType,
         what: what,
         feedback: feedback,
         nbOfFeedback: nfeed,

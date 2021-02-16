@@ -3,6 +3,7 @@ const fs = require("fs");
 const { decrypt } = require("./crypto.js");
 const readline = require("readline");
 const { type } = require("os");
+const { fork } = require("child_process");
 
 let rl = readline.createInterface({
   input: process.stdin,
@@ -80,7 +81,7 @@ let scrapping = async function () {
       await Promise.all([
         page.waitForNavigation({
           timeout: 60000,
-          waitUntil: "domcontentloaded",
+          waitUntil: "networkidle0",
         }),
         page.click("#loginbutton"),
       ]);
@@ -101,6 +102,105 @@ let scrapping = async function () {
     }
   };
 
+  const retrieveMessages = async () => {
+    return await page.evaluate(() => {
+      let nodes = document.querySelectorAll(
+        'div[data-testid="incoming_group"]'
+      );
+      let messages = [];
+      let opt = [];
+      let length = nodes.length;
+      nodes.forEach((node) => {
+        let line = node.innerText.split("\n");
+        let who = line[0];
+        let when = line[1];
+        let what = line.slice(2).join(" ");
+        // opt.push({ len: line.length, what: what });
+
+        let indx = what.indexOf(when.slice(0, -5));
+        if (indx != -1) {
+          what = what
+            .substring(0, indx)
+            .concat(what.substring(indx + when.length + 1));
+        }
+        when = when
+          .replace(who + ", date d’envoi : ", "")
+          .replace(". Message original :", "");
+        indx = who.indexOf(" replied to ");
+        if (indx !== -1) {
+          who = who.substring(0, indx);
+        }
+
+        indx = what.indexOf(` … Réponse par ${who} : `);
+        if (indx != -1) {
+          what = what.substring(indx + who.length + 18);
+        }
+        indx = what.indexOf(`Réponse par ${who} : `);
+        if (indx != -1) {
+          what = what.substring(indx + who.length + 15);
+        }
+
+        let emojiNode = node.querySelector(
+          'div[class="ggysqto6 exrn9cbp ojkyduve abpf7j7b ftzlm3b6 hybvsw6c fni8adji hgaippwi fykbt5ly ns4ygwem tlilfck6 j83agx80 bp9cbjyn taijpn5t"]'
+        );
+        let nfeed = 0;
+        let feedbacks = [];
+        if (emojiNode) {
+          nfeed = emojiNode.innerText;
+          let emojies = [
+            ...node.innerHTML.matchAll(
+              "(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe23\u20d0-\u20f0]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe23\u20d0-\u20f0]|\ud83c[\udffb-\udfff])?)*"
+            ),
+          ];
+          emojies.forEach((element) => {
+            feedbacks.push(element[0]);
+          });
+
+          what = what.slice(0, -2);
+        }
+
+        // let feedback = "";
+        // const regexp = '(<img height="16" width="16" alt=").';
+        // let rea = [...node.innerHTML.matchAll(regexp)][0];
+        // if (rea) {
+        //   feedback = rea[0].slice(-1);
+        //   nfeed = what.slice(-1);
+        //   what = what.slice(0, -2);
+        // }
+
+        if (what.length !== 0) {
+          whatType = "Texte";
+        } else {
+          whatType = "Non Texte";
+        }
+
+        messages.push({
+          who: who,
+          when: when,
+          whatType: whatType,
+          what: what,
+          feedback: feedbacks,
+          nbOfFeedback: nfeed,
+        });
+      });
+      return [messages, length];
+    });
+  };
+
+  const scrollConv = async function () {
+    return await page.evaluate(() => {
+      document
+        .querySelector(
+          'div[class="buofh1pr j83agx80 eg9m0zos ni8dbmo4 cbu4d94t gok29vw1"]'
+        )
+        .scroll(0, -2000);
+    });
+  };
+
+  /*
+  START 
+  */
+
   await gotoPage("https://www.messenger.com/");
 
   // check de la page de login
@@ -110,7 +210,7 @@ let scrapping = async function () {
   // accepter les cookies
   await page.click('button[title="Tout accepter"]'); // #u_0_j #u_0_g
 
-  await page.screenshot({ path: "loginPage.png" });
+  //await page.screenshot({ path: "loginPage.png" });
 
   await filledFields();
 
@@ -118,7 +218,7 @@ let scrapping = async function () {
   console.log(`Current page after login: ${page.url()}`);
 
   // pour debug
-  await page.screenshot({ path: "newPage.png" });
+  // await page.screenshot({ path: "newPage.png" });
 
   // changement de conversation
   await gotoPage(getUrlByThreadId(conv.BDE));
@@ -129,70 +229,39 @@ let scrapping = async function () {
   ) {
     console.log("Error lors de la connexion, nouvelle tentative ...");
     await filledFields();
-    console.log(`Current page after secont try login: ${page.url()}`);
+    await page.screenshot({ path: "second_tentative.png" });
+    console.log(`Current page after second try login: ${page.url()}`);
   }
 
   // récupération et stockage de l'html de la nouvelle page pour debug
   //await saveHTML();
-  await page.waitForTimeout(2000).then(() => console.log("Waited a second!"));
-  [messages, length, opt] = await page.evaluate(() => {
-    let nodes = document.querySelectorAll('div[data-testid="incoming_group"]');
-    let messages = [];
-    let opt = [];
-    let length = nodes.length;
-    nodes.forEach((node) => {
-      let line = node.innerText.split("\n");
-      let who = line[0];
-      let when = line[1];
-      let what = line.slice(2).join(" ");
-      // opt.push({ len: line.length, what: what });
 
-      let indx = what.indexOf(when.slice(0, -5));
-      if (indx != -1) {
-        what = what
-          .substring(0, indx)
-          .concat(what.substring(indx + when.length + 1));
-      }
-      when = when
-        .replace(who + ", date d’envoi : ", "")
-        .replace(". Message original :", "");
-      indx = who.indexOf(" replied to ");
-      if (indx !== -1) {
-        who = who.substring(0, indx);
-      }
+  // [messages, length] = await retrieveMessages();
 
-      indx = what.indexOf(` … Réponse par ${who} : `);
-      if (indx != -1) {
-        what = what.substring(indx + who.length + 18);
-      }
+  // await page.screenshot({ path: "scroll.png" });
 
-      let nfeed = 0;
-      let feedback = "";
-      const regexp = '(<img height="16" width="16" alt=").';
-      let rea = [...node.innerHTML.matchAll(regexp)][0];
-      if (rea) {
-        feedback = rea[0].slice(-1);
-        nfeed = what.slice(-1);
-        what = what.slice(0, -2);
-      }
+  // console.log(`Nombre de message chargé: ${length}`);
+  // try {
+  //   let path = "messages_" + getDate() + ".json";
+  //   // fs.writeFileSync("bodyHTML_" + date + ".html", bodyHTML);
+  //   fs.writeFileSync(path, JSON.stringify(messages));
+  // } catch (err) {
+  //   console.error(err);
+  // }
 
-      if (what.length !== 0) {
-        whatType = "Texte";
-      } else {
-        whatType = "Non Texte";
-      }
+  let i = 0;
+  while (i < 4) {
+    await scrollConv();
+    await page
+      .waitForTimeout(4000)
+      .then(() => console.log(`(${i++}) Scroll in progress ...`));
+  }
 
-      messages.push({
-        who: who,
-        when: when,
-        whatType: whatType,
-        what: what,
-        feedback: feedback,
-        nbOfFeedback: nfeed,
-      });
-    });
-    return [messages, length];
-  });
+  await page.screenshot({ path: "afterScroll_andwait.png" });
+  await saveHTML();
+
+  [messages, length] = await retrieveMessages();
+
   console.log(`Nombre de message chargé: ${length}`);
   try {
     let path = "messages_" + getDate() + ".json";
@@ -201,6 +270,7 @@ let scrapping = async function () {
   } catch (err) {
     console.error(err);
   }
+
   console.log("finish");
   await browser.close();
   return;

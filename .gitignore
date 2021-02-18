@@ -1,7 +1,8 @@
 node_modules/
 archiveHTML/
 archiveMESSAGES/
-test.js
+test-1.js
+test-2.js
 *.png
 *.html
 *.json

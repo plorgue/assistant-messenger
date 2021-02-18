@@ -2,8 +2,6 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const { decrypt } = require("./crypto.js");
 const readline = require("readline");
-const { type } = require("os");
-const { fork } = require("child_process");
 
 let rl = readline.createInterface({
   input: process.stdin,
@@ -80,7 +78,7 @@ let scrapping = async function () {
     try {
       await Promise.all([
         page.waitForNavigation({
-          timeout: 60000,
+          timeout: 30000,
           waitUntil: "networkidle0",
         }),
         page.click("#loginbutton"),
@@ -112,61 +110,69 @@ let scrapping = async function () {
       let length = nodes.length;
       nodes.forEach((node) => {
         let line = node.innerText.split("\n");
-        let who = line[0];
-        let when = line[1];
-        let what = line.slice(2).join(" ");
-        // opt.push({ len: line.length, what: what });
 
-        let indx = what.indexOf(when.slice(0, -5));
-        if (indx != -1) {
-          what = what
-            .substring(0, indx)
-            .concat(what.substring(indx + when.length + 1));
-        }
-        when = when
-          .replace(who + ", date d’envoi : ", "")
-          .replace(". Message original :", "");
+        // stockage des réaction
+        let feedbacks = [];
+
+        // stockage du contenu
+        let what = "";
+
+        // récupération de l'auteur
+        let who = line[0];
         indx = who.indexOf(" replied to ");
         if (indx !== -1) {
           who = who.substring(0, indx);
         }
-
-        indx = what.indexOf(` … Réponse par ${who} : `);
-        if (indx != -1) {
-          what = what.substring(indx + who.length + 18);
-        }
-        indx = what.indexOf(`Réponse par ${who} : `);
-        if (indx != -1) {
-          what = what.substring(indx + who.length + 15);
+        indx = who.indexOf(" a répondu à ");
+        if (indx !== -1) {
+          who = who.substring(0, indx);
         }
 
-        let emojiNode = node.querySelector(
-          'div[class="ggysqto6 exrn9cbp ojkyduve abpf7j7b ftzlm3b6 hybvsw6c fni8adji hgaippwi fykbt5ly ns4ygwem tlilfck6 j83agx80 bp9cbjyn taijpn5t"]'
-        );
-        let nfeed = 0;
-        let feedbacks = [];
-        if (emojiNode) {
-          nfeed = emojiNode.innerText;
-          let emojies = [
-            ...node.innerHTML.matchAll(
-              "(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe23\u20d0-\u20f0]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe23\u20d0-\u20f0]|\ud83c[\udffb-\udfff])?)*"
-            ),
-          ];
-          emojies.forEach((element) => {
-            feedbacks.push(element[0]);
-          });
+        // récupération de la date d'envoie
+        let when = line[1];
+        when = when
+          .replace(who + ", date d’envoi : ", "")
+          .replace(". Message original :", "");
 
-          what = what.slice(0, -2);
-        }
+        // suite de plusieurs message par la même personne
+        // ou réponse à un message précédent
+        let rows = node.querySelectorAll('div[role="row"]');
 
-        // let feedback = "";
-        // const regexp = '(<img height="16" width="16" alt=").';
-        // let rea = [...node.innerHTML.matchAll(regexp)][0];
-        // if (rea) {
-        //   feedback = rea[0].slice(-1);
-        //   nfeed = what.slice(-1);
-        //   what = what.slice(0, -2);
-        // }
+        rows.forEach((row) => {
+          let innerText = row.innerText.split("\n");
+
+          if (!innerText[0].includes(". Message original")) {
+            // quand c'est une réponse, le message sur lequel porte la réponse est attaché
+            // dans ce quand on ne tient pas compte de cette ligne
+            // sinon ....
+
+            // récupération des réactions
+            let nodeFeedbacks = row.querySelector(
+              'div[class="ggysqto6 exrn9cbp ojkyduve abpf7j7b ftzlm3b6 hybvsw6c fni8adji hgaippwi fykbt5ly ns4ygwem tlilfck6 j83agx80 bp9cbjyn taijpn5t"]'
+            );
+            if (nodeFeedbacks) {
+              let emojies = [
+                ...nodeFeedbacks.innerHTML.matchAll(
+                  "(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe23\u20d0-\u20f0]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe23\u20d0-\u20f0]|\ud83c[\udffb-\udfff])?)*"
+                ),
+              ];
+              emojies.forEach((element) => {
+                feedbacks.push(element[0]);
+              });
+
+              innerText.splice(innerText.length - 1, 1);
+            }
+
+            if (
+              innerText[0].includes(", date d’envoi : ") || // c'est un nouveau msg de la mm personne
+              innerText[0].includes("Réponse par") // c'est une réponse
+            ) {
+              innerText.splice(0, 1);
+            }
+
+            what = what.concat(what.length ? "\n" : "", innerText.join(" "));
+          }
+        });
 
         if (what.length !== 0) {
           whatType = "Texte";
@@ -180,7 +186,6 @@ let scrapping = async function () {
           whatType: whatType,
           what: what,
           feedback: feedbacks,
-          nbOfFeedback: nfeed,
         });
       });
       return [messages, length];
@@ -233,28 +238,13 @@ let scrapping = async function () {
     console.log(`Current page after second try login: ${page.url()}`);
   }
 
-  // récupération et stockage de l'html de la nouvelle page pour debug
-  //await saveHTML();
-
-  // [messages, length] = await retrieveMessages();
-
-  // await page.screenshot({ path: "scroll.png" });
-
-  // console.log(`Nombre de message chargé: ${length}`);
-  // try {
-  //   let path = "messages_" + getDate() + ".json";
-  //   // fs.writeFileSync("bodyHTML_" + date + ".html", bodyHTML);
-  //   fs.writeFileSync(path, JSON.stringify(messages));
-  // } catch (err) {
-  //   console.error(err);
-  // }
-
-  let i = 0;
-  while (i < 4) {
+  let i = 1;
+  let nbScroll = 4;
+  while (i < nbScroll + 1) {
     await scrollConv();
     await page
       .waitForTimeout(4000)
-      .then(() => console.log(`(${i++}) Scroll in progress ...`));
+      .then(() => console.log(`(${i++}/${nbScroll}) Scroll in progress ...`));
   }
 
   await page.screenshot({ path: "afterScroll_andwait.png" });
@@ -265,7 +255,6 @@ let scrapping = async function () {
   console.log(`Nombre de message chargé: ${length}`);
   try {
     let path = "messages_" + getDate() + ".json";
-    // fs.writeFileSync("bodyHTML_" + date + ".html", bodyHTML);
     fs.writeFileSync(path, JSON.stringify(messages));
   } catch (err) {
     console.error(err);
@@ -275,16 +264,3 @@ let scrapping = async function () {
   await browser.close();
   return;
 };
-
-/* 
->>>Pour récup les messages outbodyHTML_20210131-01411.html:
- document.querySelectorAll('div[data-testid="incoming_group"]')
- --> utiliser .innerText pour récup les contenus
-
- >>>Regex pour récup les émojies
- (<img height="16" width="16" alt=").
- --> comme c'est des carac spéciaux je sais pas trop si je pourais les gérer facilement
- 
- >>>Regex intéressant pour récup le contenu des messages
- >(?!<)([^(?!(<))]+)
- */

@@ -23,7 +23,6 @@ const getDate = () => {
 
 const conv = {
   BDE: "2783966814983840",
-  Kermess: "2258131307637099",
   WEI: "3363123163702478",
   MOI: "100010357567647",
 };
@@ -102,12 +101,11 @@ let scrapping = async function () {
 
   const retrieveMessages = async () => {
     return await page.evaluate(() => {
+      // message reçu
       let nodes = document.querySelectorAll(
         'div[data-testid="incoming_group"]'
       );
       let messages = [];
-      let opt = [];
-      let length = nodes.length;
       nodes.forEach((node) => {
         let line = node.innerText.split("\n");
 
@@ -129,8 +127,7 @@ let scrapping = async function () {
         }
 
         // récupération de la date d'envoie
-        let when = line[1];
-        when = when
+        let when = line[1]
           .replace(who + ", date d’envoi : ", "")
           .replace(". Message original :", "");
 
@@ -186,9 +183,85 @@ let scrapping = async function () {
           whatType: whatType,
           what: what,
           feedback: feedbacks,
+          raw: node.innerText,
         });
       });
-      return [messages, length];
+
+      // message envoyé
+      nodes = document.querySelectorAll('div[data-testid="outgoing_group"]');
+      nodes.forEach((node) => {
+        let line = node.innerText.split("\n");
+
+        // stockage des réaction
+        let feedbacks = [];
+
+        // stockage du contenu
+        let what = "";
+
+        // récupération de la date d'envoie
+
+        let when = line[0].replace("Date d’envoi de votre message : ", "");
+        if (line[0].includes("You replied to yourself")) {
+          when = line[1].replace(". Message original :", "");
+        }
+
+        // suite de plusieurs message par la même personne
+        // ou réponse à un message précédent
+        let rows = node.querySelectorAll('div[role="row"]');
+
+        rows.forEach((row) => {
+          let innerText = row.innerText.split("\n");
+
+          if (!innerText[0].includes(". Message original")) {
+            // quand c'est une réponse, le message sur lequel porte la réponse est attaché
+            // dans ce quand on ne tient pas compte de cette ligne
+            // sinon ....
+
+            // récupération des réactions
+            let nodeFeedbacks = row.querySelector(
+              'div[class="ggysqto6 exrn9cbp ojkyduve abpf7j7b ftzlm3b6 hybvsw6c fni8adji hgaippwi fykbt5ly ns4ygwem tlilfck6 j83agx80 bp9cbjyn taijpn5t"]'
+            );
+            if (nodeFeedbacks) {
+              let emojies = [
+                ...nodeFeedbacks.innerHTML.matchAll(
+                  "(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe23\u20d0-\u20f0]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe23\u20d0-\u20f0]|\ud83c[\udffb-\udfff])?)*"
+                ),
+              ];
+              emojies.forEach((element) => {
+                feedbacks.push(element[0]);
+              });
+
+              innerText.splice(innerText.length - 1, 1);
+            }
+
+            if (
+              innerText[0].includes("Date d’envoi de votre message : ") || // c'est un nouveau msg de la mm personne
+              innerText[0].includes("Votre réponse") // c'est une réponse
+            ) {
+              innerText.splice(0, 1);
+            }
+
+            what = what.concat(what.length ? "\n" : "", innerText.join(" "));
+          }
+        });
+
+        if (what.length !== 0) {
+          whatType = "Texte";
+        } else {
+          whatType = "Non Texte";
+        }
+
+        messages.push({
+          who: "Moi",
+          when: when,
+          whatType: whatType,
+          what: what,
+          feedback: feedbacks,
+          raw: node.innerText,
+        });
+      });
+
+      return messages;
     });
   };
 
@@ -234,12 +307,12 @@ let scrapping = async function () {
   ) {
     console.log("Error lors de la connexion, nouvelle tentative ...");
     await filledFields();
-    await page.screenshot({ path: "second_tentative.png" });
+    //await page.screenshot({ path: "second_tentative.png" });
     console.log(`Current page after second try login: ${page.url()}`);
   }
 
   let i = 1;
-  let nbScroll = 4;
+  let nbScroll = 20;
   while (i < nbScroll + 1) {
     await scrollConv();
     await page
@@ -250,9 +323,45 @@ let scrapping = async function () {
   await page.screenshot({ path: "afterScroll_andwait.png" });
   await saveHTML();
 
-  [messages, length] = await retrieveMessages();
+  let messages = await retrieveMessages();
 
-  console.log(`Nombre de message chargé: ${length}`);
+  messages.forEach((message) => {
+    let when = message.when;
+    let l = when.length;
+    let heure = when.substring(l - 5, l - 3);
+    let min = when.substring(l - 2);
+    let whenFormat = new Date(Date.now());
+    if (!isNaN(heure) && !isNaN(min)) {
+      whenFormat.setHours(heure, min);
+      if (when.includes("Hier, à ")) {
+        whenFormat.setDate(whenFormat.getDate() - 1);
+      } else if (!when.includes("Aujourd’hui, à")) {
+        if (when.includes("janvier")) whenFormat.setMonth(1);
+        else if (when.includes("février")) whenFormat.setMonth(2);
+        else if (when.includes("mars")) whenFormat.setMonth(3);
+        else if (when.includes("avril")) whenFormat.setMonth(4);
+        else if (when.includes("mai")) whenFormat.setMonth(5);
+        else if (when.includes("juin")) whenFormat.setMonth(6);
+        else if (when.includes("juillet")) whenFormat.setMonth(7);
+        else if (when.includes("aout")) whenFormat.setMonth(8);
+        else if (when.includes("septembre")) whenFormat.setMonth(9);
+        else if (when.includes("octobre")) whenFormat.setMonth(10);
+        else if (when.includes("novembre")) whenFormat.setMonth(11);
+        else if (when.includes("décembre")) whenFormat.setMonth(12);
+        whenFormat.setDate(when.slice(0, l - 6).match("[0-9].")[0]);
+      }
+      message.when = whenFormat.toString();
+    } else {
+      console.log(
+        `${when} / heure: ${when.substring(
+          l - 5,
+          l - 3
+        )} / min: ${when.substring(l - 2)}`
+      );
+    }
+  });
+
+  console.log(`Nombre de message chargé: ${messages.length}`);
   try {
     let path = "messages_" + getDate() + ".json";
     fs.writeFileSync(path, JSON.stringify(messages));

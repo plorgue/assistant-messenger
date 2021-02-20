@@ -72,7 +72,7 @@ let scrapping = async function () {
     // remplir les champs de connexion et submit le form
     await page.type("#email", "paullorgue@gmail.com");
     await page.type("#pass", password);
-    await page.screenshot({ path: "filling_fields.png" });
+    // await page.screenshot({ path: "filling_fields.png" });
     console.log("Completed fields");
     try {
       await Promise.all([
@@ -84,7 +84,7 @@ let scrapping = async function () {
       ]);
     } catch (err) {
       console.log("Timeout error: relancer !");
-      await page.screenshot({ path: "error_login.png" });
+      // await page.screenshot({ path: "error_login.png" });
       // await browser.close();
       // return;
     }
@@ -101,11 +101,12 @@ let scrapping = async function () {
 
   const retrieveMessages = async () => {
     return await page.evaluate(() => {
+      let messages = [];
+
       // message reçu
       let nodes = document.querySelectorAll(
         'div[data-testid="incoming_group"]'
       );
-      let messages = [];
       nodes.forEach((node) => {
         let line = node.innerText.split("\n");
 
@@ -183,7 +184,7 @@ let scrapping = async function () {
           whatType: whatType,
           what: what,
           feedback: feedbacks,
-          raw: node.innerText,
+          // raw: node.innerText,
         });
       });
 
@@ -257,7 +258,7 @@ let scrapping = async function () {
           whatType: whatType,
           what: what,
           feedback: feedbacks,
-          raw: node.innerText,
+          // raw: node.innerText,
         });
       });
 
@@ -320,8 +321,8 @@ let scrapping = async function () {
       .then(() => console.log(`(${i++}/${nbScroll}) Scroll in progress ...`));
   }
 
-  await page.screenshot({ path: "afterScroll_andwait.png" });
-  await saveHTML();
+  // await page.screenshot({ path: "afterScroll_andwait.png" });
+  // await saveHTML();
 
   let messages = await retrieveMessages();
 

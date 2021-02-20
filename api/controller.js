@@ -1,0 +1,15 @@
+const Conversation = require("./conversation.model.js");
+
+exports.getMessages = (req, res) => {
+  Conversation.getMessages(
+    req.params.conv,
+    req.params.scroll,
+    (err, messages) => {
+      if (err)
+        res.status(500).send({
+          message: err.message || "error lors de la récupération des messages",
+        });
+      else res.send(messages);
+    }
+  );
+};

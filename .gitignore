@@ -8,3 +8,4 @@ test-2.js
 *.json
 
 !package-lock.json
+!package.json

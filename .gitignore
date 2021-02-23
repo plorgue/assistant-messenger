@@ -3,9 +3,9 @@ archiveHTML/
 archiveMESSAGES/
 test-1.js
 test-2.js
-*.png
-*.html
-*.json
+./*.png
+./*.html
+./*.json
 
 !package-lock.json
 !package.json

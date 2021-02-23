@@ -1,31 +1,5 @@
 const puppeteer = require("puppeteer");
-const fs = require("fs");
-const { decrypt } = require("./utils/crypto.js");
-const readline = require("readline");
-
-let rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-const getDate = () => {
-  let date_ob = new Date();
-  return (
-    //date_ob.getFullYear() +
-    ("0" + (date_ob.getMonth() + 1)).slice(-2) +
-    ("0" + date_ob.getDate()).slice(-2) +
-    "-" +
-    ("0" + date_ob.getHours()).slice(-2) +
-    ("0" + date_ob.getMinutes()).slice(-2) +
-    ("0" + date_ob.getSeconds()).slice(-2)
-  );
-};
-
-const conv = {
-  BDE: "2783966814983840",
-  WEI: "3363123163702478",
-  MOI: "100010357567647",
-};
+const { decrypt } = require("./crypto.js");
 
 const getUrlByThreadId = (id) => {
   return "https://www.messenger.com/t/" + id;
@@ -36,14 +10,7 @@ const hash = {
   content: "b43191ad93d7978f8a2532b410b739",
 };
 
-let password = "";
-rl.question("Code : ", (answer) => {
-  password = decrypt(hash, answer.repeat(32).slice(0, 32));
-  scrapping();
-  rl.close();
-});
-
-let scrapping = async function () {
+exports.scrapping = async function (idConv, nbScroll, password) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -55,23 +22,10 @@ let scrapping = async function () {
     console.info("New page loaded: " + page.url());
   };
 
-  const saveHTML = async () => {
-    //let bodyHTML = await page.evaluate(() => document.body.innerHTML);
-    let outbodyHTML = await page.evaluate(() => document.body.outerHTML);
-    try {
-      let path = "body_" + getDate() + ".html";
-      // fs.writeFileSync("bodyHTML_" + date + ".html", bodyHTML);
-      fs.writeFileSync(path, outbodyHTML);
-      console.log("Sauvegarde HTML " + path);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   const filledFields = async () => {
     // remplir les champs de connexion et submit le form
     await page.type("#email", "paullorgue@gmail.com");
-    await page.type("#pass", password);
+    await page.type("#pass", decrypt(hash, password.repeat(32).slice(0, 32)));
     // await page.screenshot({ path: "filling_fields.png" });
     console.log("Completed fields");
     try {
@@ -84,9 +38,6 @@ let scrapping = async function () {
       ]);
     } catch (err) {
       console.log("Timeout error: relancer !");
-      // await page.screenshot({ path: "error_login.png" });
-      // await browser.close();
-      // return;
     }
 
     // si mauvais code
@@ -282,25 +233,16 @@ let scrapping = async function () {
 
   await gotoPage("https://www.messenger.com/");
 
-  // check de la page de login
-  // await saveHTML();
-  // await page.screenshot({ path: "page.png" });
-
   // accepter les cookies
   await page.click('button[title="Tout accepter"]'); // #u_0_j #u_0_g
-
-  //await page.screenshot({ path: "loginPage.png" });
 
   await filledFields();
 
   // nouvelle page censée être celle d'une conversation
   console.log(`Current page after login: ${page.url()}`);
 
-  // pour debug
-  // await page.screenshot({ path: "newPage.png" });
-
   // changement de conversation
-  await gotoPage(getUrlByThreadId(conv.BDE));
+  await gotoPage(getUrlByThreadId(idConv));
 
   if (
     (await page.url().indexOf("https://www.messenger.com/login.php?next")) !==
@@ -308,21 +250,16 @@ let scrapping = async function () {
   ) {
     console.log("Error lors de la connexion, nouvelle tentative ...");
     await filledFields();
-    //await page.screenshot({ path: "second_tentative.png" });
     console.log(`Current page after second try login: ${page.url()}`);
   }
 
   let i = 1;
-  let nbScroll = 20;
-  while (i < nbScroll + 1) {
+  while (i < parseInt(nbScroll) + 1) {
     await scrollConv();
     await page
       .waitForTimeout(4000)
       .then(() => console.log(`(${i++}/${nbScroll}) Scroll in progress ...`));
   }
-
-  // await page.screenshot({ path: "afterScroll_andwait.png" });
-  // await saveHTML();
 
   let messages = await retrieveMessages();
 
@@ -363,14 +300,6 @@ let scrapping = async function () {
   });
 
   console.log(`Nombre de message chargé: ${messages.length}`);
-  try {
-    let path = "messages_" + getDate() + ".json";
-    fs.writeFileSync(path, JSON.stringify(messages));
-  } catch (err) {
-    console.error(err);
-  }
-
-  console.log("finish");
   await browser.close();
-  return;
+  return JSON.stringify(messages);
 };

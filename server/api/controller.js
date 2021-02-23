@@ -4,6 +4,7 @@ exports.getMessages = (req, res) => {
   Conversation.getMessages(
     req.params.conv,
     req.params.scroll,
+    req.params.pwd,
     (err, messages) => {
       if (err)
         res.status(500).send({

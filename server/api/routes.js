@@ -5,5 +5,5 @@ module.exports = (app) => {
     res.send("Hello World!");
   });
 
-  app.get("/:conv/:scroll", controller.getMessages);
+  app.get("/messages/:pwd/:conv/:scroll", controller.getMessages);
 };

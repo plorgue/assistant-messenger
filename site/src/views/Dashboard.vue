@@ -12,6 +12,11 @@
               size="s"
               @click.native="loadMessages"
             />
+            <img
+              id="loading-img"
+              src="../assets/loading.png"
+              :style="`opacity: ${loadingMessage ? 1 : 0}`"
+            />
             <div id="select-container">
               <p class="">Nombre de scroll:</p>
               <select
@@ -68,6 +73,7 @@ export default {
   components: { ButtonConv },
   data() {
     return {
+      loadingMessage: false,
       password: "",
       convSelected: null,
       nbScroll: 1,
@@ -75,18 +81,22 @@ export default {
         {
           name: "BDE",
           id: "2783966814983840",
+          messages: [],
         },
         {
           name: "BDS",
           id: "3181338375224277",
+          messages: [],
         },
         {
           name: "KERMESS",
           id: "2258131307637099",
+          messages: [],
         },
         {
           name: "TEAM WEI",
           id: "3363123163702478",
+          messages: [],
         },
       ],
     };
@@ -94,6 +104,7 @@ export default {
   methods: {
     loadMessages() {
       if (this.password !== "") {
+        this.loadingMessage = true;
         fetch(
           `http://localhost:3000/messages/${this.password}/${this.convSelected.id}/${this.nbScroll}`,
           {
@@ -106,6 +117,7 @@ export default {
           .then((response) => response.json())
           .then((json) => {
             console.log(json);
+            this.loadingMessage = false;
           });
       }
     },
@@ -174,5 +186,17 @@ h2 {
   font-size: 14px;
   color: #505a50;
   background-color: whitesmoke;
+}
+#loading-img {
+  width: 32px;
+  height: 32px;
+  align-self: center;
+  margin-top: 15px;
+  animation: spin 1.2s ease-in-out infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>

@@ -3,9 +3,9 @@
     <h1>Assistant Messenger 🚀</h1>
     <div class="flex-horizontal">
       <div id="left-container" class="flex">
-        <p v-if="convSelected === ''">Selectionner une conversation</p>
+        <p v-if="convSelected === null">Selectionner une conversation</p>
         <div v-else>
-          <h2>{{ convSelected }}</h2>
+          <h2>{{ convSelected.name }}</h2>
           <div class="flex-horizontal">
             <button-conv
               content="Charger derniers messages"
@@ -42,9 +42,19 @@
           v-for="conv in conversations"
           v-bind:key="conv.id"
           :content="conv.name"
-          :isSelected="convSelected === conv.name ? true : false"
+          :isSelected="
+            convSelected !== null && convSelected.id === conv.id ? true : false
+          "
           class="btn-conv"
-          @click.native="changeConvSelected(conv.name)"
+          @click.native="
+            () => {
+              if (convSelected === conv) {
+                conv = null;
+              } else {
+                convSelected = conv;
+              }
+            }
+          "
         />
       </div>
     </div>
@@ -59,7 +69,7 @@ export default {
   data() {
     return {
       password: "",
-      convSelected: "",
+      convSelected: null,
       nbScroll: 1,
       conversations: [
         {
@@ -82,15 +92,21 @@ export default {
     };
   },
   methods: {
-    changeConvSelected(convClicked) {
-      if (this.convSelected === convClicked) {
-        this.convSelected = "";
-      } else {
-        this.convSelected = convClicked;
-      }
-    },
     loadMessages() {
       if (this.password !== "") {
+        fetch(
+          `http://localhost:3000/messages/${this.password}/${this.convSelected.id}/${this.nbScroll}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json; charset=UTF-8",
+            },
+          }
+        )
+          .then((response) => response.json())
+          .then((json) => {
+            console.log(json);
+          });
       }
     },
   },

@@ -10,7 +10,11 @@
             <button-conv
               content="Charger derniers messages"
               size="s"
-              @click.native="loadMessages"
+              @click.native="
+                () => {
+                  if (!loadingMessage) loadMessages();
+                }
+              "
             />
             <img
               id="loading-img"
@@ -39,6 +43,32 @@
               type="password"
             />
           </div>
+          <Line />
+          <div id="result-container" v-if="convSelected.messages.length > 0">
+            <p>
+              {{
+                `${
+                  convSelected.messages.length
+                } messages envoyé depuis ${formatDate(
+                  convSelected.messages[0].when
+                )}`
+              }}
+            </p>
+            <div
+              id="topMessage-container"
+              v-if="topMessage[0].message !== null"
+            >
+              <aff-message
+                v-for="message in topMessage"
+                v-bind:key="message.id"
+                :titre="message.titre"
+                :auteur="message.message.who"
+                :quand="formatDate(message.message.when)"
+                :contenu="message.message.what"
+                :nombre="message.nombre"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div id="right-container">
@@ -54,7 +84,7 @@
           @click.native="
             () => {
               if (convSelected === conv) {
-                conv = null;
+                convSelected = null;
               } else {
                 convSelected = conv;
               }
@@ -68,9 +98,11 @@
 
 <script>
 import ButtonConv from "../components/ButtonConv.vue";
+import Line from "../components/Line.vue";
+import AffMessage from "../components/AffMessage.vue";
 
 export default {
-  components: { ButtonConv },
+  components: { ButtonConv, Line, AffMessage },
   data() {
     return {
       loadingMessage: false,
@@ -99,6 +131,26 @@ export default {
           messages: [],
         },
       ],
+      topMessage: [
+        {
+          id: 1,
+          titre: "Le plus de réaction",
+          message: null,
+          nombre: 0,
+        },
+        {
+          id: 2,
+          titre: "Le plus de pouce",
+          message: null,
+          nombre: 0,
+        },
+        {
+          id: 3,
+          titre: "Le plus long message",
+          message: null,
+          nombre: 0,
+        },
+      ],
     };
   },
   methods: {
@@ -106,7 +158,8 @@ export default {
       if (this.password !== "") {
         this.loadingMessage = true;
         fetch(
-          `http://localhost:3000/messages/${this.password}/${this.convSelected.id}/${this.nbScroll}`,
+          //`http://localhost:3000/messages/${this.password}/${this.convSelected.id}/${this.nbScroll}`,
+          "http://localhost:3000/messages/",
           {
             method: "GET",
             headers: {
@@ -116,10 +169,45 @@ export default {
         )
           .then((response) => response.json())
           .then((json) => {
-            console.log(json);
             this.loadingMessage = false;
+            this.convSelected.messages = json;
+            this.findTopMessages();
           });
       }
+    },
+    findTopMessages() {
+      let topPouce = 0;
+      let topFeedback = 0;
+      let topLength = 0;
+      let msgTopPouce, msgTopFeedback, msgTopLength;
+      this.convSelected.messages.forEach((message) => {
+        if (message.whatType !== "Non Texte") {
+          if (message.what.length > topLength) {
+            topLength = message.what.length;
+            msgTopLength = message;
+          }
+          if (message.feedback.length > topFeedback) {
+            topFeedback = message.feedback.length;
+            msgTopFeedback = message;
+          }
+          if (
+            message.feedback.length > topPouce &&
+            message.feedback[0] === "👍"
+          ) {
+            topPouce = message.feedback.length;
+            msgTopPouce = message;
+          }
+        }
+      });
+      this.topMessage[0].message = msgTopFeedback;
+      this.topMessage[0].nombre = topFeedback;
+      this.topMessage[1].message = msgTopPouce;
+      this.topMessage[1].nombre = topPouce;
+      this.topMessage[2].message = msgTopLength;
+      this.topMessage[2].nombre = topLength;
+    },
+    formatDate(date) {
+      return new Date(date).toLocaleString();
     },
   },
 };
@@ -198,5 +286,8 @@ h2 {
   100% {
     transform: rotate(360deg);
   }
+}
+#result-container {
+  padding: 16px 16px 0 64px;
 }
 </style>

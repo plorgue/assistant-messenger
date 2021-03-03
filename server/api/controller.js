@@ -14,3 +14,14 @@ exports.getMessages = (req, res) => {
     }
   );
 };
+
+exports.getMessagesStored = (req, res) => {
+  Conversation.getMessagesStored((err, messages) => {
+    if (err)
+      res.status(500).send({
+        message:
+          err.message || "error lors de la récupération des messages stocker",
+      });
+    else res.send(messages);
+  });
+};

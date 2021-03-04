@@ -2,76 +2,95 @@
   <div id="main-container">
     <h1>Assistant Messenger 🚀</h1>
     <div class="flex-horizontal">
-      <div id="left-container" class="flex">
+      <div id="left-container">
         <p v-if="convSelected === null">Selectionner une conversation</p>
         <div v-else>
-          <h2>{{ convSelected.name }}</h2>
-          <div class="flex-horizontal">
-            <button-conv
-              content="Charger derniers messages"
-              size="s"
-              @click.native="
-                () => {
-                  if (!loadingMessage) loadMessages();
-                }
-              "
-            />
-            <img
-              id="loading-img"
-              src="../assets/loading.png"
-              :style="`opacity: ${loadingMessage ? 1 : 0}`"
-            />
-            <div id="select-container">
-              <p class="">Nombre de scroll:</p>
-              <select
-                id="scroll-selector"
-                class="rounded-input"
-                v-model="nbScroll"
-              >
-                <option
-                  v-for="i in [...Array(20).keys()].map((x) => x + 1)"
-                  v-bind:key="i"
-                  :value="i"
-                  >{{ i }}</option
+          <div class="box">
+            <h2>{{ convSelected.name }}</h2>
+            <div class="flex-horizontal">
+              <button-conv
+                content="Charger derniers messages"
+                size="s"
+                @click.native="
+                  () => {
+                    if (!loadingMessage) loadMessages();
+                  }
+                "
+              />
+              <img
+                id="loading-img"
+                src="../assets/loading.png"
+                :style="`opacity: ${loadingMessage ? 1 : 0}`"
+              />
+              <div id="select-container">
+                <p class="">Nombre de scroll:</p>
+                <select
+                  id="scroll-selector"
+                  class="rounded-input"
+                  v-model="nbScroll"
                 >
-              </select>
+                  <option
+                    v-for="i in [1, 2, 3, 5, 10, 15, 20, 30, 50, 100, 200]"
+                    v-bind:key="i"
+                    :value="i"
+                    >{{ i }}</option
+                  >
+                </select>
+              </div>
+              <input
+                v-model="password"
+                class="rounded-input"
+                placeholder="Mot de passe"
+                type="password"
+                @keypress.enter="
+                  () => {
+                    if (!loadingMessage) loadMessages();
+                  }
+                "
+              />
             </div>
-            <input
-              v-model="password"
-              class="rounded-input"
-              placeholder="Mot de passe"
-              type="password"
-            />
           </div>
-          <Line />
-          <div id="result-container" v-if="convSelected.messages.length > 0">
-            <p>
-              {{
-                `${
-                  convSelected.messages.length
-                } messages envoyé depuis ${formatDate(
-                  convSelected.messages[0].when
-                )}`
-              }}
-            </p>
-            <div
-              id="topMessage-container"
-              v-if="topMessage[0].message !== null"
-            >
-              <aff-message
-                v-for="message in topMessage"
-                v-bind:key="message.id"
-                :titre="message.titre"
-                :auteur="message.message.who"
-                :quand="formatDate(message.message.when)"
-                :contenu="message.message.what"
-                :nombre="message.nombre"
+          <div id="conv-container" class="flex-horizontal">
+            <div id="result-container" v-if="convSelected.messages.length > 0">
+              <p>
+                {{
+                  `${
+                    convSelected.messages.length
+                  } messages envoyé depuis ${formatDate(
+                    convSelected.messages[0].when
+                  )}`
+                }}
+              </p>
+              <div
+                id="topMessage-container"
+                v-if="topMessage[0].message !== null"
+              >
+                <aff-message
+                  v-for="message in topMessage"
+                  v-bind:key="message.id"
+                  :titre="message.titre"
+                  :auteur="message.message.who"
+                  :quand="formatDate(message.message.when)"
+                  :contenu="message.message.what"
+                  :nombre="message.nombre"
+                />
+              </div>
+            </div>
+            <div id="messages-container" class="box">
+              <message
+                v-for="msg in convSelected.messages"
+                v-bind:key="msg.when"
+                :color="convSelected.interlocuteurs.get(msg.who)"
+                :auteur="msg.who"
+                :date="formatDate(msg.when)"
+                :contenu="msg.what"
+                :reaction="msg.feedback"
               />
             </div>
           </div>
         </div>
       </div>
-      <div id="right-container">
+      <div id="right-container" class="box">
         <h2>Conversations</h2>
         <button-conv
           v-for="conv in conversations"
@@ -100,9 +119,10 @@
 import ButtonConv from "../components/ButtonConv.vue";
 import Line from "../components/Line.vue";
 import AffMessage from "../components/AffMessage.vue";
+import Message from "../components/Message.vue";
 
 export default {
-  components: { ButtonConv, Line, AffMessage },
+  components: { ButtonConv, Line, AffMessage, Message },
   data() {
     return {
       loadingMessage: false,
@@ -114,21 +134,25 @@ export default {
           name: "BDE",
           id: "2783966814983840",
           messages: [],
+          interlocuteurs: new Map(),
         },
         {
           name: "BDS",
           id: "3181338375224277",
           messages: [],
+          interlocuteurs: new Map(),
         },
         {
           name: "KERMESS",
           id: "2258131307637099",
           messages: [],
+          interlocuteurs: new Map(),
         },
         {
           name: "TEAM WEI",
           id: "3363123163702478",
           messages: [],
+          interlocuteurs: new Map(),
         },
       ],
       topMessage: [
@@ -172,6 +196,7 @@ export default {
             this.loadingMessage = false;
             this.convSelected.messages = json;
             this.findTopMessages();
+            this.setInterlocuteurs();
           });
       }
     },
@@ -206,6 +231,30 @@ export default {
       this.topMessage[2].message = msgTopLength;
       this.topMessage[2].nombre = topLength;
     },
+    setInterlocuteurs() {
+      const colors = [
+        "#FF9AA2",
+        "#FFB7B2",
+        "#FFDAC1",
+        "#E2F0CB",
+        "#B5EAD7",
+        "#C7CEEA",
+        "#FFDFD3",
+        "#E0BBE4",
+        "#E2FCE6",
+        "#FFBAE4",
+      ];
+      let interlocuteurs = new Map();
+      this.convSelected.messages.forEach((message) => {
+        if (!interlocuteurs.has(message.who)) {
+          interlocuteurs.set(
+            message.who,
+            colors[interlocuteurs.size % colors.length]
+          );
+        }
+      });
+      this.convSelected.interlocuteurs = interlocuteurs;
+    },
     formatDate(date) {
       return new Date(date).toLocaleString();
     },
@@ -216,28 +265,42 @@ export default {
 <style scoped>
 #main-container {
   height: 100%;
-  width: 90%;
-  margin: 0 5% 0 5%;
+  width: 95%;
+  margin: 0 0 0 5%;
   font-family: Arial, Helvetica, sans-serif;
   color: #505a50;
 }
 #left-container {
   width: 72%;
-  height: 1000px;
+  align-self: flex-start;
 }
 #right-container {
   position: sticky;
   align-self: flex-start;
-  top: 60px;
-  margin-top: 20px;
-  width: 25%;
-  height: 80vh;
+  top: 20px;
+  width: 20%;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
-  border-left: 2px solid gray;
+}
+.box {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  padding-bottom: 30px;
+}
+#messages-container {
+  position: sticky;
+  align-self: flex-start;
+  top: 20px;
+  width: 500px;
+  height: calc(100vh - 280px);
+  margin-top: 10px;
+  padding: 20px 10px 10px 20px;
+  overflow-y: scroll;
 }
 h1 {
   margin: 20px;
+  line-height: 40px;
 }
 .flex-horizontal {
   display: flex;
@@ -248,7 +311,8 @@ h1 {
   align-self: center;
 }
 h2 {
-  margin-left: 20px;
+  padding: 20px 0 0 20px;
+  margin: 0;
 }
 #select-container {
   display: flex;
@@ -289,5 +353,7 @@ h2 {
 }
 #result-container {
   padding: 16px 16px 0 64px;
+
+  height: 1500px;
 }
 </style>

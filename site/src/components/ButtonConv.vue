@@ -23,12 +23,12 @@ export default {
 <style scoped>
 button {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  border: 3px solid #222;
+  border: 2.5px solid #333;
   border-radius: 15px;
-  padding: 10px;
-  width: 200px;
+  padding: 15px 10px 15px 10px;
+  width: 160px;
   color: #505a50;
   background-color: whitesmoke;
   margin: 20px 0 0 0;

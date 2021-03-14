@@ -23,7 +23,7 @@
                 src="../assets/loading.png"
                 :style="`opacity: ${loadingMessage ? 1 : 0}`"
               />
-              <div id="select-container">
+              <div class="select-container">
                 <p class="">Nombre de scroll:</p>
                 <select
                   id="scroll-selector"
@@ -56,16 +56,27 @@
           <div id="conv-container" class="flex-horizontal">
             <div id="result-container" v-if="convSelected.messages.length > 0">
               <!-- Affichage de chiffres clé sur les messages récupérés -->
+              <h3>
+                Chiffres
+                clés________________________________________________________________
+              </h3>
               <p>
                 {{
                   `${
                     convSelected.messages.length
                   } messages envoyé depuis ${formatDate(
                     convSelected.messages[0].when
+                  )} soit en ${formatDuration(
+                    convSelected.messages[0].when,
+                    Date.now()
                   )}`
                 }}
               </p>
               <!-- Affichage des messages particuliers -->
+              <h3>
+                Messages
+                particuliers_________________________________________________________
+              </h3>
               <div
                 id="topMessage-container"
                 v-if="topMessage[0].message !== null"
@@ -81,7 +92,24 @@
                 />
               </div>
               <!-- Affichage des graphiques -->
-              <graph-nb-tps :messages="convSelected.messages" :pas="1" />
+              <h3>
+                Graphiques_______________________________________________________________
+              </h3>
+              <div class="select-container">
+                <p>Pas temporel des graphiques:</p>
+                <select class="rounded-input" v-model="idPasGraph">
+                  <option
+                    v-for="i in [...Array(pasGraph.length).keys()]"
+                    v-bind:key="i"
+                    :value="i"
+                    >{{ pasGraph[i][0] }}</option
+                  >
+                </select>
+              </div>
+              <graph-nb-tps
+                :messages="convSelected.messages"
+                :pas="pasGraph[idPasGraph][1]"
+              />
             </div>
             <!-- Liste message sous forme de conv -->
             <div
@@ -144,6 +172,16 @@ export default {
       password: "",
       convSelected: null,
       nbScroll: 1,
+      pasGraph: [
+        ["jour", 24],
+        ["demi-journée", 12],
+        ["6 heures", 6],
+        ["2 heures", 2],
+        ["1 heures", 1],
+        ["30 min", 0.5],
+        ["15 min", 0.25],
+      ],
+      idPasGraph: 1,
       conversations: [
         {
           name: "BDE",
@@ -192,6 +230,13 @@ export default {
       ],
     };
   },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+    console.log(this.pasGraph[2][1]);
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
     loadMessages() {
       if (this.password !== "") {
@@ -211,7 +256,7 @@ export default {
             return response.json();
           })
           .then((json) => {
-            console.log(json);
+            console.log(this.convSelected);
             this.convSelected.messages = json;
             this.findTopMessages();
             this.setInterlocuteurs();
@@ -274,8 +319,46 @@ export default {
       });
       this.convSelected.interlocuteurs = interlocuteurs;
     },
+    handleScroll(event) {
+      let el = document.getElementById("messages-container");
+      if (el !== null) {
+        el.style.height =
+          window.innerHeight - (el.offsetTop - window.scrollY) - 60 + "px";
+      }
+    },
     formatDate(date) {
       return new Date(date).toLocaleString();
+    },
+    formatDuration(date1, date2) {
+      let d1 = new Date(date1);
+      let d2 = new Date(date2);
+      let durationInMillis = Math.abs(d2 - d1);
+      // let jours = Math.floor(durationInMillis / (1000 * 60 * 60 * 24));
+      // durationInMillis -= jours * 1000 * 60 * 60 * 24;
+      // let heures = Math.floor(durationInMillis / (1000 * 60 * 60));
+      // durationInMillis -= heures * 1000 * 60 * 60;
+      // let minutes = Math.floor(durationInMillis / (1000 * 60));
+      if (durationInMillis > 25920000) {
+        // 3 jours
+        return `${Math.round(
+          durationInMillis / (1000 * 60 * 60 * 24),
+          1
+        )} jours`;
+      } else if (durationInMillis > 2160000) {
+        // 6 heures
+        return `${Math.round(durationInMillis / (1000 * 60 * 60), 1)} heures`;
+      } else if (durationInMillis > 360000) {
+        // 60 min
+        return `${Math.floor(
+          durationInMillis / (1000 * 60 * 60),
+          1
+        )}h${Math.round(durationInMillis / (1000 * 60))}min`;
+      } else {
+        return `${Math.round(durationInMillis / (1000 * 60))} minutes`;
+      }
+    },
+    debug() {
+      console.log(this.idPasGraph);
     },
   },
 };
@@ -322,6 +405,12 @@ h1 {
   margin: 20px;
   line-height: 40px;
 }
+h3 {
+  line-break: anywhere;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+}
 .flex-horizontal {
   display: flex;
   flex-direction: row;
@@ -334,7 +423,7 @@ h2 {
   padding: 20px 0 0 20px;
   margin: 0;
 }
-#select-container {
+.select-container {
   display: flex;
   flex-direction: row;
   align-items: baseline;

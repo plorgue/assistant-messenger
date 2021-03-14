@@ -1,6 +1,6 @@
 <template>
   <div id="graph">
-    <graph-temps :data="data" />
+    <graph-temps :data="data" :pas="pas" />
   </div>
 </template>
 
@@ -12,11 +12,18 @@ export default {
   props: { messages: Object, pas: Number },
   computed: {
     data() {
+      console.log(this.pas);
       let data = [];
-      let date1 = new Date(this.messages[0].when);
+      //TODO mettre changement de jour à 5h00 du mat
+      let now = new Date(Date.now());
       this.messages.forEach((msg) => {
         let date = new Date(msg.when);
-        data.push(Math.round((date - date1) / (1000 * 60 * 60 * this.pas)));
+        let offset =
+          (((now.getHours() % this.pas) * 60 + now.getMinutes()) * 60 +
+            now.getSeconds()) *
+          1000;
+        let x = (date - now + offset) / (1000 * 60 * 60 * this.pas) - 1;
+        data.push(Math.trunc(x));
       });
       return data;
     },

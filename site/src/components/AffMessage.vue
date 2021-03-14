@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>{{ `${titre} (${nombre}):` }}</h3>
+    <h4>{{ `${titre} (${nombre}):` }}</h4>
     <p>{{ `Envoyé par ${auteur} le ${quand}` }}</p>
     <p>{{ contenu }}</p>
   </div>
@@ -18,4 +18,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+h4 {
+  margin-bottom: 12px;
+}
+p {
+  font-size: 14px;
+  margin: 10px 16px 0 0;
+}
+</style>

@@ -274,18 +274,18 @@ exports.scrapping = async function (idConv, nbScroll, password) {
       if (when.includes("Hier, à ")) {
         whenFormat.setDate(whenFormat.getDate() - 1);
       } else if (!when.includes("Aujourd’hui, à")) {
-        if (when.includes("janvier")) whenFormat.setMonth(1);
-        else if (when.includes("février")) whenFormat.setMonth(2);
-        else if (when.includes("mars")) whenFormat.setMonth(3);
-        else if (when.includes("avril")) whenFormat.setMonth(4);
-        else if (when.includes("mai")) whenFormat.setMonth(5);
-        else if (when.includes("juin")) whenFormat.setMonth(6);
-        else if (when.includes("juillet")) whenFormat.setMonth(7);
-        else if (when.includes("aout")) whenFormat.setMonth(8);
-        else if (when.includes("septembre")) whenFormat.setMonth(9);
-        else if (when.includes("octobre")) whenFormat.setMonth(10);
-        else if (when.includes("novembre")) whenFormat.setMonth(11);
-        else if (when.includes("décembre")) whenFormat.setMonth(12);
+        if (when.includes("janvier")) whenFormat.setMonth(0);
+        else if (when.includes("février")) whenFormat.setMonth(1);
+        else if (when.includes("mars")) whenFormat.setMonth(2);
+        else if (when.includes("avril")) whenFormat.setMonth(3);
+        else if (when.includes("mai")) whenFormat.setMonth(4);
+        else if (when.includes("juin")) whenFormat.setMonth(5);
+        else if (when.includes("juillet")) whenFormat.setMonth(6);
+        else if (when.includes("aout")) whenFormat.setMonth(7);
+        else if (when.includes("septembre")) whenFormat.setMonth(8);
+        else if (when.includes("octobre")) whenFormat.setMonth(9);
+        else if (when.includes("novembre")) whenFormat.setMonth(10);
+        else if (when.includes("décembre")) whenFormat.setMonth(11);
         whenFormat.setDate(when.slice(0, l - 6).match("[0-9].")[0]);
       }
       message.when = whenFormat.toString();
@@ -301,5 +301,5 @@ exports.scrapping = async function (idConv, nbScroll, password) {
 
   console.log(`Nombre de message chargé: ${messages.length}`);
   await browser.close();
-  return JSON.stringify(messages);
+  return messages;
 };

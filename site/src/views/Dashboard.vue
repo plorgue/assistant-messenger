@@ -5,6 +5,7 @@
       <div id="left-container">
         <p v-if="convSelected === null">Selectionner une conversation</p>
         <div v-else>
+          <!-- Panneau horizontal pour pull des messages -->
           <div class="box">
             <h2>{{ convSelected.name }}</h2>
             <div class="flex-horizontal">
@@ -50,8 +51,11 @@
               />
             </div>
           </div>
+
+          <!-- Détail de la conv sélectionné -->
           <div id="conv-container" class="flex-horizontal">
             <div id="result-container" v-if="convSelected.messages.length > 0">
+              <!-- Affichage de chiffres clé sur les messages récupérés -->
               <p>
                 {{
                   `${
@@ -61,6 +65,7 @@
                   )}`
                 }}
               </p>
+              <!-- Affichage des messages particuliers -->
               <div
                 id="topMessage-container"
                 v-if="topMessage[0].message !== null"
@@ -75,8 +80,15 @@
                   :nombre="message.nombre"
                 />
               </div>
+              <!-- Affichage des graphiques -->
+              <graph-nb-tps :messages="convSelected.messages" :pas="1" />
             </div>
-            <div id="messages-container" class="box">
+            <!-- Liste message sous forme de conv -->
+            <div
+              id="messages-container"
+              class="box"
+              v-if="convSelected.messages.length > 0"
+            >
               <message
                 v-for="msg in convSelected.messages"
                 v-bind:key="msg.when"
@@ -90,6 +102,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Choix de la conv à afficher -->
       <div id="right-container" class="box">
         <h2>Conversations</h2>
         <button-conv
@@ -120,9 +134,10 @@ import ButtonConv from "../components/ButtonConv.vue";
 import Line from "../components/Line.vue";
 import AffMessage from "../components/AffMessage.vue";
 import Message from "../components/Message.vue";
+import GraphNbTps from "../components/GraphNbTps.vue";
 
 export default {
-  components: { ButtonConv, Line, AffMessage, Message },
+  components: { ButtonConv, Line, AffMessage, Message, GraphNbTps },
   data() {
     return {
       loadingMessage: false,
@@ -191,13 +206,17 @@ export default {
             },
           }
         )
-          .then((response) => response.json())
-          .then((json) => {
+          .then((response) => {
             this.loadingMessage = false;
+            return response.json();
+          })
+          .then((json) => {
+            console.log(json);
             this.convSelected.messages = json;
             this.findTopMessages();
             this.setInterlocuteurs();
-          });
+          })
+          .catch((err) => console.log(err));
       }
     },
     findTopMessages() {
@@ -265,13 +284,13 @@ export default {
 <style scoped>
 #main-container {
   height: 100%;
-  width: 95%;
-  margin: 0 0 0 5%;
+  width: 97%;
+  margin: 0 0 0 2%;
   font-family: Arial, Helvetica, sans-serif;
   color: #505a50;
 }
 #left-container {
-  width: 72%;
+  width: 74%;
   align-self: flex-start;
 }
 #right-container {
@@ -292,7 +311,8 @@ export default {
   position: sticky;
   align-self: flex-start;
   top: 20px;
-  width: 500px;
+  width: 300px;
+  min-width: 300px;
   height: calc(100vh - 280px);
   margin-top: 10px;
   padding: 20px 10px 10px 20px;
@@ -352,8 +372,7 @@ h2 {
   }
 }
 #result-container {
-  padding: 16px 16px 0 64px;
-
+  padding: 16px 16px 0 16px;
   height: 1500px;
 }
 </style>

@@ -1,0 +1,5 @@
+papier: https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf
+topic analysis: https://monkeylearn.com/topic-analysis/
+text analysis: https://monkeylearn.com/text-analysis/
+
+deep: https://huggingface.co/models

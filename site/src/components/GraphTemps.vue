@@ -6,7 +6,7 @@
 import Plotly from "plotly.js-dist";
 
 export default {
-  props: { data: Array, pas: Number },
+  props: { data: Array },
   mounted() {
     this.showGraph();
   },
@@ -15,12 +15,9 @@ export default {
   },
   methods: {
     showGraph() {
-      console.log(`Max: ${Math.max(...this.data)}`);
-      console.log(`Min: ${Math.min(...this.data)}`);
-      var y = [...Array(this.data.length * 2).keys()];
-      console.log(this.data);
+      var y = [...Array(this.data[0].length).keys()];
       var trace1 = {
-        x: this.data,
+        x: this.data[0],
         y: y,
         name: "control",
         autobinx: false,
@@ -33,8 +30,9 @@ export default {
         xbins: {
           end: 1,
           size: 1,
-          start: Math.min(...this.data),
+          start: Math.min(...this.data[0]),
         },
+        text: this.data[1],
       };
 
       var data = [trace1];

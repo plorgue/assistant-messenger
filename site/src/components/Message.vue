@@ -52,12 +52,12 @@ export default {
 }
 #header {
   font-size: 12px;
-  color: #222;
+  color: #eee;
   font-weight: bold;
 }
 #message {
   font-size: 11px;
-  color: #444;
+  color: #ddd;
   margin: 5px 0 2px 0;
   overflow-x: hidden;
 }

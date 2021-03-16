@@ -269,8 +269,8 @@ export default {
       if (this.password !== "") {
         this.loadingMessage = true;
         fetch(
-          //`http://localhost:3000/messages/${this.password}/${this.convSelected.id}/${this.nbScroll}`,
-          "http://localhost:3000/messages/",
+          `http://localhost:3000/messages/${this.password}/${this.convSelected.id}/${this.nbScroll}`,
+          //"http://localhost:3000/messages/",
           {
             method: "GET",
             headers: {
@@ -323,16 +323,37 @@ export default {
     },
     setInterlocuteurs() {
       const colors = [
-        "#FF9AA2",
-        "#FFB7B2",
-        "#FFDAC1",
-        "#E2F0CB",
-        "#B5EAD7",
-        "#C7CEEA",
-        "#FFDFD3",
-        "#E0BBE4",
-        "#E2FCE6",
-        "#FFBAE4",
+        // couleurs pastelles
+        // "#FF9AA2",
+        // "#FFB7B2",
+        // "#FFDAC1",
+        // "#E2F0CB",
+        // "#B5EAD7",
+        // "#C7CEEA",
+        // "#FFDFD3",
+        // "#E0BBE4",
+        // "#E2FCE6",
+        // "#FFBAE4",
+        // couleurs plus fortes
+        "#2E8B57", //seagreen
+        "#DAA520", //goldenrod
+        "#B22222", //firebrick
+        "#008080", //teal
+        "#006400", //darkgreen
+        "#800000", //maroon
+        "#1E90E0", //dodgerblue
+        "#000080", //navy
+        //"#0000CD", //mediumblue
+        "#C71585", //mediumvioletred
+        "#EE4500", //orangered
+        "#556B2F", //darkolivegreen
+        "#483D8B", //darkslateblue
+        "#2F4F4F", //darkslategray
+        "#D2691E", //chocolate
+        "#C52222", //darkred
+        "#800080", //purple
+        "#BDB76B", //darkkhaki
+        "#CD5C5C", //indianred
       ];
       let interlocuteurs = new Map();
       this.convSelected.messages.forEach((message) => {

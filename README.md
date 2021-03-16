@@ -46,10 +46,20 @@ main.js est le script est le fichier de test du scrapping.
 
 \site contient le site VueJS qui affiche ces messages
 
-## Dépendances
+## Principales dépendances
 
 - Puppeteer: `npm i puppeteer`
 - Crypto: `npm i crypto`
 - Plotly: `npm i plotly.js-dist`
 - ExpressJS
 - VueJS
+
+## Captures du site
+
+![alt text](https://github.com/plorgue/assistant-messenger/blob/main/site/blob/capt1.PNG?raw=true)
+
+![alt text](https://github.com/plorgue/assistant-messenger/blob/main/site/blob/capt2.PNG?raw=true)
+
+![alt text](https://github.com/plorgue/assistant-messenger/blob/main/site/blob/capt3.PNG?raw=true)
+
+![alt text](https://github.com/plorgue/assistant-messenger/blob/main/site/blob/capt4.PNG?raw=true)

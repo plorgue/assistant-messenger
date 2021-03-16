@@ -43,6 +43,7 @@ Phase 3: plusieurs choix
 main.js est le script est le fichier de test du scrapping.
 
 \server contient le server express qui renvoi les messages scrapping.js est le script qui récupère tous les messages
+
 \site contient le site VueJS qui affiche ces messages
 
 ## Dépendances

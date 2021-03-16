@@ -77,6 +77,14 @@ exports.scrapping = async function (idConv, nbScroll, password) {
         if (indx !== -1) {
           who = who.substring(0, indx);
         }
+        indx = who.indexOf(" forwarded");
+        if (indx !== -1) {
+          who = who.substring(0, indx);
+        }
+        indx = who.indexOf(" vous a répondu");
+        if (indx !== -1) {
+          who = who.substring(0, indx);
+        }
 
         // récupération de la date d'envoie
         let when = line[1]
@@ -139,7 +147,7 @@ exports.scrapping = async function (idConv, nbScroll, password) {
         });
       });
 
-      // message envoyé
+      //message envoyé
       nodes = document.querySelectorAll('div[data-testid="outgoing_group"]');
       nodes.forEach((node) => {
         let line = node.innerText.split("\n");
@@ -153,7 +161,10 @@ exports.scrapping = async function (idConv, nbScroll, password) {
         // récupération de la date d'envoie
 
         let when = line[0].replace("Date d’envoi de votre message : ", "");
-        if (line[0].includes("You replied to yourself")) {
+        if (
+          line[0].includes("You replied to yourself") ||
+          line[0].includes("Vous avez répondu")
+        ) {
           when = line[1].replace(". Message original :", "");
         }
 
@@ -209,7 +220,7 @@ exports.scrapping = async function (idConv, nbScroll, password) {
           whatType: whatType,
           what: what,
           feedback: feedbacks,
-          // raw: node.innerText,
+          raw: node.innerText,
         });
       });
 
@@ -257,7 +268,7 @@ exports.scrapping = async function (idConv, nbScroll, password) {
   while (i < parseInt(nbScroll) + 1) {
     await scrollConv();
     await page
-      .waitForTimeout(4000)
+      .waitForTimeout(3000)
       .then(() => console.log(`(${i++}/${nbScroll}) Scroll in progress ...`));
   }
 

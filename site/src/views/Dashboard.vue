@@ -9,22 +9,8 @@
           <div class="box">
             <h2>{{ convSelected.name }}</h2>
             <div class="flex-horizontal">
-              <button-conv
-                content="Charger derniers messages"
-                size="s"
-                @click.native="
-                  () => {
-                    if (!loadingMessage) loadMessages();
-                  }
-                "
-              />
-              <img
-                id="loading-img"
-                src="../assets/loading.png"
-                :style="`opacity: ${loadingMessage ? 1 : 0}`"
-              />
               <div class="select-container">
-                <p class="">Nombre de scroll:</p>
+                <p>Nombre de scroll:</p>
                 <select
                   id="scroll-selector"
                   class="rounded-input"
@@ -49,6 +35,21 @@
                   }
                 "
               />
+              <button-conv
+                id="btn-load-msg"
+                content="Charger derniers messages"
+                size="s"
+                @click.native="
+                  () => {
+                    if (!loadingMessage) loadMessages();
+                  }
+                "
+              />
+              <img
+                id="loading-img"
+                src="../assets/loading.png"
+                :style="`opacity: ${loadingMessage ? 1 : 0}`"
+              />
             </div>
           </div>
 
@@ -70,6 +71,9 @@
                     convSelected.messages[0].when,
                     Date.now()
                   )}`
+                }}<br />
+                {{
+                  `Longeur moyenne d'un message: ${avgMsgLength()} caractères`
                 }}
               </p>
               <!-- Affichage des messages particuliers -->
@@ -110,6 +114,18 @@
                 :messages="convSelected.messages"
                 :pas="pasGraph[idPasGraph][1]"
               />
+              <graph-feedback-tps
+                :messages="convSelected.messages"
+                :pas="pasGraph[idPasGraph][1]"
+              />
+              <graph-serious-feedback-tps
+                :messages="convSelected.messages"
+                :pas="pasGraph[idPasGraph][1]"
+              />
+              <graph-interlocuteur :messages="convSelected.messages" />
+              <div>
+                <br />
+              </div>
             </div>
             <!-- Liste message sous forme de conv -->
             <div
@@ -163,9 +179,21 @@ import Line from "../components/Line.vue";
 import AffMessage from "../components/AffMessage.vue";
 import Message from "../components/Message.vue";
 import GraphNbTps from "../components/GraphNbTps.vue";
+import GraphFeedbackTps from "../components/GraphFeedbackTps.vue";
+import GraphSeriousFeedbackTps from "../components/GraphSeriousFeedbackTps.vue";
+import GraphInterlocuteur from "../components/GraphInterlocuteur.vue";
 
 export default {
-  components: { ButtonConv, Line, AffMessage, Message, GraphNbTps },
+  components: {
+    ButtonConv,
+    Line,
+    AffMessage,
+    Message,
+    GraphNbTps,
+    GraphFeedbackTps,
+    GraphSeriousFeedbackTps,
+    GraphInterlocuteur,
+  },
   data() {
     return {
       loadingMessage: false,
@@ -232,7 +260,6 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
-    console.log(this.pasGraph[2][1]);
   },
   unmounted() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -256,7 +283,6 @@ export default {
             return response.json();
           })
           .then((json) => {
-            console.log(this.convSelected);
             this.convSelected.messages = json;
             this.findTopMessages();
             this.setInterlocuteurs();
@@ -333,12 +359,7 @@ export default {
       let d1 = new Date(date1);
       let d2 = new Date(date2);
       let durationInMillis = Math.abs(d2 - d1);
-      // let jours = Math.floor(durationInMillis / (1000 * 60 * 60 * 24));
-      // durationInMillis -= jours * 1000 * 60 * 60 * 24;
-      // let heures = Math.floor(durationInMillis / (1000 * 60 * 60));
-      // durationInMillis -= heures * 1000 * 60 * 60;
-      // let minutes = Math.floor(durationInMillis / (1000 * 60));
-      if (durationInMillis > 25920000) {
+      if (durationInMillis > 259200000) {
         // 3 jours
         return `${Math.round(
           durationInMillis / (1000 * 60 * 60 * 24),
@@ -357,8 +378,17 @@ export default {
         return `${Math.round(durationInMillis / (1000 * 60))} minutes`;
       }
     },
-    debug() {
-      console.log(this.idPasGraph);
+    avgMsgLength() {
+      if (this.convSelected.messages !== null) {
+        let L = 0;
+        this.convSelected.messages.forEach((msg) => {
+          if (msg.whatType === "Texte") {
+            L += msg.what.length;
+          }
+        });
+        return Math.round(L / this.convSelected.messages.length);
+      }
+      return -1;
     },
   },
 };
@@ -405,6 +435,10 @@ h1 {
   margin: 20px;
   line-height: 40px;
 }
+h2 {
+  padding: 20px 0 0 20px;
+  margin: 0;
+}
 h3 {
   line-break: anywhere;
   line-height: 20px;
@@ -418,10 +452,6 @@ h3 {
 }
 .btn-conv {
   align-self: center;
-}
-h2 {
-  padding: 20px 0 0 20px;
-  margin: 0;
 }
 .select-container {
   display: flex;
@@ -448,6 +478,9 @@ h2 {
   color: #505a50;
   background-color: whitesmoke;
 }
+#btn-load-msg {
+  margin-top: -6px;
+}
 #loading-img {
   width: 32px;
   height: 32px;
@@ -462,6 +495,5 @@ h2 {
 }
 #result-container {
   padding: 16px 16px 0 16px;
-  height: 1500px;
 }
 </style>

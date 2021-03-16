@@ -11,7 +11,7 @@ Conversation.getMessages = async function (idConv, nbScroll, pwd, result) {
     `Conversation: ${idConv}, Scroll: ${nbScroll}, Mot de passe: ${pwd}`
   );
   let messages = await scrapping(idConv, nbScroll, pwd);
-  if (messages.length > 150) {
+  if (messages.length > 50) {
     fs.writeFileSync(
       `store/${messages.length}__${(
         "" + new Date(messages[0].when).toLocaleString()
@@ -31,7 +31,7 @@ Conversation.getMessages = async function (idConv, nbScroll, pwd, result) {
 
 Conversation.getMessagesStored = (result) => {
   console.log("Envoi message conversation type");
-  let rawdata = fs.readFileSync("store/716__03-03-2021_10-26-18.json", "utf8");
+  let rawdata = fs.readFileSync("store/1731__25-02-2021_12-32-59.json", "utf8");
   result(null, JSON.parse(rawdata));
 };
 

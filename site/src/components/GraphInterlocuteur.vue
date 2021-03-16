@@ -23,11 +23,6 @@ export default {
         },
         opacity: 0.9,
         type: "histogram",
-        // xbins: {
-        //   end: 1,
-        //   size: 1,
-        //   start: Math.min(...this.data),
-        // },
       };
 
       var layout = {

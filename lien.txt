@@ -3,3 +3,13 @@ topic analysis: https://monkeylearn.com/topic-analysis/
 text analysis: https://monkeylearn.com/text-analysis/
 
 deep: https://huggingface.co/models
+
+
+hard : https://www.kaggle.com/abhishek/text-extraction-using-bert-w-sentiment-inference/data
+
+lstm : https://www.kaggle.com/ngyptr/lstm-sentiment-analysis-keras/execution
+
+jeu de donnée tweet: https://www.kaggle.com/kazanova/sentiment140
+
+
+tensorflow: https://www.tensorflow.org/official_models/fine_tuning_bert

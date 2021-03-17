@@ -513,7 +513,7 @@
   {
     "who": "Grincheux",
     "when": "Mon Mar 15 2021 22:38:48 GMT+0100 (heure normale d’Europe centrale)",
-    "whatType": "Texte",
+    "whatType": "Non texte",
     "what": "GIPHY",
     "feedback": ["😠", "😢"]
   },
@@ -534,7 +534,7 @@
   {
     "who": "PLTess",
     "when": "Mon Mar 15 2021 22:39:48 GMT+0100 (heure normale d’Europe centrale)",
-    "whatType": "Texte",
+    "whatType": "Non texte",
     "what": "GIPHY",
     "feedback": ["😆"]
   },

@@ -22,6 +22,44 @@ export default {
   props: { messages: Object, pas: Number },
   computed: {
     data() {
+      const seriousEmoji = [
+        "🖐",
+        "✋",
+        "🤚",
+        "🤙",
+        "👈",
+        "👉",
+        "👆",
+        "👇",
+        "☝",
+        "👍",
+        "👎",
+        "👏",
+        "🙌",
+        "👐",
+        "💪",
+        "👀",
+        "😮",
+        "😯",
+        "🙋",
+        "🙋‍♂️",
+        "🙋‍♀️",
+        "🤷‍♀️",
+        "🤷‍♂️",
+        "🤷",
+        "🙅",
+        "🙅‍♂️",
+        "🙅‍♀️",
+        "🙆",
+        "🙆‍♂️",
+        "🙆‍♀️",
+        "💁",
+        "💁‍♂️",
+        "💁‍♀️",
+        "🤦‍♀️",
+        "🤦‍♂️",
+        "🤦",
+      ];
       let data = [];
       let now = new Date(Date.now());
       // comptage du nombre de réaction par tranche horraire
@@ -30,26 +68,7 @@ export default {
         let tag = false;
         if (msg.feedback.length > 0) {
           tag = msg.feedback.some((fdbk) => {
-            return [
-              "🖐",
-              "✋",
-              "🤚",
-              "🤙",
-              "👈",
-              "👉",
-              "👆",
-              "👇",
-              "☝",
-              "👍",
-              "👎",
-              "👏",
-              "🙌",
-              "👐",
-              "💪",
-              "👀",
-              "😮",
-              "😯",
-            ].includes(fdbk);
+            return seriousEmoji.includes(fdbk);
           });
         }
         let offset = 0;
@@ -75,7 +94,7 @@ export default {
   methods: {
     formatHours(h) {
       let minutes = ((h - Math.floor(h)) * 60) % 60;
-      return `${Math.floor(h)}h${minutes > 0 ? minutes : ""}`;
+      return `${Math.floor(h)}h${minutes > 0 ? minutes : ","}`;
     },
   },
 };

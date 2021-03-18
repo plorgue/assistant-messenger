@@ -2,7 +2,6 @@ const crypto = require("crypto");
 
 const algorithm = "aes-256-ctr";
 const iv = crypto.randomBytes(16);
-//const secretKey = "vOVH6sdmpNWjRRIqCc7rdxs01lwHzfr3";
 
 const encrypt = (text, secretKey) => {
   const cipher = crypto.createCipheriv(algorithm, secretKey, iv);

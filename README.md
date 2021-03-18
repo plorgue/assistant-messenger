@@ -11,7 +11,7 @@ Il faut plusieurs informations autour de chaque message:
 - les réactions,
 - le contenu.
 
-### 2 Traiter c'est messages et afficher des graphiques sympa
+### 2 Traiter ces messages et afficher des graphiques sympa
 
 Utilisation de plotly.js pour tracer l'évolution des différents critères au cours du temps.
 On peut visualiser:

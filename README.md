@@ -18,10 +18,10 @@ On peut visualiser:
 
 - la fréquence de réception messages,
 - la fréquence de réaction sous les messages
-- la fréquence de réaction typé "sérieuse"
-- qui parle le plus et dans quel proportion ?
+- la fréquence de réaction typée "sérieuse"
+- qui parle le plus et dans quelle proportion ?
 
-### 3 Analyse du contenu pour obtenir les mots clé / sujet de conversation
+### 3 Analyse du contenu - NLP
 
 🚧👷‍♂️ Travail en cours 👷‍♂️🚧
 
@@ -41,11 +41,12 @@ Je suis limite niveau planning, il faut pas que je traine sinon des imprévus po
 Objectifs 1 et 2 remplies (possible d'améliorer l'affichages des histogrammes en fusionnant certains)
 
 Phase 3: plusieurs choix
--->
+
 
 - NLP : Topic / Text analysis
 - Deep learning: surentrainement de BERT
 - Analyse des sentiments
+-->
 
 ## Captures du site au 16 mars
 

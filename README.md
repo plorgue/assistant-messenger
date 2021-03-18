@@ -84,6 +84,7 @@ Server:
 
 Pour tester le projet il faut:
 
+- m'envoyer un mail (paullorgue@gmail.com) pour avoir le mot de passe permettant de récupérer les messages de mon compte pour quelques heures(c'est pas mon mdp Facebook)
 - avoir node d'installé et un gestionnaire de paquet (j'utilise npm)
 - avoir un compte Facebook et des conversations de groupe sur Messenger (les conversations avec un seul autre interlocuteur ne sont pas compatible)
 - avoir installé Vue CLI : `npm install -g @vue/cli`
@@ -98,7 +99,7 @@ Procédure pour tester:
 
 ### Warning
 
-Ce projet est avant tout destiné à un usage personnel donc les url des conversations que je souhaite analyser seront/sont associé à un bouton sur le côté droit et un code PIN me suffit pour appeler l'api. ( pas besoin de rentrer le mot de passe de 36 caractères ni de coller le lien de la conv qui m'intéresse )
-J'ai rapidement ajouté ces fonctionnalités il se peut donc qu'elles ne fonctionnent pas totalement. (je devrais ajouter ces fonctionnalités demain normalement ^^)
+Ce projet est avant tout destiné à un usage personnel donc les url des conversations que je souhaite analyser sont associés à un bouton sur le côté droit et un code PIN me suffit pour appeler l'api. ( pas besoin de rentrer le mot de passe de 36 caractères ni de coller le lien de la conv qui m'intéresse )
+Je suis rapidement en train d'ajouter une fonctionnalités "visiteur" pour pouvoir analyser une conversation sur un autre compte Facebook (en entrant mot de passe FB et identifiant)
 
-De plus n'ayant pas testé avec d'autres comptes Facebook que le mien je ne suis pas sur que le scrapping de page Messenger de ces autres comptes fonctionne (si le compte n'est pas configuré en français, pas sur que ça marche par exemple)
+<!-- De plus n'ayant pas testé avec d'autres comptes Facebook que le mien je ne suis pas sur que le scrapping de page Messenger de ces autres comptes fonctionne (si le compte n'est pas configuré en français, pas sur que ça marche par exemple) -->

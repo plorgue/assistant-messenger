@@ -9,6 +9,9 @@ test-3.js
 ./*.json
 main.js
 clean.ps1
+*.pdf
+*.zip
+
 
 !package-lock.json
 !package.json

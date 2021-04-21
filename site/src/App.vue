@@ -5,24 +5,35 @@
 </template>
 
 <style>
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+h2 {
+  padding: 20px 0 0 20px;
+  margin: 0;
 }
-
-#nav {
-  padding: 30px;
+.box {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  padding-bottom: 30px;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
+.rounded-input {
+  height: fit-content;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 16px;
+  border-radius: 15px;
+  border: 1px solid #222;
+  outline: 0;
+  font-size: 14px;
+  color: #505a50;
+  background-color: whitesmoke;
+}
+.select-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
 </style>

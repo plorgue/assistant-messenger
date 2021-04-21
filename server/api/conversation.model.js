@@ -1,6 +1,5 @@
 const { scrapping } = require("../utils/scrapping.js");
 const fs = require("fs");
-const { raw } = require("express");
 
 const Conversation = function (conversation) {
   this.id = conversation.id;
@@ -11,7 +10,7 @@ Conversation.getMessages = async function (idConv, nbScroll, pwd, result) {
     `Conversation: ${idConv}, Scroll: ${nbScroll}, Mot de passe: ${pwd}`
   );
   let messages = await scrapping(idConv, nbScroll, pwd);
-  if (messages.length > 50) {
+  if (messages.length > 150) {
     fs.writeFileSync(
       `store/${messages.length}__${(
         "" + new Date(messages[0].when).toLocaleString()

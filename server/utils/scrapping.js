@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
 const { decrypt } = require("./crypto.js");
+const fs = require("fs");
 
 const getUrlByThreadId = (id) => {
   return "https://www.messenger.com/t/" + id;
@@ -31,7 +32,7 @@ exports.scrapping = async function (idConv, nbScroll, password) {
     try {
       await Promise.all([
         page.waitForNavigation({
-          timeout: 30000,
+          timeout: 25000,
           waitUntil: "networkidle0",
         }),
         page.click("#loginbutton"),
@@ -143,7 +144,7 @@ exports.scrapping = async function (idConv, nbScroll, password) {
           whatType: whatType,
           what: what,
           feedback: feedbacks,
-          // raw: node.innerText,
+          raw: node.innerText,
         });
       });
 
@@ -208,7 +209,13 @@ exports.scrapping = async function (idConv, nbScroll, password) {
           }
         });
 
-        if (what.length !== 0) {
+        if (
+          what.length !== 0 ||
+          what === "Tenor GIF Keyboard" ||
+          what === "GIPHY" ||
+          what.includes("http://") ||
+          what.includes("https://")
+        ) {
           whatType = "Texte";
         } else {
           whatType = "Non Texte";
@@ -270,6 +277,20 @@ exports.scrapping = async function (idConv, nbScroll, password) {
     await page
       .waitForTimeout(3000)
       .then(() => console.log(`(${i++}/${nbScroll}) Scroll in progress ...`));
+    if (i % 100 === 0 && i / 100 > 0) {
+      let msg = await retrieveMessages();
+      fs.writeFileSync(
+        `store/${new Date(Date.now())
+          .toLocaleString()
+          .replace(" à ", "_")
+          .replace("/", "-")
+          .replace("/", "-")
+          .replace(":", "-")
+          .replace(":", "-")}__${msg.length}.json`,
+        JSON.stringify(msg)
+      );
+      console.log(`${msg.length} messages saved`);
+    }
   }
 
   let messages = await retrieveMessages();
@@ -297,16 +318,32 @@ exports.scrapping = async function (idConv, nbScroll, password) {
         else if (when.includes("octobre")) whenFormat.setMonth(9);
         else if (when.includes("novembre")) whenFormat.setMonth(10);
         else if (when.includes("décembre")) whenFormat.setMonth(11);
-        whenFormat.setDate(when.slice(0, l - 6).match("[0-9].")[0]);
+        let da = when.match("[0-9].")[0];
+        if (da !== null) whenFormat.setDate(parseInt());
       }
       message.when = whenFormat.toString();
     } else {
-      console.log(
-        `${when} / heure: ${when.substring(
-          l - 5,
-          l - 3
-        )} / min: ${when.substring(l - 2)}`
-      );
+      if (when.includes("janvier")) whenFormat.setMonth(0);
+      else if (when.includes("février")) whenFormat.setMonth(1);
+      else if (when.includes("mars")) whenFormat.setMonth(2);
+      else if (when.includes("avril")) whenFormat.setMonth(3);
+      else if (when.includes("mai")) whenFormat.setMonth(4);
+      else if (when.includes("juin")) whenFormat.setMonth(5);
+      else if (when.includes("juillet")) whenFormat.setMonth(6);
+      else if (when.includes("aout")) whenFormat.setMonth(7);
+      else if (when.includes("septembre")) whenFormat.setMonth(8);
+      else if (when.includes("octobre")) whenFormat.setMonth(9);
+      else if (when.includes("novembre")) whenFormat.setMonth(10);
+      else if (when.includes("décembre")) whenFormat.setMonth(11);
+      let da = when.match("[0-9].")[0];
+      if (da !== null) whenFormat.setDate(parseInt());
+      message.when = whenFormat.toString();
+      // console.log(
+      //   `${when} / heure: ${when.substring(
+      //     l - 5,
+      //     l - 3
+      //   )} / min: ${when.substring(l - 2)}`
+      // );
     }
   });
 

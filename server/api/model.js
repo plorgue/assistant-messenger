@@ -45,7 +45,7 @@ Conversation.getGuessMessages = async function (
     `Conversation: ${idConv}, Scroll: ${nbScroll}, Compte visiteur: ${user}`
   );
   let messages = await scrapping(idConv, nbScroll, pwd, user);
-  console.log(`${messages.length} messages envoyés`);
+  console.log("Messages envoyés");
   result(null, JSON.stringify(messages));
   return;
 };

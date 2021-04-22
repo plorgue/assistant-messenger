@@ -33,7 +33,7 @@ exports.scrapping = async function (
     await page.type("#email", userId);
     await page.type(
       "#pass",
-      userId === "paullorgu@gmail.com"
+      userId === "paullorgue@gmail.com"
         ? decrypt(hash, password.repeat(32).slice(0, 32))
         : password
     );
@@ -220,15 +220,15 @@ exports.scrapping = async function (
         });
 
         if (
-          what.length !== 0 ||
+          what.length === 0 ||
           what === "Tenor GIF Keyboard" ||
           what === "GIPHY" ||
-          what.includes("http://") ||
-          what.includes("https://")
+          what.includes("http") ||
+          what.includes("Écouter 0 :00 / 0 :00")
         ) {
-          whatType = "Texte";
-        } else {
           whatType = "Non Texte";
+        } else {
+          whatType = "Texte";
         }
 
         messages.push({
@@ -305,6 +305,21 @@ exports.scrapping = async function (
 
   let messages = await retrieveMessages();
 
+  function getMonth(when) {
+    if (when.includes("janvier")) return 0;
+    else if (when.includes("février")) return 1;
+    else if (when.includes("mars")) return 2;
+    else if (when.includes("avril")) return 3;
+    else if (when.includes("mai")) return 4;
+    else if (when.includes("juin")) return 5;
+    else if (when.includes("juillet")) return 6;
+    else if (when.includes("aout")) return 7;
+    else if (when.includes("septembre")) return 8;
+    else if (when.includes("octobre")) return 9;
+    else if (when.includes("novembre")) return 10;
+    else if (when.includes("décembre")) return 11;
+  }
+
   messages.forEach((message) => {
     let when = message.when;
     let l = when.length;
@@ -316,45 +331,28 @@ exports.scrapping = async function (
       if (when.includes("Hier, à ")) {
         whenFormat.setDate(whenFormat.getDate() - 1);
       } else if (!when.includes("Aujourd’hui, à")) {
-        if (when.includes("janvier")) whenFormat.setMonth(0);
-        else if (when.includes("février")) whenFormat.setMonth(1);
-        else if (when.includes("mars")) whenFormat.setMonth(2);
-        else if (when.includes("avril")) whenFormat.setMonth(3);
-        else if (when.includes("mai")) whenFormat.setMonth(4);
-        else if (when.includes("juin")) whenFormat.setMonth(5);
-        else if (when.includes("juillet")) whenFormat.setMonth(6);
-        else if (when.includes("aout")) whenFormat.setMonth(7);
-        else if (when.includes("septembre")) whenFormat.setMonth(8);
-        else if (when.includes("octobre")) whenFormat.setMonth(9);
-        else if (when.includes("novembre")) whenFormat.setMonth(10);
-        else if (when.includes("décembre")) whenFormat.setMonth(11);
-        let da = when.match("[0-9].")[0];
-        if (da !== null) whenFormat.setDate(parseInt());
+        //mois
+        let month = getMonth(when);
+        if (month !== -1) whenFormat.setMonth(month);
+        //jour
+        let da = when.match("[0-9].");
+        if (da !== null) {
+          whenFormat.setDate(parseInt(da[0]));
+        }
       }
-      message.when = whenFormat.toString();
     } else {
-      if (when.includes("janvier")) whenFormat.setMonth(0);
-      else if (when.includes("février")) whenFormat.setMonth(1);
-      else if (when.includes("mars")) whenFormat.setMonth(2);
-      else if (when.includes("avril")) whenFormat.setMonth(3);
-      else if (when.includes("mai")) whenFormat.setMonth(4);
-      else if (when.includes("juin")) whenFormat.setMonth(5);
-      else if (when.includes("juillet")) whenFormat.setMonth(6);
-      else if (when.includes("aout")) whenFormat.setMonth(7);
-      else if (when.includes("septembre")) whenFormat.setMonth(8);
-      else if (when.includes("octobre")) whenFormat.setMonth(9);
-      else if (when.includes("novembre")) whenFormat.setMonth(10);
-      else if (when.includes("décembre")) whenFormat.setMonth(11);
-      let da = when.match("[0-9].")[0];
-      if (da !== null) whenFormat.setDate(parseInt());
-      message.when = whenFormat.toString();
-      // console.log(
-      //   `${when} / heure: ${when.substring(
-      //     l - 5,
-      //     l - 3
-      //   )} / min: ${when.substring(l - 2)}`
-      // );
+      //mois
+      let month = getMonth(when);
+      if (month !== -1) whenFormat.setMonth(month);
+
+      //jour
+      let da = when.match("[0-9].");
+      if (da !== null) {
+        whenFormat.setDate(parseInt(da[0]));
+      }
     }
+    whenFormat.setSeconds(Math.floor(Math.random() * 60));
+    message.when = whenFormat.toString();
   });
 
   console.log(`Nombre de message chargé: ${messages.length}`);

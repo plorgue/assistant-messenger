@@ -11,9 +11,10 @@ export default {
   props: { messages: Object },
   methods: {
     showGraph() {
+      var interlocuteurs = this.dataInterlocuteur();
       var y = [...Array(this.messages.length).keys()];
       var trace1 = {
-        y: this.dataInterlocuteur(),
+        y: interlocuteurs,
 
         name: "control",
         autobinx: false,
@@ -33,6 +34,15 @@ export default {
         xaxis: { title: "Nombre de messages" },
         plot_bgcolor: "#f5f5f5",
         paper_bgcolor: "#f5f5f5",
+        margin: {
+          l: Math.min(
+            Math.max(this.largestName(interlocuteurs) * 8.5, 60),
+            180
+          ),
+          r: 20,
+          b: 50,
+          pad: 10,
+        },
       };
       Plotly.newPlot("graphInterlocuteurs", [trace1], layout);
     },
@@ -42,6 +52,13 @@ export default {
         names.push(msg.who);
       });
       return names;
+    },
+    largestName(names) {
+      let max = 0;
+      names.forEach((name) => {
+        if (name.length > max) max = name.length;
+      });
+      return max;
     },
   },
   mounted() {

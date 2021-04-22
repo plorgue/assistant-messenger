@@ -65,7 +65,7 @@ export default {
     return {
       loadingMessage: false,
       password: "",
-      nbScroll: 1,
+      nbScroll: 3,
     };
   },
   computed: {
@@ -82,8 +82,8 @@ export default {
       ) {
         let convSelected = this.$store.state.convSelected;
         this.loadingMessage = true;
-        // let mainUrl = `http://localhost:3000/messages/${this.password}/${convSelected.id}/${this.nbScroll}`;
-        let mainUrl = "http://localhost:3000/messages/";
+        let mainUrl = `http://localhost:3000/messages/${this.password}/${convSelected.id}/${this.nbScroll}`;
+        //let mainUrl = "http://localhost:3000/messages/";
         let visiteurUrl = `http://localhost:3000/messages/${convSelected.password}/${convSelected.userId}/${convSelected.id}/${this.nbScroll}`;
         fetch(this.isVisiteurMode ? visiteurUrl : mainUrl, {
           method: "GET",

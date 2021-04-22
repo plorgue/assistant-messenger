@@ -10,12 +10,14 @@ import Plotly from "plotly.js-dist";
 export default {
   props: {
     id: String,
-    data: Array,
+    data1: Array,
+    data2: Array,
     pas: Number,
     title: String,
     xlabel: String,
     ylabel: String,
-    color: String,
+    color1: String,
+    color2: String,
   },
   mounted() {
     this.showGraph();
@@ -25,25 +27,49 @@ export default {
   },
   methods: {
     showGraph() {
-      var y = [...Array(this.data.length).keys()];
+      var y = [...Array(this.data1.length).keys()];
+      let traces = [];
       var trace1 = {
-        x: this.data,
+        x: this.data1,
         y: y,
-        name: "control",
+        name: "Total réaction",
         autobinx: false,
         histnorm: "count",
         marker: {
-          color: this.color,
+          color: this.color1,
         },
         opacity: 0.9,
         type: "histogram",
         xbins: {
           end: 1,
           size: 1,
-          start: Math.min(...this.data),
+          start: Math.min(...this.data1),
         },
         text: this.barHoverText(),
       };
+      traces.push(trace1);
+
+      if (this.data2 !== undefined) {
+        var trace2 = {
+          x: this.data2,
+          y: y,
+          name: 'Réactions "sérieuses"',
+          autobinx: false,
+          histnorm: "count",
+          marker: {
+            color: this.color2,
+          },
+          opacity: 1,
+          type: "histogram",
+          xbins: {
+            end: 1,
+            size: 1,
+            start: Math.min(...this.data2),
+          },
+          text: this.barHoverText(),
+        };
+        traces.push(trace2);
+      }
 
       var layout = {
         // bargap: 0.01,
@@ -54,13 +80,20 @@ export default {
         yaxis: { title: this.ylabel },
         plot_bgcolor: "#f5f5f5",
         paper_bgcolor: "#f5f5f5",
+        margin: {
+          l: 80,
+          r: 50,
+          b: 80,
+          pad: 15,
+        },
       };
-      Plotly.newPlot(this.id, [trace1], layout);
+
+      Plotly.newPlot(this.id, traces, layout);
     },
     barHoverText() {
       const jours = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
-      let min = Math.min(...this.data);
-      let max = Math.max(...this.data);
+      let min = Math.min(...this.data1);
+      let max = Math.max(...this.data1);
       let now = new Date(Date.now());
       let text = [];
 

@@ -62,10 +62,6 @@
         :messages="$store.state.convSelected.messages"
         :pas="pasGraph[idPasGraph][1]"
       />
-      <graph-serious-feedback-tps
-        :messages="$store.state.convSelected.messages"
-        :pas="pasGraph[idPasGraph][1]"
-      />
       <graph-interlocuteur :messages="$store.state.convSelected.messages" />
       <div>
         <br />

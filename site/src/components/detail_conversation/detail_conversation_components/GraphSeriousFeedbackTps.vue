@@ -2,14 +2,14 @@
   <div id="graph">
     <graph-temps
       id="graphSeriousFeedback"
-      :data="data"
+      :data1="data"
       :pas="pas"
       :title="`Fréquence de messages type sérieux`"
       :xlabel="
         `Temps depuis l'envoie: graduation*${pas}h (une barre = ${pas}h)`
       "
       :ylabel="`Nombre de réactions`"
-      color="rgba(46,139,87,1)"
+      color1="rgba(46,139,87,1)"
     />
   </div>
 </template>

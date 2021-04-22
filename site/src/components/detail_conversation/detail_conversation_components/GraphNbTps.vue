@@ -2,14 +2,14 @@
   <div id="graph">
     <graph-temps
       id="graphNbMsg"
-      :data="data"
+      :data1="data"
       :pas="pas"
       title="Fréquence de nouveaux messages"
       :xlabel="
         `Temps depuis l'envoie: graduation*${pas}h (une barre = ${pas}h)`
       "
       ylabel="Nombre de messages"
-      color="rgba(54, 168, 235, 1)"
+      color1="rgba(54, 168, 235, 1)"
     />
   </div>
 </template>

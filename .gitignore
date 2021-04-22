@@ -1,6 +1,7 @@
 node_modules/
 archiveHTML/
 archiveMESSAGES/
+server/store/old/
 test-1.js
 test-2.js
 test-3.js

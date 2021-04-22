@@ -2,14 +2,16 @@
   <div id="graph">
     <graph-temps
       id="graphFeedback"
-      :data="data"
+      :data1="data1"
+      :data2="data2"
       :pas="pas"
       :title="`Fréquence de réaction`"
       :xlabel="
         `Temps depuis l'envoie: graduation*${pas}h (une barre = ${pas}h)`
       "
       :ylabel="`Nombre de réactions`"
-      color="rgba(220,20,60,1)"
+      color1="rgba(46,139,87,1)"
+      color2="rgb(255, 116, 116)"
     />
   </div>
 </template>
@@ -21,28 +23,69 @@ export default {
   components: { GraphTemps },
   props: { messages: Object, pas: Number },
   computed: {
-    data() {
+    data1() {
       let data = [];
-      let now = new Date(Date.now());
       // comptage du nombre de réaction par tranche horraire
       this.messages.forEach((msg) => {
-        let date = new Date(msg.when);
         let nbFeedbacks = msg.feedback.length;
-        let offset = 0;
-        if (this.pas > 1) {
-          offset =
-            (((now.getHours() % this.pas) * 60 + now.getMinutes()) * 60 +
-              now.getSeconds()) *
-            1000;
-        } else {
-          offset =
-            ((now.getMinutes() % (this.pas * 60)) * 60 + now.getSeconds()) *
-            1000;
-        }
-        let x = Math.trunc(
-          (date - now + offset) / (1000 * 60 * 60 * this.pas) - 1
-        );
+        let x = this.tempsEnPasdeDuréeDepuisMtn(new Date(msg.when));
         data.push(...new Array(nbFeedbacks).fill(x, 0, nbFeedbacks));
+      });
+
+      return data;
+    },
+    data2() {
+      const seriousEmoji = [
+        "🖐",
+        "✋",
+        "🤚",
+        "🤙",
+        "👈",
+        "👉",
+        "👆",
+        "👇",
+        "☝",
+        "👍",
+        "👎",
+        "👏",
+        "🙌",
+        "👐",
+        "💪",
+        "👀",
+        "😮",
+        "😯",
+        "🙋",
+        "🙋‍♂️",
+        "🙋‍♀️",
+        "🤷‍♀️",
+        "🤷‍♂️",
+        "🤷",
+        "🙅",
+        "🙅‍♂️",
+        "🙅‍♀️",
+        "🙆",
+        "🙆‍♂️",
+        "🙆‍♀️",
+        "💁",
+        "💁‍♂️",
+        "💁‍♀️",
+        "🤦‍♀️",
+        "🤦‍♂️",
+        "🤦",
+      ];
+      let data = [];
+      // comptage du nombre de réaction par tranche horraire
+      this.messages.forEach((msg) => {
+        let tag = false;
+        if (msg.feedback.length > 0) {
+          tag = msg.feedback.some((fdbk) => {
+            return seriousEmoji.includes(fdbk);
+          });
+        }
+        if (tag) {
+          let x = this.tempsEnPasdeDuréeDepuisMtn(new Date(msg.when));
+          data.push(x);
+        }
       });
 
       return data;
@@ -52,6 +95,22 @@ export default {
     formatHours(h) {
       let minutes = ((h - Math.floor(h)) * 60) % 60;
       return `${Math.floor(h)}h${minutes > 0 ? minutes : ""}`;
+    },
+    tempsEnPasdeDuréeDepuisMtn(date) {
+      let now = new Date(Date.now());
+      let offset = 0;
+      if (this.pas > 1) {
+        offset =
+          (((now.getHours() % this.pas) * 60 + now.getMinutes()) * 60 +
+            now.getSeconds()) *
+          1000;
+      } else {
+        offset =
+          ((now.getMinutes() % (this.pas * 60)) * 60 + now.getSeconds()) * 1000;
+      }
+      return Math.trunc(
+        (date - now + offset) / (1000 * 60 * 60 * this.pas) - 1
+      );
     },
   },
 };

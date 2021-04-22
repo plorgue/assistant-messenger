@@ -62,15 +62,4 @@ h3 {
   flex-direction: row;
   justify-content: space-around;
 }
-/* #scroll-selector {
-  height: fit-content;
-  font-weight: bold;
-}
-#scroll-selector:hover {
-  cursor: pointer;
-  background-color: #eeeeee;
-}
-#btn-load-msg {
-  margin-top: -6px;
-} */
 </style>

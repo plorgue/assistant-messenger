@@ -30,25 +30,18 @@
         </select>
       </div>
       <input
+        v-if="!isVisiteurMode"
         v-model="password"
         class="rounded-input"
         placeholder="Mot de passe"
         type="password"
-        @keypress.enter="
-          () => {
-            if (!loadingMessage) loadMessages();
-          }
-        "
+        @keypress.enter="loadMessages"
       />
-      <button-conv
+      <button-rounded
         id="btn-load-msg"
         content="Charger derniers messages"
         size="s"
-        @click.native="
-          () => {
-            if (!loadingMessage) loadMessages();
-          }
-        "
+        @click.native="loadMessages"
       />
       <img
         id="loading-img"
@@ -60,10 +53,10 @@
 </template>
 
 <script>
-import ButtonConv from "../ButtonConv.vue";
+import ButtonRounded from "../ButtonRounded.vue";
 export default {
   components: {
-    ButtonConv,
+    ButtonRounded,
   },
   props: {
     name: String,
@@ -75,20 +68,29 @@ export default {
       nbScroll: 1,
     };
   },
+  computed: {
+    isVisiteurMode: function() {
+      return this.$store.state.convSelected.name === "Compte visiteur";
+    },
+  },
   methods: {
     loadMessages() {
-      if (this.password !== "") {
+      if (
+        !this.loadingMessage &&
+        (this.password !== "" ||
+          this.$store.state.convSelected.name === "Compte visiteur")
+      ) {
+        let convSelected = this.$store.state.convSelected;
         this.loadingMessage = true;
-        fetch(
-          //`http://localhost:3000/messages/${this.password}/${this.$store.state.convSelected.id}/${this.nbScroll}`,
-          "http://localhost:3000/messages/",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json; charset=UTF-8",
-            },
-          }
-        )
+        // let mainUrl = `http://localhost:3000/messages/${this.password}/${convSelected.id}/${this.nbScroll}`;
+        let mainUrl = "http://localhost:3000/messages/";
+        let visiteurUrl = `http://localhost:3000/messages/${convSelected.password}/${convSelected.userId}/${convSelected.id}/${this.nbScroll}`;
+        fetch(this.isVisiteurMode ? visiteurUrl : mainUrl, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json; charset=UTF-8",
+          },
+        })
           .then((response) => {
             this.loadingMessage = false;
             return response.json();

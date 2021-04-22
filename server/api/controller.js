@@ -1,4 +1,4 @@
-const Conversation = require("./conversation.model.js");
+const Conversation = require("./model.js");
 
 exports.getMessages = (req, res) => {
   Conversation.getMessages(
@@ -24,4 +24,22 @@ exports.getMessagesStored = (req, res) => {
       });
     else res.send(messages);
   });
+};
+
+exports.getGuessMessages = (req, res) => {
+  Conversation.getGuessMessages(
+    req.params.conv,
+    req.params.scroll,
+    req.params.pwd,
+    req.params.user,
+    (err, messages) => {
+      if (err)
+        res.status(500).send({
+          messages:
+            err.message ||
+            "error lors de la récupération des messages sur le compte saisi",
+        });
+      else res.send(messages);
+    }
+  );
 };

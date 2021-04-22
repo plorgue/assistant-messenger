@@ -3,7 +3,9 @@
     <label class="switch">
       <input type="checkbox" @change="checkChange" v-model="isCheck" />
       <span class="slider round"></span>
-      <span class="title">{{ title }}</span>
+      <span :class="isCheck ? 'title' : 'title title-unchecked'">{{
+        title
+      }}</span>
     </label>
   </div>
 </template>
@@ -13,15 +15,15 @@ export default {
   props: {
     title: String,
   },
-  methods: {
-    checkChange() {
-      this.$emit("checked", isCheck);
-    },
-  },
   data() {
     return {
       isCheck: false,
     };
+  },
+  methods: {
+    checkChange() {
+      this.$emit("checked", this.isCheck);
+    },
   },
 };
 </script>
@@ -79,5 +81,9 @@ export default {
 .title {
   margin-left: 60px;
   font-size: 0.95rem;
+  color: inherit;
+}
+.title-unchecked {
+  color: #aaa;
 }
 </style>

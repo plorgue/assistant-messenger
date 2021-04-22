@@ -23,7 +23,7 @@ Conversation.getMessages = async function (idConv, nbScroll, pwd, result) {
       JSON.stringify(messages)
     );
   }
-  console.log("Messages envoyés");
+  console.log(`${messages.length} messages envoyés`);
   result(null, JSON.stringify(messages));
   return;
 };
@@ -32,6 +32,22 @@ Conversation.getMessagesStored = (result) => {
   console.log("Envoi message conversation type");
   let rawdata = fs.readFileSync("store/1731__25-02-2021_12-32-59.json", "utf8");
   result(null, JSON.parse(rawdata));
+};
+
+Conversation.getGuessMessages = async function (
+  idConv,
+  nbScroll,
+  pwd,
+  user,
+  result
+) {
+  console.log(
+    `Conversation: ${idConv}, Scroll: ${nbScroll}, Compte visiteur: ${user}`
+  );
+  let messages = await scrapping(idConv, nbScroll, pwd, user);
+  console.log(`${messages.length} messages envoyés`);
+  result(null, JSON.stringify(messages));
+  return;
 };
 
 module.exports = Conversation;

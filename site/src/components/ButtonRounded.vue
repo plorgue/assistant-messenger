@@ -27,7 +27,7 @@ button {
   font-weight: bold;
   border: 2.5px solid #333;
   border-radius: 15px;
-  padding: 15px 10px 15px 10px;
+  padding: 15px 10px;
   width: 160px;
   color: #505a50;
   background-color: whitesmoke;
@@ -53,5 +53,7 @@ button.small {
   border-width: 1px;
   font-size: 14px;
   width: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 </style>

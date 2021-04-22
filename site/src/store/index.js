@@ -24,6 +24,13 @@ export default createStore({
         id: "3363123163702478",
         messages: [],
       },
+      {
+        name: "Compte visiteur",
+        id: "",
+        password: "",
+        userId: "",
+        messages: [],
+      },
     ],
   },
   mutations: {
@@ -37,6 +44,13 @@ export default createStore({
       state.convSelected.interlocuteurs = interlocuteurs;
     },
   },
-  actions: {},
+  actions: {
+    visiteurConvSelected({ state, commit }, params) {
+      state.conversations[4].userId = params[0];
+      state.conversations[4].password = params[1];
+      state.conversations[4].id = params[2];
+      commit("newConvSelected", state.conversations[4]);
+    },
+  },
   modules: {},
 });

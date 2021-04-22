@@ -11,7 +11,12 @@ const hash = {
   content: "19cd27ffbcc9049995f3c6866495f25b1e572b7a",
 };
 
-exports.scrapping = async function (idConv, nbScroll, password) {
+exports.scrapping = async function (
+  idConv,
+  nbScroll,
+  password,
+  userId = "paullorgue@gmail.com"
+) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -25,8 +30,13 @@ exports.scrapping = async function (idConv, nbScroll, password) {
 
   const filledFields = async () => {
     // remplir les champs de connexion et submit le form
-    await page.type("#email", "paullorgue@gmail.com");
-    await page.type("#pass", decrypt(hash, password.repeat(32).slice(0, 32)));
+    await page.type("#email", userId);
+    await page.type(
+      "#pass",
+      userId === "paullorgu@gmail.com"
+        ? decrypt(hash, password.repeat(32).slice(0, 32))
+        : password
+    );
     // await page.screenshot({ path: "filling_fields.png" });
     console.log("Completed fields");
     try {

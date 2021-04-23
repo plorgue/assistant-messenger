@@ -45,11 +45,14 @@ export default {
           size: 1,
           start: Math.min(...this.data1),
         },
-        text: this.barHoverText(),
+        text: this.barHoverText(this.data1),
       };
       traces.push(trace1);
 
       if (this.data2 !== undefined) {
+        if (!this.data2.includes(Math.max(...this.data1))) {
+          this.data2.push(Math.max(...this.data1));
+        }
         var trace2 = {
           x: this.data2,
           y: y,
@@ -66,7 +69,7 @@ export default {
             size: 1,
             start: Math.min(...this.data2),
           },
-          text: this.barHoverText(),
+          text: this.barHoverText(this.data2),
         };
         traces.push(trace2);
       }
@@ -90,10 +93,10 @@ export default {
 
       Plotly.newPlot(this.id, traces, layout);
     },
-    barHoverText() {
+    barHoverText(data) {
       const jours = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
-      let min = Math.min(...this.data1);
-      let max = Math.max(...this.data1);
+      let min = Math.min(...data);
+      let max = Math.max(...data);
       let now = new Date(Date.now());
       let text = [];
 

@@ -10,9 +10,10 @@ test-3.js
 ./*.json
 main.js
 clean.ps1
-*.pdf
+Rapport d'avancement.pdf
 *.zip
-
+lien.txt
+clean.ps1
 
 !package-lock.json
 !package.json

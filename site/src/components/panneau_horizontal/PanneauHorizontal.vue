@@ -76,14 +76,17 @@ export default {
   methods: {
     loadMessages() {
       if (
-        !this.loadingMessage &&
-        (this.password !== "" ||
-          this.$store.state.convSelected.name === "Compte visiteur")
+        !this.loadingMessage
+        // && (this.password !== "" ||
+        // this.$store.state.convSelected.name === "Compte visiteur"
+        // )
       ) {
         let convSelected = this.$store.state.convSelected;
         this.loadingMessage = true;
-        let mainUrl = `http://localhost:3000/messages/${this.password}/${convSelected.id}/${this.nbScroll}`;
-        //let mainUrl = "http://localhost:3000/messages/";
+        let mainUrl =
+          this.password !== ""
+            ? `http://localhost:3000/messages/${this.password}/${convSelected.id}/${this.nbScroll}`
+            : `http://localhost:3000/messages/${convSelected.id}`;
         let visiteurUrl = `http://localhost:3000/messages/${convSelected.password}/${convSelected.userId}/${convSelected.id}/${this.nbScroll}`;
         fetch(this.isVisiteurMode ? visiteurUrl : mainUrl, {
           method: "GET",
@@ -96,13 +99,16 @@ export default {
             return response.json();
           })
           .then((json) => {
-            this.$store.commit("newMessagesConvSelected", json);
-            this.$store.commit("newInterlocuteurs", this.setInterlocuteurs());
+            let conv = json[0];
+            conv.interlocuteurs = this.setInterlocuteurs(conv);
+            this.$store.dispatch("newMessagesLoaded", conv);
+            // this.$store.commit("newMessagesConvSelected", json);
+            // this.$store.commit("newInterlocuteurs", this.setInterlocuteurs());
           })
           .catch((err) => console.log(err));
       }
     },
-    setInterlocuteurs() {
+    setInterlocuteurs(conv) {
       const colors = [
         "#2E8B57", //seagreen
         "#DAA520", //goldenrod
@@ -124,7 +130,7 @@ export default {
         "#CD5C5C", //indianred
       ];
       let interlocuteurs = new Map();
-      this.$store.state.convSelected.messages.forEach((message) => {
+      conv.messages.forEach((message) => {
         if (!interlocuteurs.has(message.who)) {
           interlocuteurs.set(
             message.who,

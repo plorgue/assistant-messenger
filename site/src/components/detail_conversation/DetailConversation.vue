@@ -1,9 +1,6 @@
 <template>
-  <div id="conv-container" class="flex-horizontal">
-    <div
-      id="result-container"
-      v-if="$store.state.convSelected.messages.length > 0"
-    >
+  <div id="conv-container" class="flex-horizontal" v-if="isConvSelected()">
+    <div id="result-container">
       <!-- Affichage de chiffres clé sur les messages récupérés -->
       <h3>
         Chiffres
@@ -11,12 +8,10 @@
       </h3>
       <p>
         {{
-          `${
-            $store.state.convSelected.messages.length
-          } messages envoyé depuis ${formatDate(
-            $store.state.convSelected.messages[0].when
+          `${convSelected.messages.length} messages envoyé depuis ${formatDate(
+            convSelected.messages[0].when
           )} soit en ${formatDuration(
-            $store.state.convSelected.messages[0].when,
+            convSelected.messages[0].when,
             Date.now()
           )}`
         }}<br />
@@ -55,28 +50,28 @@
         </select>
       </div>
       <graph-nb-tps
-        :messages="$store.state.convSelected.messages"
+        :messages="convSelected.messages"
         :pas="pasGraph[idPasGraph][1]"
       />
       <graph-feedback-tps
-        :messages="$store.state.convSelected.messages"
+        :messages="convSelected.messages"
         :pas="pasGraph[idPasGraph][1]"
       />
-      <graph-interlocuteur :messages="$store.state.convSelected.messages" />
+      <!-- <graph-serious-feedback-tps
+        :messages="$store.state.convSelected.messages"
+        :pas="pasGraph[idPasGraph][1]"
+      /> -->
+      <graph-interlocuteur :messages="convSelected.messages" />
       <div>
         <br />
       </div>
     </div>
     <!-- Liste message sous forme de conv -->
-    <div
-      id="messages-container"
-      class="box"
-      v-if="$store.state.convSelected.messages.length > 0"
-    >
+    <div id="messages-container" class="box">
       <message
-        v-for="msg in $store.state.convSelected.messages"
+        v-for="msg in convSelected.messages"
         v-bind:key="msg.when"
-        :color="$store.state.convSelected.interlocuteurs.get(msg.who)"
+        :color="convSelected.interlocuteurs.get(msg.who)"
         :auteur="msg.who"
         :date="formatDate(msg.when)"
         :contenu="msg.what"
@@ -105,7 +100,8 @@ export default {
   },
   data() {
     return {
-      idPasGraph: 1,
+      convSelected: undefined,
+      idPasGraph: 2,
       pasGraph: [
         ["jour", 24],
         ["demi-journée", 12],
@@ -124,6 +120,13 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
+    isConvSelected() {
+      if (this.$store.state.convSelected.messages.length > 0) {
+        this.convSelected = this.$store.state.convSelected;
+        return true;
+      }
+      return false;
+    },
     handleScroll(event) {
       let el = document.getElementById("messages-container");
       if (el !== null) {
@@ -158,14 +161,14 @@ export default {
       }
     },
     avgMsgLength() {
-      if (this.$store.state.convSelected.messages !== null) {
+      if (this.convSelected.messages !== null) {
         let L = 0;
-        this.$store.state.convSelected.messages.forEach((msg) => {
+        this.convSelected.messages.forEach((msg) => {
           if (msg.whatType === "Texte") {
             L += msg.what.length;
           }
         });
-        return Math.round(L / this.$store.state.convSelected.messages.length);
+        return Math.round(L / this.convSelected.messages.length);
       }
       return -1;
     },
@@ -193,8 +196,14 @@ export default {
       let topPouce = 0;
       let topFeedback = 0;
       let topLength = 0;
-      let msgTopPouce, msgTopFeedback, msgTopLength;
-      this.$store.state.convSelected.messages.forEach((message) => {
+      let msgTopPouce = {
+        who: "----",
+        when: "----",
+        what: "Aucune message n'a reçu de 👍",
+        whatType: "Texte",
+      };
+      let msgTopFeedback, msgTopLength;
+      this.convSelected.messages.forEach((message) => {
         if (message.whatType !== "Non Texte") {
           if (message.what.length > topLength) {
             topLength = message.what.length;
@@ -222,7 +231,6 @@ export default {
       return topMessage;
     },
   },
-  computed: {},
 };
 </script>
 

@@ -6,6 +6,6 @@ module.exports = (app) => {
   });
 
   app.get("/messages/:pwd/:conv/:scroll", controller.getMessages);
-  app.get("/messages/", controller.getMessagesStored);
+  app.get("/messages/:conv", controller.getMessagesStored);
   app.get("/messages/:pwd/:user/:conv/:scroll", controller.getGuessMessages);
 };

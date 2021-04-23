@@ -32,7 +32,7 @@
       <input
         class="rounded-input"
         v-model="passwordVisiteur"
-        placeholder="Mot de passe Facebbok"
+        placeholder="Mot de passe Facebook"
         type="password"
       />
       <input

@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-let path = "./20-04-2021_02-04-26__8225.json";
+let path = "./bde_conv_5132";
 
 // let e = {
 //   who: "Moi",
@@ -19,26 +19,13 @@ let path = "./20-04-2021_02-04-26__8225.json";
 // };
 // console.log(new Date(formatWhen(e)).getFullYear());
 
-let data = JSON.parse(fs.readFileSync(path, "utf8"));
+let data = JSON.parse(fs.readFileSync(path + ".json", "utf8"));
 console.log(data.length);
 let data_r = [];
 let a = 0;
 let b = 0;
 let c = 0;
 data.forEach((element) => {
-  if (!isValid(element.when)) {
-    let tmp = formatWhen(element);
-    if (isValid(tmp)) {
-      element.when = tmp;
-      data_r.push(element);
-      b++;
-    } else {
-      console.log(element);
-      a++;
-    }
-  } else {
-    data_r.push(element);
-  }
   if (
     element.what.includes("http") ||
     element.what.includes("GIPHY") ||
@@ -48,6 +35,18 @@ data.forEach((element) => {
     element.whatType = "Non Texte";
     c++;
   }
+  if (!isValid(element.when)) {
+    let tmp = formatWhen(element);
+    if (isValid(tmp)) {
+      data_r.push(randomSecond(element));
+      b++;
+    } else {
+      console.log(element);
+      a++;
+    }
+  } else {
+    data_r.push(randomSecond(element));
+  }
 });
 console.log(
   `Messages formattés: ${b}, messages toujours invalide: ${a}, autre formatage: ${c}`
@@ -56,8 +55,18 @@ if (a) {
   console.log(`${a} messages non valides`);
   console.log(`Avant: ${data.length}. Après: ${data_r.length}`);
 } else {
-  fs.writeFileSync(path + "_r", JSON.stringify(data_r));
+  fs.writeFileSync(path + "_r.json", JSON.stringify(data_r));
   console.log("Changements sauvés");
+}
+
+function randomSecond(element) {
+  let d = new Date(element.when);
+  console.log("---");
+  console.log(d);
+  d.setSeconds(Math.floor(Math.random() * 60)).toString();
+  console.log(d);
+  element.when = d.toString();
+  return element;
 }
 
 function isValid(whenStr) {

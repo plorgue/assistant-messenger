@@ -72,6 +72,7 @@ export default {
         "🤦‍♀️",
         "🤦‍♂️",
         "🤦",
+        "❤",
       ];
       let data = [];
       // comptage du nombre de réaction par tranche horraire

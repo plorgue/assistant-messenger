@@ -1,4 +1,4 @@
-import { createStore } from "vuex";
+import { createStore, mapState } from "vuex";
 
 export default createStore({
   state: {
@@ -40,8 +40,12 @@ export default createStore({
     newMessagesConvSelected(state, messages) {
       state.convSelected.messages = messages;
     },
-    newInterlocuteurs(state, interlocuteurs) {
-      state.convSelected.interlocuteurs = interlocuteurs;
+    // newInterlocuteurs(state, interlocuteurs) {
+    //   state.convSelected.interlocuteurs = interlocuteurs;
+    // },
+    newMessagesConv(state, [index, conv]) {
+      state.conversations[index].messages = conv.messages;
+      state.conversations[index].interlocuteurs = conv.interlocuteurs;
     },
   },
   actions: {
@@ -50,6 +54,17 @@ export default createStore({
       state.conversations[4].password = params[1];
       state.conversations[4].id = params[2];
       commit("newConvSelected", state.conversations[4]);
+    },
+    newMessagesLoaded({ state, commit }, params) {
+      let index;
+      let i = 0;
+      state.conversations.forEach((conv) => {
+        if (conv.id === params.idConv) {
+          index = i;
+        }
+        i++;
+      });
+      commit("newMessagesConv", [index, params]);
     },
   },
   modules: {},

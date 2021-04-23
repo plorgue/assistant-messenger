@@ -1,0 +1,1418 @@
+[
+  {
+    "who": "Al",
+    "when": "Sat Apr 10 2021 10:44:41 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ah oui je parlais du moodle pardon",
+    "feedback": [],
+    "raw": "Al\nAl, date d’envoi : le 10 avril à 10:44\nAh oui je parlais du moodle pardon"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Sat Apr 10 2021 11:10:23 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": ["👍", "😮"],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 10 avril à 11:10\n3"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Sat Apr 10 2021 15:34:42 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "attendez le rapport de véro c'est pour aujourd’hui ?",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 10 avril à 15:34\nattendez le rapport de véro c'est pour aujourd’hui ?"
+  },
+  {
+    "who": "Olivier",
+    "when": "Sat Apr 10 2021 15:35:04 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Allo ?",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 10 avril à 15:35\nAllo ?"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Sat Apr 10 2021 15:35:13 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Quel rapport ?",
+    "feedback": [],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 10 avril à 15:35\nQuel rapport ?"
+  },
+  {
+    "who": "Olivier",
+    "when": "Sat Apr 10 2021 15:36:27 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C’est pas le 23 ?",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 10 avril à 15:36\nC’est pas le 23 ?"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Sat Apr 10 2021 15:36:33 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Le truc ou on doit annalyser un produit du quotidien\nJe croyais que si",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 10 avril à 15:36\nLe truc ou on doit annalyser un produit du quotidien\nFanny-T, date d’envoi : le 10 avril à 15:36\nJe croyais que si"
+  },
+  {
+    "who": "Olivier",
+    "when": "Sat Apr 10 2021 15:36:15 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "D’où tu sors le aujourd’hui alors ?",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 10 avril à 15:36\nD’où tu sors le aujourd’hui alors ?"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Sat Apr 10 2021 15:36:38 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ah mais en fait sur son diapo c'est marqué 10 avril 2020\nDonc ça doit juste pas être à jour",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 10 avril à 15:36\nAh mais en fait sur son diapo c'est marqué 10 avril 2020\nFanny-T, date d’envoi : le 10 avril à 15:36\nDonc ça doit juste pas être à jour"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Sat Apr 10 2021 15:41:53 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "la video de JMA sur l'entreprise ca doit durer cb de tes ?\ntps",
+    "feedback": ["🤷‍♀️"],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 10 avril à 15:41\nla video de JMA sur l'entreprise ca doit durer cb de tes ?\n1\nBig Jar, date d’envoi : le 10 avril à 15:41\ntps"
+  },
+  {
+    "who": "Al",
+    "when": "Sat Apr 10 2021 15:44:07 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Faut faire une vidéo et pas un rapport ?",
+    "feedback": ["👍"],
+    "raw": "Al\nAl, date d’envoi : le 10 avril à 15:44\nFaut faire une vidéo et pas un rapport ?\n1"
+  },
+  {
+    "who": "Rhopieds",
+    "when": "Sat Apr 10 2021 15:49:01 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Tqt c’est bien le 23, juste elle a pas changé son diapo",
+    "feedback": ["❤"],
+    "raw": "Rhopieds\nRhopieds, date d’envoi : le 10 avril à 15:49\nTqt c’est bien le 23, juste elle a pas changé son diapo\n2"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Sat Apr 10 2021 16:04:03 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Si vous voulez jouer à overcooked avec Fafa et moi vous êtes les bienvenus ",
+    "feedback": ["❤"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 10 avril à 16:04\nSi vous voulez jouer à overcooked avec Fafa et moi vous êtes les bienvenus \n1"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Sat Apr 10 2021 16:35:47 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Est ce qu’on a un document qui dit qu’on valide notre 1ère année d’école ?",
+    "feedback": [],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 10 avril à 16:35\nEst ce qu’on a un document qui dit qu’on valide notre 1ère année d’école ?"
+  },
+  {
+    "who": "Al",
+    "when": "Sat Apr 10 2021 16:42:42 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je sais pas trop\nMais t’as un certificat de scolarité normalement",
+    "feedback": ["👍"],
+    "raw": "Al\nAl, date d’envoi : le 10 avril à 16:42\nJe sais pas trop\nAl, date d’envoi : le 10 avril à 16:42\nMais t’as un certificat de scolarité normalement\n1"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Sat Apr 10 2021 17:40:39 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ca marche merci",
+    "feedback": [],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 10 avril à 17:40\nCa marche merci"
+  },
+  {
+    "who": "Beyoncey",
+    "when": "Sat Apr 10 2021 17:51:17 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Bah tes relevés de note des deux semestres sinon",
+    "feedback": ["👍"],
+    "raw": "Beyoncey\nBeyoncey, date d’envoi : le 10 avril à 17:51\nBah tes relevés de note des deux semestres sinon\n2"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Sat Apr 10 2021 20:40:18 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Par contre, on en parle que le générique de Wanda vision il est aussi long que celui d'inspecteur coco ?",
+    "feedback": ["😆"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 10 avril à 20:40\nPar contre, on en parle que le générique de Wanda vision il est aussi long que celui d'inspecteur coco ?\n4"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Sun Apr 11 2021 08:34:35 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Vous savez jusqu’à quel âge ça crie de façon random au milieu de la nuit un bébé ?",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 11 avril à 08:34\nVous savez jusqu’à quel âge ça crie de façon random au milieu de la nuit un bébé ?"
+  },
+  {
+    "who": "Beyoncey",
+    "when": "Sun Apr 11 2021 10:00:52 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Certeins c'est 4 mois certains c'est 3 ans bon chance mdr",
+    "feedback": [],
+    "raw": "Beyoncey\nBeyoncey, date d’envoi : le 11 avril à 10:00\nCerteins c'est 4 mois certains c'est 3 ans bon chance mdr"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Sun Apr 11 2021 10:01:28 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Oh misère",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 11 avril à 10:01\nOh misère"
+  },
+  {
+    "who": "Olivier",
+    "when": "Sun Apr 11 2021 11:16:36 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "J’ai regardé toutes les vidéos du confessionnal\nVous êtes les boss",
+    "feedback": ["😮", "❤", "😂", "❤"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 11 avril à 11:16\nJ’ai regardé toutes les vidéos du confessionnal\n5\nOlivier, date d’envoi : le 11 avril à 11:16\nVous êtes les boss\n2"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Sun Apr 11 2021 11:33:07 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Y’a cb de vidéos de Lea ?",
+    "feedback": [],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 11 avril à 11:33\nY’a cb de vidéos de Lea ?"
+  },
+  {
+    "who": "Olivier",
+    "when": "Sun Apr 11 2021 11:34:51 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Toute seule ? Une",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 11 avril à 11:34\nToute seule ? Une"
+  },
+  {
+    "who": "Leragourdin",
+    "when": "Sun Apr 11 2021 12:12:44 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "Tenor GIF Keyboard",
+    "feedback": [],
+    "raw": "Leragourdin\nLeragourdin, date d’envoi : le 11 avril à 12:12\nTenor GIF Keyboard"
+  },
+  {
+    "who": "Olivier",
+    "when": "Sun Apr 11 2021 12:12:23 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C’est la meilleure vidéo",
+    "feedback": ["❤"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 11 avril à 12:12\nC’est la meilleure vidéo\n1"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Sun Apr 11 2021 12:37:14 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "Tenor GIF Keyboard",
+    "feedback": ["😆"],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 11 avril à 12:37\nTenor GIF Keyboard\n3"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Sun Apr 11 2021 13:26:12 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Pressée de voir ces vidéos aussi ",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 11 avril à 13:26\nPressée de voir ces vidéos aussi "
+  },
+  {
+    "who": "Olivier",
+    "when": "Sun Apr 11 2021 13:27:19 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Soit pas trop pressée",
+    "feedback": ["😢", "😂"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 11 avril à 13:27\nSoit pas trop pressée\n2"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Sun Apr 11 2021 13:47:44 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Pq tu les mets pas en vrac sur le drive ?",
+    "feedback": [],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 11 avril à 13:47\nPq tu les mets pas en vrac sur le drive ?"
+  },
+  {
+    "who": "Olivier",
+    "when": "Sun Apr 11 2021 14:10:06 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Parce que c’est beaucoup moins drôle si vous voyez les vidéos avant le montage",
+    "feedback": ["👍"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 11 avril à 14:10\nParce que c’est beaucoup moins drôle si vous voyez les vidéos avant le montage\n4"
+  },
+  {
+    "who": "Olivier",
+    "when": "Sun Apr 11 2021 19:04:41 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Qui veut venir au Sabaidi demain midi avec Fafa et moi ?",
+    "feedback": ["👍", "👎", "🙋‍♀️"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 11 avril à 19:04\nQui veut venir au Sabaidi demain midi avec Fafa et moi ?\n8"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Sun Apr 11 2021 19:06:43 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Aled le repas du démon",
+    "feedback": ["😮", "❤"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 11 avril à 19:06\nAled le repas du démon\n3"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Sun Apr 11 2021 19:07:54 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Tu nous donnes le reste on se sacrifie c'est bon t'auras pas besoin d'en manger pendant une semaine",
+    "feedback": ["❤", "😂"],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 11 avril à 19:07\nTu nous donnes le reste on se sacrifie c'est bon t'auras pas besoin d'en manger pendant une semaine\n2"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Mon Apr 12 2021 09:46:23 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Y’a des gens à l’école ?",
+    "feedback": ["👍", "👎"],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 12 avril à 09:46\nY’a des gens à l’école ?\n3"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Mon Apr 12 2021 09:57:34 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "On s’organise comment le pour ce midi ?",
+    "feedback": ["🤷‍♂️"],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 12 avril à 09:57\nOn s’organise comment le pour ce midi ?\n1"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Mon Apr 12 2021 10:02:29 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Perso je fini à 12h donc le temps d'y aller ya moyen que ça fasse tard\nDonc chap la livraison pour cette fois ci",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 12 avril à 10:02\nPerso je fini à 12h donc le temps d'y aller ya moyen que ça fasse tard\nDragomar, date d’envoi : le 12 avril à 10:02\nDonc chap la livraison pour cette fois ci"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 10:02:39 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "J’avais pas prévu de vous livrer mais soit",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 10:02\nJ’avais pas prévu de vous livrer mais soit"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Mon Apr 12 2021 10:02:34 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je peux aller chercher si vous voulez",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 12 avril à 10:02\nJe peux aller chercher si vous voulez"
+  },
+  {
+    "who": "Ronflex",
+    "when": "Mon Apr 12 2021 10:02:33 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je peux venir livrer mais 12h seulement",
+    "feedback": [],
+    "raw": "Ronflex\nRonflex, date d’envoi : le 12 avril à 10:02\nJe peux venir livrer mais 12h seulement"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 10:03:42 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Mais tu finis aussi à 12h Fafa",
+    "feedback": ["👍"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 10:03\nMais tu finis aussi à 12h Fafa\n1"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Mon Apr 12 2021 10:03:07 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Non mais à l'école",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 12 avril à 10:03\nNon mais à l'école"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Mon Apr 12 2021 10:03:46 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Juste est ce qu’on appellerait pas pour commander comme ça on a moins besoin de faire la queue ?\nOui mais si on appelle avant ça passe non ?",
+    "feedback": ["👍"],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 12 avril à 10:03\nJuste est ce qu’on appellerait pas pour commander comme ça on a moins besoin de faire la queue ?\n1\nFanny-T, date d’envoi : le 12 avril à 10:03\nOui mais si on appelle avant ça passe non ?"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 10:04:30 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Oui vas y je t’accompagnerai",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 10:04\nOui vas y je t’accompagnerai"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Mon Apr 12 2021 10:17:39 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C’est quoi le numéro je vais les appeler\nEt passez votre commande du coup svp\nSimon ca te dit on y va un peu avant vu qu’on a pas cours ce matin ?",
+    "feedback": ["😆", "👍"],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 12 avril à 10:17\nC’est quoi le numéro je vais les appeler\n1\nspace mountain 🍆, date d’envoi : le 12 avril à 10:17\nEt passez votre commande du coup svp\nspace mountain 🍆, date d’envoi : le 12 avril à 10:17\nSimon ca te dit on y va un peu avant vu qu’on a pas cours ce matin ?\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 10:18:01 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je suis chaud",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 10:18\nJe suis chaud"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Mon Apr 12 2021 10:18:39 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ca part",
+    "feedback": [],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 12 avril à 10:18\nCa part"
+  },
+  {
+    "who": "Ronflex",
+    "when": "Mon Apr 12 2021 10:18:09 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "poulet crousty",
+    "feedback": [],
+    "raw": "Ronflex\nRonflex, date d’envoi : le 12 avril à 10:18\npoulet crousty"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 10:18:12 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Pareil",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 10:18\nPareil"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Mon Apr 12 2021 10:20:08 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Tout pareil",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 12 avril à 10:20\nTout pareil"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 10:20:52 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Il y a que Mago qui va prendre un pad Thai toutes façons",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 10:20\nIl y a que Mago qui va prendre un pad Thai toutes façons"
+  },
+  {
+    "who": "ComTess",
+    "when": "Mon Apr 12 2021 10:21:41 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Pad thaï crevette \nEt non ",
+    "feedback": ["🤮", "❤", "🤢", "😆"],
+    "raw": "ComTess\nComTess, date d’envoi : le 12 avril à 10:21\nPad thaï crevette \n3\nComTess, date d’envoi : le 12 avril à 10:21\nEt non \n2"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 10:21:39 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "La honte",
+    "feedback": ["😮"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 10:21\nLa honte\n1"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Mon Apr 12 2021 10:23:24 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Pad thai poulet pleaseee",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 12 avril à 10:23\nPad thai poulet pleaseee"
+  },
+  {
+    "who": "ComTess",
+    "when": "Mon Apr 12 2021 10:25:51 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Sorry de pas vouloir manger des poulets de 36 jours, élevés en bataille dans des conditions horribles, et qui n’ont jamais vu la lumière du jour ",
+    "feedback": ["❤"],
+    "raw": "ComTess\nComTess, date d’envoi : le 12 avril à 10:25\nSorry de pas vouloir manger des poulets de 36 jours, élevés en bataille dans des conditions horribles, et qui n’ont jamais vu la lumière du jour \n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 10:25:21 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ça ne fait aucun doutes que les crevettes ont été pêchées dans la Garonne ce matin",
+    "feedback": ["😆", "👍"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 10:25\nÇa ne fait aucun doutes que les crevettes ont été pêchées dans la Garonne ce matin\n2"
+  },
+  {
+    "who": "ComTess",
+    "when": "Mon Apr 12 2021 10:27:47 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "ComTess a retiré un message",
+    "feedback": [],
+    "raw": "ComTess\nComTess, date d’envoi : le 12 avril à 10:27\nComTess a retiré un message"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Mon Apr 12 2021 10:28:58 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Personne d’autre pour ce midi ? C’est votre dernière bafouille ?",
+    "feedback": [],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 12 avril à 10:28\nPersonne d’autre pour ce midi ? C’est votre dernière bafouille ?"
+  },
+  {
+    "who": "ComTess",
+    "when": "Mon Apr 12 2021 10:49:17 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Est-ce que quelqu’un a Le petit prince et pourrait me le prêter demain ?",
+    "feedback": ["😆", "👎"],
+    "raw": "ComTess\nComTess, date d’envoi : le 12 avril à 10:49\nEst-ce que quelqu’un a Le petit prince et pourrait me le prêter demain ?\n3"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Mon Apr 12 2021 10:58:29 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "http://www.cmls.polytechnique.fr/perso/tringali/documents/st_exupery_le_petit_prince.pdf\ntu me le rendras dans la semaine?",
+    "feedback": ["😆"],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 12 avril à 10:58\nhttp://www.cmls.polytechnique.fr/perso/tringali/documents/st_exupery_le_petit_prince.pdf\nTchikita, date d’envoi : le 12 avril à 10:58\ntu me le rendras dans la semaine?\n3"
+  },
+  {
+    "who": "ComTess",
+    "when": "Mon Apr 12 2021 10:58:22 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Il me le faut en papier ",
+    "feedback": ["👍"],
+    "raw": "ComTess\nComTess, date d’envoi : le 12 avril à 10:58\nIl me le faut en papier \n1"
+  },
+  {
+    "who": "Al",
+    "when": "Mon Apr 12 2021 11:00:33 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je l’ai en espagnol dans ma chambre je crois\nA défaut que quelqu’un l’ait en français",
+    "feedback": ["😮", "❤"],
+    "raw": "Al\nAl, date d’envoi : le 12 avril à 11:00\nJe l’ai en espagnol dans ma chambre je crois\n3\nAl, date d’envoi : le 12 avril à 11:00\nA défaut que quelqu’un l’ait en français"
+  },
+  {
+    "who": "ComTess",
+    "when": "Mon Apr 12 2021 11:01:52 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Pourquoi tu l’as en espagnol ? ",
+    "feedback": [],
+    "raw": "ComTess\nComTess, date d’envoi : le 12 avril à 11:01\nPourquoi tu l’as en espagnol ? "
+  },
+  {
+    "who": "Al",
+    "when": "Mon Apr 12 2021 11:02:02 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "Tenor GIF Keyboard",
+    "feedback": ["😆", "🙏", "💁‍♀️"],
+    "raw": "Al\nAl, date d’envoi : le 12 avril à 11:02\nTenor GIF Keyboard\n7"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Mon Apr 12 2021 11:22:20 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Bon j’ai pas réussi à les joindre, leur portable est éteint on va commander direct la bas",
+    "feedback": ["👍"],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 12 avril à 11:22\nBon j’ai pas réussi à les joindre, leur portable est éteint on va commander direct la bas\n1"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Mon Apr 12 2021 11:50:47 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Hé les copains \nSabaidi il est fermé",
+    "feedback": ["😆", "😭"],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 12 avril à 11:50\nHé les copains \nspace mountain 🍆, date d’envoi : le 12 avril à 11:50\nSabaidi il est fermé\n3"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Mon Apr 12 2021 11:50:40 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Non arrête",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 12 avril à 11:50\nNon arrête"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Mon Apr 12 2021 11:50:29 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "GIPHY",
+    "feedback": [],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 12 avril à 11:50\nGIPHY"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Mon Apr 12 2021 11:50:21 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "Tenor GIF Keyboard",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 12 avril à 11:50\nTenor GIF Keyboard"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 11:51:35 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "On mange quoi ?",
+    "feedback": ["🤷‍♀️"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 11:51\nOn mange quoi ?\n1"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Mon Apr 12 2021 11:51:34 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "des oeufs en chocolat",
+    "feedback": ["❤"],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 12 avril à 11:51\ndes oeufs en chocolat\n1"
+  },
+  {
+    "who": "ComTess",
+    "when": "Mon Apr 12 2021 11:59:53 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Qui RU du coup ?",
+    "feedback": ["😢"],
+    "raw": "ComTess\nComTess, date d’envoi : le 12 avril à 11:59\nQui RU du coup ?\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 11:59:34 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Cafet",
+    "feedback": ["👍"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 11:59\nCafet\n2"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Mon Apr 12 2021 13:57:53 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Qui reste à Bordeaux la semaine des vacances ?",
+    "feedback": ["👍", "👎"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 12 avril à 13:57\nQui reste à Bordeaux la semaine des vacances ?\n7"
+  },
+  {
+    "who": "ComTess",
+    "when": "Mon Apr 12 2021 14:01:33 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "La première moitié",
+    "feedback": [],
+    "raw": "ComTess\nComTess, date d’envoi : le 12 avril à 14:01\nLa première moitié"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Mon Apr 12 2021 14:11:15 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Bravo @Antoine Parize on a tout entendu",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 12 avril à 14:11\nBravo @Antoine Parize on a tout entendu"
+  },
+  {
+    "who": "Rhopieds",
+    "when": "Mon Apr 12 2021 14:11:54 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C'est ma faute oops",
+    "feedback": ["😂"],
+    "raw": "Rhopieds\nRhopieds, date d’envoi : le 12 avril à 14:11\nC'est ma faute oops\n1"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Mon Apr 12 2021 14:22:30 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ah les bruits qu'il fait ",
+    "feedback": ["😆", "👍"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 12 avril à 14:22\nAh les bruits qu'il fait \n2"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Mon Apr 12 2021 14:22:48 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "demande lui de se mute stp",
+    "feedback": ["❤", "😂"],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 12 avril à 14:22\ndemande lui de se mute stp\n2"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Mon Apr 12 2021 14:48:39 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "ses grandes respirations dans mes oreilles là ",
+    "feedback": [],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 12 avril à 14:48\nses grandes respirations dans mes oreilles là "
+  },
+  {
+    "who": "Dragomar",
+    "when": "Mon Apr 12 2021 14:57:07 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C'est intéressant ce qu'il raconte ou pas?",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 12 avril à 14:57\nC'est intéressant ce qu'il raconte ou pas?"
+  },
+  {
+    "who": "Rhopieds",
+    "when": "Mon Apr 12 2021 14:57:05 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": ["❤"],
+    "raw": "Rhopieds\nRhopieds, date d’envoi : le 12 avril à 14:57\n4"
+  },
+  {
+    "who": "Rhopieds",
+    "when": "Mon Apr 12 2021 14:57:59 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ouais tqt",
+    "feedback": ["😆"],
+    "raw": "Rhopieds\nRhopieds, date d’envoi : le 12 avril à 14:57\nOuais tqt\n3"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Mon Apr 12 2021 14:58:29 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "Tenor GIF Keyboard",
+    "feedback": ["❤", "😆", "😂"],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 12 avril à 14:58\nTenor GIF Keyboard\n3"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Mon Apr 12 2021 15:37:18 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Il va y avoir un truc sur cette matière ?",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 12 avril à 15:37\nIl va y avoir un truc sur cette matière ?"
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 15:38:50 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Au début du zoom il a dit que non je crois\nQuelqu’un a dit « il y aura une évaluation ? » et il a dit non",
+    "feedback": ["❤", "❤"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 15:38\nAu début du zoom il a dit que non je crois\n1\nOlivier, date d’envoi : le 12 avril à 15:38\nQuelqu’un a dit « il y aura une évaluation ? » et il a dit non\n1"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Mon Apr 12 2021 15:38:22 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ah bah je vais aller faire du pii alors merci ",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 12 avril à 15:38\nAh bah je vais aller faire du pii alors merci "
+  },
+  {
+    "who": "Olivier",
+    "when": "Mon Apr 12 2021 15:38:56 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Fin c’est ce qu’on m’a dit parce qu’il était déjà en mute chez moi perso",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 12 avril à 15:38\nFin c’est ce qu’on m’a dit parce qu’il était déjà en mute chez moi perso"
+  },
+  {
+    "who": "Rhopieds",
+    "when": "Mon Apr 12 2021 15:38:21 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "En disant ça il a dût perdre 40 abonnés à son live zoom",
+    "feedback": ["😆", "😂"],
+    "raw": "Rhopieds\nRhopieds, date d’envoi : le 12 avril à 15:38\nEn disant ça il a dût perdre 40 abonnés à son live zoom\n3"
+  },
+  {
+    "who": "Al",
+    "when": "Mon Apr 12 2021 18:02:07 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C’est pour quand le truc de Lespinet déjà ?",
+    "feedback": [],
+    "raw": "Al\nAl, date d’envoi : le 12 avril à 18:02\nC’est pour quand le truc de Lespinet déjà ?"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Mon Apr 12 2021 18:03:03 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Le 23 avril",
+    "feedback": ["❤"],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 12 avril à 18:03\nLe 23 avril\n1"
+  },
+  {
+    "who": "Al",
+    "when": "Mon Apr 12 2021 18:03:46 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Mercii",
+    "feedback": ["❤"],
+    "raw": "Al\nAl, date d’envoi : le 12 avril à 18:03\nMercii\n1"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Tue Apr 13 2021 08:54:16 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Du monde qui va à l’école aujourd’hui ?",
+    "feedback": ["👍"],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 13 avril à 08:54\nDu monde qui va à l’école aujourd’hui ?\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Tue Apr 13 2021 08:54:12 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "A partir de 12h je pense",
+    "feedback": ["👍"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 13 avril à 08:54\nA partir de 12h je pense\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Tue Apr 13 2021 11:04:57 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Qui RU?",
+    "feedback": ["👍", "👎"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 13 avril à 11:04\nQui RU?\n5"
+  },
+  {
+    "who": "Olivier",
+    "when": "Tue Apr 13 2021 11:34:53 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ceux qui vont au RU vous y allez quand ? Je prends le tram à lisse d’Aquitaine la\nMusée*",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 13 avril à 11:34\nCeux qui vont au RU vous y allez quand ? Je prends le tram à lisse d’Aquitaine la\nOlivier, date d’envoi : le 13 avril à 11:34\nMusée*"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Tue Apr 13 2021 11:35:42 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je suis à l’école dans 20min",
+    "feedback": ["👍"],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 13 avril à 11:35\nJe suis à l’école dans 20min\n1"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Tue Apr 13 2021 11:36:14 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Avec Mago on est à l'école\net Tess",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 13 avril à 11:36\nAvec Mago on est à l'école\nm'enfou, date d’envoi : le 13 avril à 11:36\net Tess"
+  },
+  {
+    "who": "Olivier",
+    "when": "Tue Apr 13 2021 11:37:01 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "D’acc je vous rejoins à l’école du coup",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 13 avril à 11:37\nD’acc je vous rejoins à l’école du coup"
+  },
+  {
+    "who": "Ronflex",
+    "when": "Tue Apr 13 2021 11:44:55 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je suis à la bibli",
+    "feedback": [],
+    "raw": "Ronflex\nRonflex, date d’envoi : le 13 avril à 11:44\nJe suis à la bibli"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Tue Apr 13 2021 11:59:29 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": ["😮"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 13 avril à 11:59\n1"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Tue Apr 13 2021 11:59:35 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C'est qui cette meuf ?",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 13 avril à 11:59\nC'est qui cette meuf ?"
+  },
+  {
+    "who": "ComTess",
+    "when": "Tue Apr 13 2021 12:09:37 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je suis à la cafétéria parce que j’ai oublié mon Tupperware",
+    "feedback": ["😢"],
+    "raw": "ComTess\nComTess, date d’envoi : le 13 avril à 12:09\nJe suis à la cafétéria parce que j’ai oublié mon Tupperware\n1"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Tue Apr 13 2021 12:12:56 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "On t'attend dehors",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 13 avril à 12:12\nOn t'attend dehors"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Tue Apr 13 2021 17:55:58 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 13 avril à 17:55"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Tue Apr 13 2021 17:55:06 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Les pulls arrivent chez les gens c'est cool",
+    "feedback": ["❤", "💚"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 13 avril à 17:55\nLes pulls arrivent chez les gens c'est cool\n5"
+  },
+  {
+    "who": "Olivier",
+    "when": "Tue Apr 13 2021 17:57:53 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "Tenor GIF Keyboard",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 13 avril à 17:57\nTenor GIF Keyboard"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Tue Apr 13 2021 18:05:13 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Merci @Elise Cadet !",
+    "feedback": ["❤"],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 13 avril à 18:05\nMerci @Elise Cadet !\n1"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Tue Apr 13 2021 18:10:19 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C'est le merci de pinzi que j'attends avec impatience mdr",
+    "feedback": ["😆"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 13 avril à 18:10\nC'est le merci de pinzi que j'attends avec impatience mdr\n2"
+  },
+  {
+    "who": "Olivier",
+    "when": "Tue Apr 13 2021 18:21:51 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 13 avril à 18:21"
+  },
+  {
+    "who": "Olivier",
+    "when": "Tue Apr 13 2021 18:21:25 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "« que voilà »",
+    "feedback": ["😮", "😆"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 13 avril à 18:21\n« que voilà »\n4"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Tue Apr 13 2021 18:22:18 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "À toute",
+    "feedback": ["😆"],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 13 avril à 18:22\nÀ toute\n1"
+  },
+  {
+    "who": "La main innocente",
+    "when": "Wed Apr 14 2021 08:39:57 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Mdr\nLe ctrl+A",
+    "feedback": ["😆", "😢"],
+    "raw": "La main innocente\nLa main innocente, date d’envoi : le 14 avril à 08:39\nMdr\n1\nLa main innocente, date d’envoi : le 14 avril à 08:39\nLe ctrl+A\n1"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Wed Apr 14 2021 08:40:36 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Y’a quoi ?",
+    "feedback": [],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 14 avril à 08:40\nY’a quoi ?"
+  },
+  {
+    "who": "La main innocente",
+    "when": "Wed Apr 14 2021 08:41:49 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Amaury en pleine discussion c'était rigolo",
+    "feedback": ["😮"],
+    "raw": "La main innocente\nLa main innocente, date d’envoi : le 14 avril à 08:41\nAmaury en pleine discussion c'était rigolo\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 08:41:34 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Bah top Fafa ça écoute pas le cours",
+    "feedback": ["👍"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 08:41\nBah top Fafa ça écoute pas le cours\n1"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Wed Apr 14 2021 08:41:05 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "J’ai un problème de Windows j’y peux rien",
+    "feedback": ["❤", "😆"],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 14 avril à 08:41\nJ’ai un problème de Windows j’y peux rien\n2"
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 08:42:53 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ah la tuile",
+    "feedback": ["😆"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 08:42\nAh la tuile\n1"
+  },
+  {
+    "who": "Fanny-T",
+    "when": "Wed Apr 14 2021 08:42:42 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je te le fais pas dire !",
+    "feedback": ["😆"],
+    "raw": "Fanny-T\nFanny-T, date d’envoi : le 14 avril à 08:42\nJe te le fais pas dire !\n1"
+  },
+  {
+    "who": "La main innocente",
+    "when": "Wed Apr 14 2021 08:43:38 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ouvre les volets",
+    "feedback": ["😆", "😂"],
+    "raw": "La main innocente\nLa main innocente, date d’envoi : le 14 avril à 08:43\nOuvre les volets\n4"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Wed Apr 14 2021 09:01:29 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Y a des gens qui vont à l'école ce matin ?",
+    "feedback": ["👍"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 14 avril à 09:01\nY a des gens qui vont à l'école ce matin ?\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 09:01:46 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Pour 12h je pense",
+    "feedback": ["👍"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 09:01\nPour 12h je pense\n1"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Wed Apr 14 2021 10:07:15 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Est ce que ya que chez moi que google drive beug?\nGenre tous mes doc sont comme ça",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 14 avril à 10:07\nEst ce que ya que chez moi que google drive beug?\nDragomar, date d’envoi : le 14 avril à 10:07\nGenre tous mes doc sont comme ça"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Wed Apr 14 2021 10:08:37 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 14 avril à 10:08"
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 10:08:38 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je vois pas le bug",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 10:08\nJe vois pas le bug"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Wed Apr 14 2021 10:09:33 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Le texte dépasse la page à droite",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 14 avril à 10:09\nLe texte dépasse la page à droite"
+  },
+  {
+    "who": "Rhopieds",
+    "when": "Wed Apr 14 2021 10:09:03 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Regarde à droite",
+    "feedback": [],
+    "raw": "Rhopieds\nRhopieds, date d’envoi : le 14 avril à 10:09\nRegarde à droite"
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 10:09:28 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Quel œil de lynx",
+    "feedback": ["😆"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 10:09\nQuel œil de lynx\n1"
+  },
+  {
+    "who": "Rhopieds",
+    "when": "Wed Apr 14 2021 10:09:11 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Essaie dans Affichage d’activer/désactiver la mise en page",
+    "feedback": [],
+    "raw": "Rhopieds\nRhopieds, date d’envoi : le 14 avril à 10:09\nEssaie dans Affichage d’activer/désactiver la mise en page"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Wed Apr 14 2021 10:10:41 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ça change rien\nJe pense que c'est google qui me dit que je dois pas travailler",
+    "feedback": ["😢", "😆"],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 14 avril à 10:10\nÇa change rien\n1\nDragomar, date d’envoi : le 14 avril à 10:10\nJe pense que c'est google qui me dit que je dois pas travailler\n2"
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 10:11:12 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ah le con Bruno il a terminé la réunion\nMoi ça bug pas",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 10:11\nAh le con Bruno il a terminé la réunion\nOlivier, date d’envoi : le 14 avril à 10:11\nMoi ça bug pas"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Wed Apr 14 2021 10:11:24 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Et bah top",
+    "feedback": [],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 14 avril à 10:11\nEt bah top"
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 10:15:39 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "qui RU ce midi ?",
+    "feedback": ["👍", "👎"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 10:15\nqui RU ce midi ?\n6"
+  },
+  {
+    "who": "ComTess",
+    "when": "Wed Apr 14 2021 10:16:14 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Mais tard\nGenre vers 12:40",
+    "feedback": [],
+    "raw": "ComTess\nComTess, date d’envoi : le 14 avril à 10:16\nMais tard\nComTess, date d’envoi : le 14 avril à 10:16\nGenre vers 12:40"
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 10:16:21 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Elle est malade elle elle veut que je meure de faim",
+    "feedback": ["😆"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 10:16\nElle est malade elle elle veut que je meure de faim\n4"
+  },
+  {
+    "who": "ComTess",
+    "when": "Wed Apr 14 2021 10:17:06 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Allez-y sans moi les bg ",
+    "feedback": [],
+    "raw": "ComTess\nComTess, date d’envoi : le 14 avril à 10:17\nAllez-y sans moi les bg "
+  },
+  {
+    "who": "Olivier",
+    "when": "Wed Apr 14 2021 10:17:21 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "GIPHY",
+    "feedback": ["😆"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 14 avril à 10:17\nGIPHY\n1"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Wed Apr 14 2021 19:23:44 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "2 FEUILLES A4 POUR APPRENTISSAGE AUTOMATIQUE\nALORS QUE J'AI RIEN SUIVI DE PUIS LE DEBUT DU SEMESTRE",
+    "feedback": ["😢", "😆"],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 14 avril à 19:23\n2 FEUILLES A4 POUR APPRENTISSAGE AUTOMATIQUE\n4\nDragomar, date d’envoi : le 14 avril à 19:23\nALORS QUE J'AI RIEN SUIVI DE PUIS LE DEBUT DU SEMESTRE"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Wed Apr 14 2021 19:25:52 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": ["❤"],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 14 avril à 19:25\n1"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Thu Apr 15 2021 10:54:13 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": ["🤮", "❤", "😎"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 15 avril à 10:54\n5"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Thu Apr 15 2021 10:54:47 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 15 avril à 10:54"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Thu Apr 15 2021 10:56:54 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Il a pas inversé amour et cœur la ?",
+    "feedback": [],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 15 avril à 10:56\nIl a pas inversé amour et cœur la ?"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Thu Apr 15 2021 10:59:34 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Je préfère pas savoir\nJe vais juste ignorer ce message",
+    "feedback": ["😆"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 15 avril à 10:59\nJe préfère pas savoir\nm'enfou, date d’envoi : le 15 avril à 10:59\nJe vais juste ignorer ce message\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Thu Apr 15 2021 11:00:57 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C’est toi qui voulait qu’il te remercie",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 15 avril à 11:00\nC’est toi qui voulait qu’il te remercie"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Thu Apr 15 2021 11:00:36 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "J'avais pas besoin d'autant d'amour, un merci aurait amplement suffit",
+    "feedback": ["😠"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 15 avril à 11:00\nJ'avais pas besoin d'autant d'amour, un merci aurait amplement suffit\n1"
+  },
+  {
+    "who": "ComTess",
+    "when": "Thu Apr 15 2021 11:01:34 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "GIPHY",
+    "feedback": ["😆"],
+    "raw": "ComTess\nComTess, date d’envoi : le 15 avril à 11:01\nGIPHY\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Thu Apr 15 2021 11:01:46 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Toujours quelque chose à redire",
+    "feedback": ["👍"],
+    "raw": "Olivier\nOlivier, date d’envoi : le 15 avril à 11:01\nToujours quelque chose à redire\n1"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Thu Apr 15 2021 11:13:11 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "GIPHY",
+    "feedback": [],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 15 avril à 11:13\nGIPHY"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Thu Apr 15 2021 19:58:17 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 15 avril à 19:58"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Thu Apr 15 2021 19:59:38 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "La suite de tout à l'heure mdr",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 15 avril à 19:59\nLa suite de tout à l'heure mdr"
+  },
+  {
+    "who": "Al",
+    "when": "Thu Apr 15 2021 20:00:20 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Moi je trouve ça plus cool qu’il envoie du love plutôt que des photos de pont ",
+    "feedback": ["👍", "😆", "😂"],
+    "raw": "Al\nAl, date d’envoi : le 15 avril à 20:00\nMoi je trouve ça plus cool qu’il envoie du love plutôt que des photos de pont \n7"
+  },
+  {
+    "who": "La main innocente",
+    "when": "Thu Apr 15 2021 20:08:52 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ca serait le ponpon",
+    "feedback": ["😆", "😢"],
+    "raw": "La main innocente\nLa main innocente, date d’envoi : le 15 avril à 20:08\nCa serait le ponpon\n4"
+  },
+  {
+    "who": "Beyoncey",
+    "when": "Fri Apr 16 2021 09:00:44 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Les gars on a des consignes pour la présentation de JMA ?",
+    "feedback": [],
+    "raw": "Beyoncey\nBeyoncey, date d’envoi : le 16 avril à 09:00\nLes gars on a des consignes pour la présentation de JMA ?"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Fri Apr 16 2021 09:01:35 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Il avait envoyé un mail avec des trucs oui\nLes trucs sont en pièces jointes je crois d'ailleurs",
+    "feedback": ["😮"],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 16 avril à 09:01\nIl avait envoyé un mail avec des trucs oui\nm'enfou, date d’envoi : le 16 avril à 09:01\nLes trucs sont en pièces jointes je crois d'ailleurs\n1"
+  },
+  {
+    "who": "Beyoncey",
+    "when": "Fri Apr 16 2021 09:01:00 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Tu crois que tu pourrais me le retransferer stp ? J'ai du le suppr je trouve pas",
+    "feedback": ["👍"],
+    "raw": "Beyoncey\nBeyoncey, date d’envoi : le 16 avril à 09:01\nTu crois que tu pourrais me le retransferer stp ? J'ai du le suppr je trouve pas\n1"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Fri Apr 16 2021 09:07:51 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "C'est bon",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 16 avril à 09:07\nC'est bon"
+  },
+  {
+    "who": "Beyoncey",
+    "when": "Fri Apr 16 2021 09:07:43 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Merciii",
+    "feedback": [],
+    "raw": "Beyoncey\nBeyoncey, date d’envoi : le 16 avril à 09:07\nMerciii"
+  },
+  {
+    "who": "Ronflex",
+    "when": "Fri Apr 16 2021 10:53:23 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Qui ru 12h?",
+    "feedback": ["👍", "👎"],
+    "raw": "Ronflex\nRonflex, date d’envoi : le 16 avril à 10:53\nQui ru 12h?\n4"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Fri Apr 16 2021 10:54:14 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Avec Simon on arrive à 12h30",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 16 avril à 10:54\nAvec Simon on arrive à 12h30"
+  },
+  {
+    "who": "Olivier",
+    "when": "Fri Apr 16 2021 10:55:11 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ouais par la",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 16 avril à 10:55\nOuais par la"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Fri Apr 16 2021 10:55:37 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Parce qu'on a Coralie jusqu'à 12h10 et on peut pas partir avant",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 16 avril à 10:55\nParce qu'on a Coralie jusqu'à 12h10 et on peut pas partir avant"
+  },
+  {
+    "who": "Ronflex",
+    "when": "Fri Apr 16 2021 10:58:41 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "On peut vous attendre tranquille",
+    "feedback": ["❤"],
+    "raw": "Ronflex\nRonflex, date d’envoi : le 16 avril à 10:58\nOn peut vous attendre tranquille\n2"
+  },
+  {
+    "who": "m'enfou",
+    "when": "Fri Apr 16 2021 10:59:02 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Oh que c'est gentil",
+    "feedback": [],
+    "raw": "m'enfou\nm'enfou, date d’envoi : le 16 avril à 10:59\nOh que c'est gentil"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Fri Apr 16 2021 12:43:00 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Qqu'un à son tp fashion_mnist qui fonctionne ?\nSans aucune erreur*",
+    "feedback": [],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 16 avril à 12:43\nQqu'un à son tp fashion_mnist qui fonctionne ?\nTchikita, date d’envoi : le 16 avril à 12:43\nSans aucune erreur*"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Fri Apr 16 2021 12:50:06 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Ok Nn c'est bon je suis un codeur hors pair je gère",
+    "feedback": [],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 16 avril à 12:50\nOk Nn c'est bon je suis un codeur hors pair je gère"
+  },
+  {
+    "who": "Beyoncey",
+    "when": "Fri Apr 16 2021 12:52:39 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "btw j'ai des corrections d'annales d'automatique si vous avez besoin je vous les file pas là pcq osef et ça va se perdre\nmais je vous le dis comme ça j'oublie pas",
+    "feedback": ["❤"],
+    "raw": "Beyoncey\nBeyoncey, date d’envoi : le 16 avril à 12:52\nbtw j'ai des corrections d'annales d'automatique si vous avez besoin je vous les file pas là pcq osef et ça va se perdre\n5\nBeyoncey, date d’envoi : le 16 avril à 12:52\nmais je vous le dis comme ça j'oublie pas"
+  },
+  {
+    "who": "Dragomar",
+    "when": "Fri Apr 16 2021 13:23:20 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Des gens chaud pour faire une soirée jeux de société ce soir ?",
+    "feedback": ["🤷‍♂️", "❤", "👎"],
+    "raw": "Dragomar\nDragomar, date d’envoi : le 16 avril à 13:23\nDes gens chaud pour faire une soirée jeux de société ce soir ?\n4"
+  },
+  {
+    "who": "Olivier",
+    "when": "Fri Apr 16 2021 17:07:16 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Pourquoi on est pas bcp à boire une bière sur le patio là vous êtes où ?",
+    "feedback": [],
+    "raw": "Olivier\nOlivier, date d’envoi : le 16 avril à 17:07\nPourquoi on est pas bcp à boire une bière sur le patio là vous êtes où ?"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Fri Apr 16 2021 17:08:24 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "GIPHY",
+    "feedback": ["😢"],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 16 avril à 17:08\nGIPHY\n3"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Fri Apr 16 2021 17:09:18 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "@Simon termine pas en y comme la dernière fois stp",
+    "feedback": ["😆"],
+    "raw": "Tchikita a répondu à Olivier\nle 16 avril à 17:09. Message original :\nPourquoi on est pas bcp à boire une bière sur le patio là vous êtes où ?\nRéponse par Tchikita :\n@Simon termine pas en y comme la dernière fois stp\n1"
+  },
+  {
+    "who": "Olivier",
+    "when": "Fri Apr 16 2021 17:09:42 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "AU MOINS",
+    "feedback": ["❤"],
+    "raw": "Olivier a répondu à Tchikita\nle 16 avril à 17:09. Message original :\n@Simon termine pas en y comme la dernière fois stp\nRéponse par Olivier :\nAU MOINS\n1"
+  },
+  {
+    "who": "Al",
+    "when": "Fri Apr 16 2021 17:10:35 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "J’arrive ",
+    "feedback": ["😑"],
+    "raw": "Al\nAl, date d’envoi : le 16 avril à 17:10\nJ’arrive \n1"
+  },
+  {
+    "who": "space mountain 🍆",
+    "when": "Fri Apr 16 2021 17:11:12 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Non Texte",
+    "what": "Tenor GIF Keyboard",
+    "feedback": ["😆"],
+    "raw": "space mountain 🍆\nspace mountain 🍆, date d’envoi : le 16 avril à 17:11\nTenor GIF Keyboard\n2"
+  },
+  {
+    "who": "Big Jar",
+    "when": "Fri Apr 16 2021 18:27:48 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Y’a un mec qui vient de me demander s’il pouvait prendre le cube en photo",
+    "feedback": ["😆", "❤"],
+    "raw": "Big Jar\nBig Jar, date d’envoi : le 16 avril à 18:27\nY’a un mec qui vient de me demander s’il pouvait prendre le cube en photo\n5"
+  },
+  {
+    "who": "Tchikita",
+    "when": "Fri Apr 16 2021 18:30:29 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Elle est devenue fameuse depuis qu'il y a deux gros bg qui sont allés sur son toit",
+    "feedback": ["❤", "😆"],
+    "raw": "Tchikita\nTchikita, date d’envoi : le 16 avril à 18:30\nElle est devenue fameuse depuis qu'il y a deux gros bg qui sont allés sur son toit\n5"
+  },
+  {
+    "who": "ComTess",
+    "when": "Fri Apr 16 2021 18:37:55 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "Bon qui vient ce soir ?",
+    "feedback": ["👍", "👎"],
+    "raw": "ComTess\nComTess, date d’envoi : le 16 avril à 18:37\nBon qui vient ce soir ?\n3"
+  },
+  {
+    "who": "Olivier",
+    "when": "Fri Apr 16 2021 18:37:57 GMT+0200 (heure d’été d’Europe centrale)",
+    "whatType": "Texte",
+    "what": "@Rhopieds",
+    "feedback": ["👍"],
+    "raw": "Olivier a répondu à ComTess\nle 16 avril à 18:37. Message original :\nBon qui vient ce soir ?\nRéponse par Olivier :\n@Rhopieds\n1"
+  }
+]

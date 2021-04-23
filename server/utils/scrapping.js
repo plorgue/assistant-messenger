@@ -14,7 +14,7 @@ const hash = {
 exports.scrapping = async function (
   idConv,
   nbScroll,
-  password,
+  pwd,
   userId = "paullorgue@gmail.com"
 ) {
   const browser = await puppeteer.launch();
@@ -25,31 +25,39 @@ exports.scrapping = async function (
       timeout: 120000, // 2 minutes
       waitUntil: "networkidle0", // considère navigation fini quand il n'y a plus de requêtes envoyer dans un laps de temps de 500ms
     });
-    console.info("New page loaded: " + page.url());
+    console.info("Navigation: " + page.url());
   };
 
-  const filledFields = async () => {
+  const tryLogin = async () => {
     // remplir les champs de connexion et submit le form
     await page.type("#email", userId);
-    await page.type(
-      "#pass",
-      userId === "paullorgue@gmail.com"
-        ? decrypt(hash, password.repeat(32).slice(0, 32))
-        : password
-    );
-    // await page.screenshot({ path: "filling_fields.png" });
-    console.log("Completed fields");
+    let password = pwd;
+    if (userId === "paullorgue@gmail.com") {
+      password = decrypt(hash, password.repeat(32).slice(0, 32));
+    }
+    console.log(">" + password + "<"); // ENLEVER
+
+    await page.type("#pass", password);
+
+    await page.screenshot({ path: "filling_fields.png" });
+    console.log("Champs remplis, tentative de connexion...");
+
     try {
       await Promise.all([
         page.waitForNavigation({
-          timeout: 25000,
+          timeout: 35000,
           waitUntil: "networkidle0",
         }),
         page.click("#loginbutton"),
       ]);
     } catch (err) {
-      console.log("Timeout error: relancer !");
+      console.log(
+        "La page met trop lomptemps à se charger. Capture d'écran de la page: ./server/timeout.png "
+      );
+      await page.screenshot({ path: "timeout.png" });
+      return -1; // ENLEVER
     }
+    await page.screenshot({ path: "loged.png" }); // ENLEVER
 
     // si mauvais code
     if ((await page.url()) === "https://www.messenger.com/login/password/") {
@@ -247,11 +255,12 @@ exports.scrapping = async function (
 
   const scrollConv = async function () {
     return await page.evaluate(() => {
-      document
-        .querySelector(
-          'div[class="buofh1pr j83agx80 eg9m0zos ni8dbmo4 cbu4d94t gok29vw1"]'
-        )
-        .scroll(0, -2000);
+      let div = document.querySelector(
+        'div[class="buofh1pr j83agx80 eg9m0zos ni8dbmo4 cbu4d94t gok29vw1"]'
+      );
+      if (div !== null) {
+        div.scroll(0, -2000);
+      }
     });
   };
 
@@ -259,34 +268,38 @@ exports.scrapping = async function (
   START 
   */
 
-  await gotoPage("https://www.messenger.com/");
-
-  // accepter les cookies
-  await page.click('button[title="Tout accepter"]'); // #u_0_j #u_0_g
-
-  await filledFields();
-
-  // nouvelle page censée être celle d'une conversation
-  console.log(`Current page after login: ${page.url()}`);
-
   // changement de conversation
   await gotoPage(getUrlByThreadId(idConv));
+  // accepter les cookies
+  await page.click('button[title="Tout accepter"]'); // #u_0_j #u_0_g
 
   if (
     (await page.url().indexOf("https://www.messenger.com/login.php?next")) !==
     -1
   ) {
-    console.log("Error lors de la connexion, nouvelle tentative ...");
-    await filledFields();
-    console.log(`Current page after second try login: ${page.url()}`);
+    // ENLEVER
+    if ((await tryLogin()) == -1) {
+      await page
+        .waitForTimeout(2000)
+        .then(() => console.log(`Url de la page actuelle: ${page.url()}`));
+      console.log("Nouvelle tentative de connexion...");
+      await tryLogin();
+    }
+    // ENLEVER
+
+    await page
+      .waitForTimeout(2000)
+      .then(() => console.log(`Url de la page actuelle: ${page.url()}`));
   }
+
+  // await page.screenshot({ path: "avant_scrap.png" });
 
   let i = 1;
   while (i < parseInt(nbScroll) + 1) {
     await scrollConv();
     await page
-      .waitForTimeout(3000)
-      .then(() => console.log(`(${i++}/${nbScroll}) Scroll in progress ...`));
+      .waitForTimeout(Math.min(2000 + i * 10, 10000))
+      .then(() => console.log(`(${i++}/${nbScroll}) Scroll en cours ...`));
     if (i % 100 === 0 && i / 100 > 0) {
       let msg = await retrieveMessages();
       fs.writeFileSync(
@@ -299,7 +312,7 @@ exports.scrapping = async function (
           .replace(":", "-")}__${msg.length}.json`,
         JSON.stringify(msg)
       );
-      console.log(`${msg.length} messages saved`);
+      console.log(`${msg.length} messages sauvegardés`);
     }
   }
 

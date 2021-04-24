@@ -1,6 +1,7 @@
 node_modules/
 archiveHTML/
 archiveMESSAGES/
+utils/
 server/store/old/
 test-1.js
 test-2.js
@@ -11,9 +12,19 @@ test-3.js
 main.js
 clean.ps1
 Rapport d'avancement.pdf
-*.zip
+plorgue*.zip
 lien.txt
 clean.ps1
+.vs/
+
+*.h5
+*.pt
+sentiments/data/*.csv
+sentiments/data/*.jsonl
+sentiments/data/*.pickle
+sentiments/.vs
+
+
 
 !package-lock.json
 !package.json

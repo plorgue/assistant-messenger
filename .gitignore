@@ -3,6 +3,7 @@ archiveHTML/
 archiveMESSAGES/
 utils/
 server/store/old/
+server/store/format.js
 server/*.png
 test-1.js
 test-2.js
@@ -23,9 +24,10 @@ clean.ps1
 sentiments/data/*.csv
 sentiments/data/*.jsonl
 sentiments/data/*.pickle
-sentiments/.vs
+sentiments/.vscode
 
 
 
 !package-lock.json
 !package.json
+!sentiments/models_weights/f179_count8000_epo20_batch4.h5

@@ -1,1126 +1,1783 @@
 ,0
-0,Merci !
-1,Beaurepaire
-2,Julien
-3,BDE
-4,Duboz
-5,Mdrrr
-6,Thomas Faure
-7,Corentin
-8,Désolée
-9,Je ne le comprendrai jamais
-10,GIPHY
-11,Yes
-12,Tenor GIF
-13,ENCORE
-14,Mais aled
-15,Calmez
-16,Sinon
-17,Jvais
-18,Leclerc
-19,Du rhum blanc 2L
-20,Lorgue
-21,Ça
-22,Aïe
-23,Lourd
-24,OK
-25,Ah c’
-26,Pessac
-27,Go
-28,Japacompri
-29,Je parle de la D3A
-30,d’hier ?
-31,Aller
-32,Maelle
-33,Claverie
-34,Simon
-35,Hâte
-36,Pesquet
-37,Bah
-38,Canada
-39,Osaka
-40,Ptdr
-41,TP Axure
-42,Genre
-43,Axure
-44,Partie 2
-45,Vues
-46,https://vimeo.com/488255957  Partie 3
-47,Lien
-48,https://vimeo.com/488277532
-49,Partie 4
-50,https://vimeo.com/488283155  
-51,Masters https://vimeo.com/488291661  
-52,Partie 6
-53,Dynamic
-54,Partie 7
-55,Repeaters https://vimeo.com/488307178
-56,m’énerver
-57,Update
-58,Zoom
-59,Ah ça serait cool alors !
-60,JE
-61,Deso
-62,"Ah
-Je sais tout"
-63,Leblanc
-64,Devient vert
-65,Ah
-66,Esrl
-67,Perso
-68,Mdrrrrr
-69,Ajouter
-70,Ah tu pense
-71,Hollywood
-72,Vegas
-73,Purée
-74,Spoiler
-75,Poulpas
-76,Trop
-77,Laur
-78,Mdr
-79,Julie
-80,Nope
-81,Bde
-82,Wow
-83,Lâches
-84,Dacc pour fixer un créneau lundi
-85,horaire+
-86,J'avais
-87,2A
-88,On l’
-89,Ya Zoe
-90,années précédentes
-91,Rapports.ensc.fr
-92,Romain
-93,Paul
-94,Juliette
-95,Regarde
-96,Jeudi midi
-97,Svp
-98,Et je donne ma procuration
-99,Exterieures
-100,https://docs.google.com/document/d/1Uk3cpTIsiRklL9G3dRe_E-SxkVipzxKQiuY5uiLBaaI/edit?fbclid=IwAR1wokM97GuLf32nl2D_Yd0qtwdRkdmZdiW3DbQ4IkkOBJfQCH5E8n6ebMw#
-101,https://us02web.zoom.us/j/82060015724?pwd=QVYrRElpM1NNKzBlc0dGOG1TRXZBZz09
-102,Sarenacllav
-103,CR
-104,Tranquille c’
-105,Soirée
-106,Hello
-107,Merci
-108,DM
-109,TP
-110,LARGE
-111,Le 6 mars
-112,Ah voila
-113,Tchikita
-114,Discord
-115,Vérifiez
-116,Annulation
-117,Wes
-118,Bordeaux
-119,Ça c’
-120,Nicooooooo
-121,Ouais
-122,Faudra
-123,Qu'on en*
-124,Du coup faudra un cameraman
-125,Perso j’
-126,AG
-127,PC
-128,Linux
-129,Zoom pas
-130,Shotgun
-131,Sabaidi
-132,Hum
-133,Niveau
-134,Donc
-135,Parfait
-136,Why not
-137,1A
-138,Bah c’
-139,Yen
-140,l’ENSC
-141,Oups
-142,Tranquille
-143,Antoine
-144,Btw
-145,Bye
-146,Pierre
-147,Harry Potter 7 n’
-148,HP7
-149,Et
-150,Cépafo
-151,"Martin
+0,giphy
+1,aled
+2,moi c'est totalement aled
+3,google
+4,ça c’
+5,ibm
+6,tenor gif
+7,dorine l’
+8,fais de l'art
+9,go
+10,paf
+11,euh
+12,genre
+13,"je sais pas
+mais ça peut-être un symptôme de covid"
+14,dorine
+15,"maud
+d’"
+16,ça
+17,juliette tu fais le form
+18,merci juliette
+19,incroyable
+20,instagram
+21,reu
+22,deso
+23,je peux jusqu’
+24,mito
+25,ton
+26,j'ai jamais conjugué ce verbe
+27,bordeaux vendredi
+28,kermes
+29,1a
+30,bde
+31,ds
+32,si
+33,j'arrives
+34,santa
+35,saracco
+36,nadège
+37,prebot
+38,"yes
+bon"
+39,allô
+40,youpi
+41,oh les gars on
+42,ou sinon on réutilise
+43,julien
+44,mdrrr
+45,d3a
+46,beaurepaire
+47,bonnefon
+48,antoine
+49,quel wec
+50,normal
+51,all i
+52,christmas
+53,qrcog
+54,airbnb
+55,y'en aurait pour 25 euros
+56,ca
+57,brd
+58,sinon
+59,nope
+60,ok c’
+61,mdrrr c’
+62,aled l’
+63,désolée
+64,coucou
+65,ptin
+66,t'es en train de poser des question @julien
+67,tchikita
+68,ah
+69,ce
+70,jul il
+71,trop
+72,beau
+73,biglouche
+74,super
+75,ah oui !
+76,thomas
+77,cte
+78,partiel de hourlier
+79,divers
+80,tg
+81,kan
+82,esrl
+83,anova
+84,simon
+85,joyeux
+86,elise
+87,bocal
+88,sapin c’
+89,lorgue
+90,j'ai dit 19h
+91,parize goume
+92,ttc
+93,eh bah vous
+94,gout
+95,oof
+96,toi t’
+97,maelle
+98,bof
+99,aaaah c’
+100,ouais
+101,j'en sais rien
+102,regarde
+103,zuliani
+104,amusez
+105,oups
+106,paul
+107,ah ça veut dire on
+108,pareil
+109,léa
+110,https://us02web.zoom.us/j/81000350455?pwd=nndxcitmbwveuc9cwuhacdnoc0k4ut09
+111,"nico
 "
-152,Du coup
-153,Message
-154,Yep
-155,Je sais pas mettre les salles d'attente
-156,J'AI
-157,"COUP
-Voilà je peux"
-158,Heureusement
-159,MON SILENCE
-160,https://www.google.com/url?q=https://bordeaux-inp-fr.zoom.us/j/89654911621&sa=D&source=calendar&ust=1614418272368000&usg=AOvVaw3Zj537Cf99u0fKmULpf86M
-161,https://zoom.us/j/99670528713?pwd=bjlkbWtzMHdyN29QSVdDdzByOUpRdz09
-162,Coucou
-163,Intéressant
-164,Violet
-165,Gala
-166,Benoît
-167,Entrée
-168,Plat
-169,Dessert
-170,Boisson
-171,PAS
-172,CHAP ON
-173,L'ANNÉE
-174,Euh
-175,Qqun
-176,Chrystelle
-177,GROSSES VOIX
-178,Brd
-179,Live
-180,JE VOIS
-181,ON VOIT
-182,RESPO
-183,Gneugneugneu
-184,C FO JE
-185,FACEBOOK
-186,ON VOIT R
-187,"Octoflix
+112,largeault
+113,apres
+114,merci @juliette
+115,https://docs.google.com/forms/d/e/1faipqlsearg0unvees4allqqows0lpmfk77gcvlyypg9gyygr_xkpsa/viewform?usp=sf_link
+116,parize @albane
+117,yann
+118,lydia
+119,sorryyyy j’
+120,justine
+121,cheum genre
+122,linkedin
+123,ensc
+124,utilisateur
+125,thalès
+126,renault
+127,ux designer
+128,ux researcher
+129,ergonome
+130,facteurs humain
+131,data
+132,data science / ia
+133,product owner
+134,manager
+135,ingénieur
+136,2a
+137,marie
+138,pcq bon un pull orange
+139,ptdr
+140,xs
+141,wec
+142,noël
+143,blue
+144,fait
+145,fanny
+146,orange
+147,ah bah
+148,laisse fanny trkl toi
+149,grave
+150,soutenance
+151,c fo
+152,cec
+153,impossible
+154,état
+155,julie
+156,yes
+157,faudra
+158,l’ensc
+159,laur
+160,dis
+161,starf
+162,trop vieux
+163,hippo
+164,"lol
 "
-188,Respo
-189,Ben
-190,Tiens
-191,Aled y’
-192,BdA
-193,Ayaya
-194,J'en connais 0
-195,Ptn j’
-196,3A
-197,Audrey
-198,Netflix
-199,"Oups
-Pas sure"
-200,Hyper
-201,Oscar
-202,TCHA
-203,TCHEU
-204,Tess
-205,"Octofliw
-Octoflux
-Flûte
+165,meilleur jeu !
+166,lance
+167,tuez
+168,mdrr ma mère
+169,chui
+170,nicolas
+171,salotti
+172,comtess
+173,edwige d'uml
+174,moodle
+175,jsp
+176,s8
+177,stuv j’
+178,uml
+179,un tp
+180,ouiiii
+181,youtube
+182,hâte
+183,ju tuer des gens devant
+184,moquez
+185,@léa grondin
+186,mago
+187,@mado
+188,pierre
+189,"un drive bien fourni
 "
-206,Faut
-207,Octoflix
-208,Méfait
-209,Poulpywood
-210,J'ai envoyé ça à octoflix
-211,Aaaaah
-212,J'
-213,Instagram
-214,M'
-215,"Top
+190,cm
+191,ah d’accord
+192,sarenacllav c’
+193,go wec
+194,hier olivier
+195,génie log
+196,gl
+197,whaa
+198,mattheo
+199,large
+200,promo
+201,rigal
+202,"correction
+c’"
+203,examen_modelisationstat-ensc-2a_janvier2017.pdf
+204,sd
+205,saracco c’
+206,l’as
+207,fafa
+208,ensuite calme toi
+209,nico
+210,bonne année
+211,bonne
+212,bonaparte
+213,heuuu
+214,t9
+215,bonne année bande de bg
+216,largeault t’
+217,avoir disney
+218,ans
+219,revenez
+220,faut
+221,canada
+222,"non
+du 15"
+223,janvier
+224,je vais
+225,"https://ibm.webex.com/join/marc.rodier
+faut"
+226,bordeaux
+227,tkt
+228,merci !
+229,vive
+230,ah c’
+231,margot
+232,svp
+233,adresse de mago
+234,mbeaurepaire@ensc.fr
+235,oupsi
+236,ah ok !
+237,perso j’
+238,fanny t’
+239,gneu
+240,sarenacllav
+241,purée
+242,nickel
+243,mago c’
+244,"je peux te le partagé
 "
-216,Marseillais
-217,Je fais apéro
-218,Ah merde
-219,Un Max de dégâts
-220,Apéro
-221,CM
-222,Maiwen
-223,Mercredi
-224,Lotie
-225,Hugo
-226,Theo
-227,Poulpix
-228,Prejent
-229,Attend
-230,Le Hugo de Julien
-231,PII
-232,Conférence
-233,"Oups
+245,s6 projet
+246,commandez
+247,europe
+248,pesquet
+249,connais
+250,"jvous ai a mettre des cœurs sur mon message
 "
-234,Beyoncé
-235,Moi on me fait la vaisselle
-236,Gradi
-237,Pol
-238,Faire
-239,Woa
-240,Hein
-241,Lucas Tomas
-242,"Lydia
+251,hais
+252,vous vous rappellez de l'identifiant et du mot de passe de la wofi
+253,et ton
+254,iloveensc
+255,jadorelaje
+256,apprend
+257,apprends
+258,info
+259,3a
+260,j'ai un rdv
+261,bdx inp
+262,wei
+263,aquitaine
+264,reserve
+265,"mc
 "
-243,Lydia
-244,Bataille
-245,jusqu’
-246,Tendu
-247,Ramenez
-248,Grave
-249,OH JE VIENS
-250,"UN TRUC
+266,ihm
+267,xavier serviante
+268,cours*
+269,promis
+270,glwadys
+271,ru
+272,fichtre
+273,sabaidiiiiii
+274,chaud
+275,qui etes
+276,vous fait
+277,nigrosla
+278,olivier
+279,quannd
+280,wonders !
+281,spoil
+282,kel
+283,shotgun
+284,j'ai eu l'expert juridique
+285,inp
+286,wei and go
+287,wei and
+288,parfait
+289,wei n go
+290,merci
+291,np btw
+292,gradi
+293,j'ai moto
+294,cho
+295,jsp j’
+296,éteint
+297,forceuse
+298,cadet
+299,juliette
+300,laur t’
+301,ah bah super ça
+302,vielle meuf
+303,y'a qui qui fait le wec chez
+304,ya
+305,"ah
 "
-251,Evan
-252,Fillot de romain
-253,Chat
-254,Why
-255,Élise m’
-256,Chui
-257,Mettez
-258,ON PEUT
-259,Comment
-260,MOI
-261,AUSSI
-262,Arths
-263,Bonnefon
-264,Zuliani
-265,Largeault
-266,Olivier
-267,C LHEURE
-268,LAPPEL
-269,Elise
-270,Arrêtez
-271,Que ça change
-272,Bonjour
-273,Bonsoir
-274,Amen Marion
-275,Alban
-276,Ca
-277,Nice
-278,Fanny
-279,Cho
-280,TANT
-281,FAIT
-282,TR C Y’A
-283,TRUC
-284,"Wiwi
-Il"
-285,Toi t’
-286,Je suis apparement
-287,https://vm.tiktok.com/ZMeY2nmMP/
-288,SoNt MEiLlEuReS
-289,VoUs
-290,Ah bah
-291,Ca n’
-292,Fafa
-293,Venez
-294,Ah bah là
-295,Jalouse
-296,Amenez
-297,Dem
-298,Jme
-299,Mets
-300,Lance
-301,Nadège
-302,Donc comptez
-303,Je me suis lavé
-304,Marc Sangnier
-305,SFR 63D8
-306,Appuyez
-307,Noé
-308,Boooooom
-309,Parize  
-310,@Juliette Esrl
-311,Mr Leblanc
-312,OUU
-313,OUI
-314,AH
-315,Ya
-316,Je suis sur le podium les gars
-317,Jsp
-318,"Oups
-Bon j’"
-319,Pâques
-320,WEC
-321,CONFESSIONAL
-322,COMME A SECRET
-323,Wiwi
-324,Idem
-325,Léo
-326,Pareil
-327,J'ai peur de pas être
-328,"Engagement
-Idem"
-329,Foucaud
-330,Sheets
-331,Sese
-332,CA
-333,T'as plus de souvenirs
-334,Oups c’
-335,Sarah
-336,Chaud
-337,Fragile
-338,Ya un taxi
-339,Jvoulais
-340,"ER
-Jamais"
-341,Un nain
-342,SONDAGE
-343,Bah Jsuis chaud
-344,Je suis amoureux
-345,Tiktok
-346,Impossible
-347,Je la connais limite par cœur la liste de notre
-348,Noël c’
-349,Faure
-350,Chuicho
-351,Amaury
-352,Victorien
-353,Baptiste
-354,Qqn
-355,YA UN DOC
-356,Sorry
-357,Tranks
-358,Bouger
-359,Paques
-360,Jcapte
-361,Ça n’
-362,Jsuis 90e
-363,Bravo
-364,Started from the bottom
-365,WEC 2
-366,Avril
-367,Je vous aime bande de patates
-368,Juste Paul
-369,Paris
-370,Ptin
-371,Voilà
-372,WEI Gate
-373,Btw Octoflix
-374,WEI and
-375,IT
-376,SIMON
-377,Foreuse
-378,bataille navale
-379,Mago
-380,Nous                              
-381,Ah bon ?
-382,Billard
-383,Moi devant la « 
-384,Mdrrr j’
-385,Balayettes
-386,Ricard
-387,Bières
-388,Combien
-389,Captain
-390,Fatigué
-391,Tas
-392,Porque
-393,Samedi
-394,Ahah
-395,Urban Dictilnnary
-396,1L
-397,4L
-398,Vodka
-399,VODKA
-400,Prends
-401,2L Shweppes
-402,J’ai ça j’
-403,2L Jsuis
-404,Jean Zubieta
-405,Mélissa
-406,Help !
-407,Appelle
-408,Maintenant
-409,Nicolas
-410,"Laur
-C’"
-411,rue Saint James
-412,Sisi
-413,https://docs.google.com/spreadsheets/d/1x5xVv2R-lGST-G_lvP6p4M5yTlmjb0j_5VokUUikq6U/edit?usp=sharing
-414,Campagne
-415,Appelle Romain
-416,Bisous
-417,J'ai envie de me rendormir
-418,Allez
-419,Arthur
-420,Attendez
-421,Ok j’
-422,Mdr t’
-423,Jsp c’
-424,Thea
-425,Lou
-426,Berrocca
-427,Tabac
-428,Bizouuuu
-429,Simsim
-430,Viens
-431,Ptdr Thea
-432,"Wiwi ""Ah Wiwi"
-433,DRAMA YAKOI
-434,Réponds
-435,Publi c’
-436,Les Hollypoulpes
-437,Envie
-438,Envoie
-439,Ah cool
-440,Vas
-441,Time
-442,Je suis mort
-443,VENEZ
-444,VIDES
-445,Margot
-446,Ah voila j’
-447,Parf
-448,Mato
-449,Parfé
-450,Gin
-451,Freestyle
-452,Giiiiiin
-453,Coco
-454,Lundi y’
-455,TU VENAIS
-456,RÉUNIONS TU
-457,BOUE
-458,PATRIE
-459,@MADO
-460,Ok
-461,Voisine Dessous
-462,MEILLEURE CHOe
-463,Wellington
-464,Soleil
-465,Faudrait
-466,Je sais plus si l'ag
-467,Et donc vous voulez pas poser de questions sur le wei donc ?
-468,Fin on va pas demander
-469,Heure 
-470,Participer
-471,"Zoom https://us02web.zoom.us/j/83322208300?pwd=bVFWZTZ2aG5taVo4THJFb1Fsc0dvZz09
-@Simon Laur"
-472,Wei
-473,prix du WEI
-474,Soit
-475,WEI&GO
-476,Mdrrr d’
-477,Essayez
-478,Gneugneu
-479,Hugo 3
-480,Gala je meurs
-481,coup Julie
-482,Le problème c’
-483,Donc c’
-484,Cpbx
-485,CL
-486,Grivel
-487,Ihs
-488,Matez
-489,Fake news
-490,Votez
-491,Antman
-492,Merci @Antoine
-493,Recliquent
-494,jbulteau@ensc.fr
-495,Ag
-496,l’AG
-497,Lucad Tomas
-498,Flute
-499,BAH SUPER
-500,Rester
-501,Hop j’
-502,PATRIIIIIIIIIIIIIIIIIIIIIIIIIIIIICK
-503,hugo3
-504,Marine
-505,Hugo3
-506,Coup d'état
-507,Fait
-508,Bugs
-509,J'ai trop peur
-510,Ohhhhhh Brigitte c’
-511,m’ouvrir svp j’
-512,Antoine on t’
-513,Non
-514,Utile
-515,Arrête
-516,Soit heureuse
-517,J’ai ma réponse
-518,Same je m’
-519,Boar dé bier
-520,Issou
-521,GO
-522,Théa
-523,Zak
-524,Zack
-525,Jma il est mort ?
-526,Ciao
-527,Loosers
-528,Moi aussi
-529,Ça m’
-530,JE VEUX FAIRE
-531,CLUB
-532,ANTOINETTE
-533,Omg
-534,GENS
-535,12:30
-536,OH
-537,BDS
-538,ZOOM
-539,IL
-540,OU
-541,LE RESPO COM
-542,Super
-543,C bon
-544,Ptdrrrrrr
-545,Poulparty
-546,Remets
-547,Dites
-548,Shotgun @Paul
-549,Bah jsp
-550,"Julien
-Paint"
-551,Réunion
-552,QUI
-553,DISPO
-554,WEC LE
-555,WEEKEND
-556,C PA LÉ VACANCES
-557,GO FAIRE
-558,Probablement la dernière fois de notre vie
-559,MANOAR
-560,Quels 1A
-561,"Cho
+306,wc
+307,je sais pas
+308,dites ce que
+309,bdx
+310,si c'est pour une soirée
+311,romain
+312,brigitte
+313,je suis sorry
+314,j'ai pas son num mdr
+315,mets
+316,appelle
+317,grosse
+318,stats
+319,a4
+320,whouaaa
+321,messieurs
+322,le premier sujet de
+323,td de sd
+324,ensc sd
+325,first
+326,hmmm
+327,wn
+328,cdc
+329,pii
+330,spies
+331,porque
+332,annule
+333,amène
+334,oui
+335,flemme
+336,virez salotti
+337,killer bee
+338,asuma
+339,rat
+340,j'aurais
+341,jardiland
+342,"un arbre comme ça
+?"
+343,malheur
+344,jusqu’
+345,fair
+346,ah oui déso j’
+347,techniquement t’
+348,coup
+349,"je sais pas
 "
-562,J'ai eu
-563,Versailles
-564,PLANÈTE
-565,Google
-566,Élise vilayleck
-567,Je sais que c'est dans htdocs
-568,"Ah
-Jsp"
-569,Je sais que c'est pas un club
-570,Barthas
-571,Emma
-572,BDA
-573,Je suis uniquement spectatrice habituellement
-574,Bé
-575,Genre l’
-576,Antoine Barthas
-577,MP
-578,Merci !!
-579,Fuck
-580,Tom Duris
-581,J'ai eu Romain
-582,"https://bordeaux-inp-fr.zoom.us/j/84024735940
+350,donc
+351,wesh
+352,corrigé.pdf
+353,nina la boss
+354,ci
+355,nadège l’
+356,ju
+357,beaurepaire @fanny
+358,briand
+359,ancova
+360,et j'ai confirmation de
+361,martin fannie
+362,tangi
+363,moule
+364,tp
+365,lequel
+366,je sais pas à quoi ça ressemble donc je voudrais
+367,tp 3
+368,tp faf
+369,trooooop
+370,candidats
+371,vibrasons
+372,votez
+373,votes
+374,vendredi
+375,j'ai un pote
+376,argentique
+377,aller
+378,direction
+379,dormir
+380,oue
+381,qu’
+382,time
+383,hâte d’
+384,large j’
+385,kestuve
+386,sandrine m’
+387,"wesh
 "
-583,Oskour
-584,Julien t’
-585,Rip
-586,Salles
-587,je t’
-588,Nadege
-589,Déjà
-590,Je viens de le découvrir perso
-591,Genre Coralie
-592,Attends
-593,Et ça va Sylvia
-594,Nadege m’
-595,Serieux
-596,SD
-597,"Gg
-Viens"
-598,Att
-599,Peut
-600,Yep j’
-601,SD 1 ça m’
-602,Décathlon
-603,Salut !
-604,IL Y A DES AFFAIRES
-605,LAISSÉES
-606,FOYER
-607,VOUS
-608,SEMAINES
-609,MANIFESTER
-610,VENIR
-611,COMMUNAUTÉ !
-612,Askip
-613,Jsais
-614,Donne
-615,Foucaud @Fanny
-616,Merciiiii
-617,Australien
-618,Donnez
-619,RU
-620,Ah oui
-621,Gère
-622,JE n’
-623,Me
-624,Turn
-625,Gros
-626,Gros t’
-627,Calabar
-628,Photoshop
-629,Cadet
-630,Vois
-631,Nanaanananana
-632,Brd c’
-633,Oof
-634,Laquelle
-635,"Brd
+388,hp
+389,répon
+390,dixit
+391,"parole
+j’"
+392,kdo
+393,je c’
+394,merde
+395,double
+396,nathan
+397,mois
+398,big jar
+399,mr
+400,ou qu’ils déposent
+401,je m’
+402,j’imagine
+403,reprise
+404,td
+405,nous on
+406,je me disais
+407,bon bah rien
+408,spoiler
+409,coup le wec
+410,deso j’
+411,calme
+412,juliette esquirol
+413,sisi
+414,mato de vieillesse
+415,beaurepaire @albane
+416,foucaud samedi
+417,fragile
+418,samedi
+419,ailp
+420,tahiti
+421,.net
+422,va
+423,app
+424,bdd
+425,conseil d'administration
+426,mets moi
+427,gros
+428,@antoine parize
+429,antman
+430,beyoncé
+431,phalippou
+432,chicha
+433,"mdr
 "
-636,le WEC
-637,Sébastien
-638,"Juliette
-J’"
-639,Joe
-640,Phone
-641,Big Jar
-642,Munch
-643,Allô
-644,Dommage Jsuis
-645,Ah p3
-646,Tom
-647,Parts
-648,Haut*
-649,Tjrs
-650,Savoir
-651,Noice
-652,Tek
-653,Youhou
-654,BCI
-655,Lyon
-656,... je n’
-657,Salotti
-658,Roh
-659,Juliette et moi on discutera
-660,Capacité
-661,"Du coup faites attention
+434,ramène
+435,stéphanie
+436,"super ca
+qui ca ?"
+437,tu sais faire ça @julien
+438,7 wonders
+439,vas
+440,ok
+441,16:30
+442,"julie
 "
-662,SC
-663,AA
-664,Les
-665,Pulls
-666,Demain c'est encore
-667,Multiplier
-668,Please
-669,ComTess
-670,Bonnefon j’
-671,"Lea
+443,je l’
+444,ivrogne
+445,arths
+446,mdr
+447,pasquet
+448,magnifique
+449,ah ça c’
+450,préparez
+451,jpo
+452,bl
+453,j'ai perdu
+454,wow
+455,"je sais
 "
-672,Poulpablo
-673,Jsuis
-674,Xbox
-675,Aled
-676,Flûte
-677,Clara
-678,CO2
-679,C c’
-680,Ah yes !
-681,"Merci
+456,un vrai ingé
+457,fh
+458,trop mignon
+459,"vraiment
+on aura tout"
+460,surtiut
+461,ah mince trop
+462,retrouvée
+463,qu’on a perdu
+464,wtf c’
+465,https://www.bpesquet.fr/teaching/slides/
+466,tournage
+467,ahah
+468,court
+469,"jpo
 "
-682,C<=600
-683,Max 200B
-684,"0.5C<=500
-C’"
-685,Pro
-686,Écoute
-687,S110
-688,M€
-689,TWh
-690,Airbnb
-691,BOIRE CE SOIR
-692,Diluer c’
-693,Youhouuuu
-694,Nathan
-695,Énorme
-696,Jure tu balances
-697,Regardez
-698,Mooooh
-699,m’interroge
-700,"Lourd
-Je"
-701,Trop heureuse
-702,@Paul t’
-703,Nico
-704,Apoulpo>
-705,STAND
-706,Rappelez
-707,Lundi
-708,Mardi
-709,Est
-710,Et faut virer tous les trucs inflammables genre les canapés askip
-711,Cayere
-712,CHSCT
-713,LeBlanc
-714,"1A
-Mais les canapés frère"
-715,Askip Julie
-716,Ouah
-717,Aaah
-718,Ah ouais on abort
-719,"Ah non
+470,pierre  
+471,hate
+472,garde
+473,chambre de lago
+474,"margot
 "
-720,"Wtf
-Celui la
+475,ahhhhh
+476,moi
+477,parize
+478,sese
+479,arrête
+480,alban
+481,qu’on est leur bonne poire
+482,voilà
+483,muzotte
+484,bah jsp
+485,jma
+486,parfé
+487,kedge
+488,mensonge
+489,rhinoshield
+490,respo
+491,et force
+492,je suis frustrée
+493,bds
+494,bda
+495,allez hop
+496,tout
+497,minde fait
+498,envoie
+499,monde
+500,je crois ces profs
+501,jade
+502,tireuse
+503,v&b
+504,tenez
+505,j'ai pas trouvé les
+506,ensegid
+507,balance
+508,3a julien talon
+509,egid
+510,chloé
+511,hop
+512,alexia
+513,cbp
+514,voix
+515,j'arrive
+516,ccu
+517,gracias
+518,présentation
+519,nhibernate
+520,c#
+521,je sais pas si c'est clair
+522,wow j’
+523,promis j’
+524,nerds
+525,demande
+526,aie
+527,flight
+528,omg
+529,stop
+530,jsuis
+531,"inchalah
+"
+532,discord @simon laur
+533,disc
+534,pck
+535,venez
+536,syllabus
+537,https://www.instagram.com/reel/ckg5m16jk8b/?igshid=1g9p7rjjh6h4k
+538,sachant qu’ils sont sur bdx pour leurs cours
+539,sorry
+540,flûte
+541,tess
+542,margot h24
+543,je sais pas si c’
+544,ahhhh ça c’
+545,un catalogue faf
+546,bg
+547,calamap
+548,je gagnerai un max de temps
+549,kaggle
+550,baptiste
+551,judith c’
+552,nevermind
+553,lourd
+554,switch
+555,excel
+556,fin tu l’
+557,youhou
+558,enseirb
+559,l’ent
+560,rakel
+561,ouest
+562,sauf s’
+563,quel enfer
+564,les 3a
+565,"jsp
+"
+566,tranquille
+567,cti
+568,chap c’
+569,ah oui
+570,"pire ouin ouin
+"
+571,loulou
+572,alors
+573,attends
+574,hippolyte
+575,rep
+576,sandrine
+577,maurine
+578,lattendait
+579,bah c’
+580,d’eux c’
+581,l’ielts
+582,allez
+583,jean castex
+584,prolog swi
+585,élise
+586,ah bah j’
+587,rare
+588,azy
+589,ave
+590,marine
+591,pierre melchior
+592,qqn
+593,melchior
+594,foucaud
+595,lm
+596,https://drive.google.com/drive/u/0/folders/1nieystebz591jtu1hb52u13ualk_syh2?lfhs=2&fbclid=iwar0yyrv3qttv0bxrycft3-fkrleturrtlq4ailgh9zcgpfz01n8pcuqhfhi
+597,coco
+598,aveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+599,bonjour
+600,partage
+601,toeic
+602,sarenacllav !!
+603,https://bordeaux-inp-fr.zoom.us/j/87987428862
+604,btw
+605,"ah
+elle a dit des trucs intéressants ?"
+606,je
+607,oubliée
+608,quentin
+609,montre
+610,outch
+611,merci quentin
+612,pourquoi
+613,canard
+614,ia albane
+615,s1
+616,dut
+617,"cuisine
+"
+618,cap
+619,partir
+620,ducoup
+621,thea
+622,et nous on est
+623,loup
+624,camille
+625,hé beh c’
+626,déplace
+627,cochonne
+628,mince
+629,@fanny pierre
+630,parizé
+631,lothaire
+632,mato
+633,marine non
+634,putain
+635,rené
+636,matthéo
+637,pitié
+638,le gros mytho
+639,supet
+640,ah j’
+641,réveille
+642,albane
+643,jsp c’
+644,lanusse
+645,corentin
+646,joyeux hunger
+647,rhopieds
+648,sc
+649,robotique
+650,fälse 
+651,intelligence artificielle
+652,je suis pas inscrite
+653,qu’on a cours
+654,qqun
+655,yé comprends
+656,tuto youtube
+657,je fais pas des vidéos
+658,soirée
+659,juste arnaud
+660,théo
+661,arthur
+662,1a ca
+663,tristan
+664,tf1
+665,kheys
+666,motivez
+667,jpo svp
+668,je fais les présentations
+669,https://docs.google.com/spreadsheets/u/0/d/1g4iysw5wbvm88_qlrerkilttrh8twh8it2ggagzkuko/htmlview#gid=0
+670,venez m’
+671,troooop
+672,mdrr elise
+673,expo
+674,ca marche
+675,je crois
+676,aa
+677,robotique 7
+678,ux
+679,mouais
+680,groupe 4
+681,leblanc
+682,bordeaux 
+683,benoit
+684,jaime
+685,mdr leblanc
+686,macron
+687,jpo dem
+688,je t'ai partagé le diapo
+689,élève
+690,ecole
+691,"ou inversement
+le fameux"
+692,we plage
+693,team
+694,amaury
+695,mdrrrrr
+696,ahhhh
+697,je me suis mal
+698,julie pas
+699,claire
+700,insta
+701,tu n’
+702,le détail
+703,je revois
+704,parize ?
+705,"jour 4
+isabelle"
+706,13:56
+707,vodka
+708,turn
+709,nooooooon
+710,mdr quelle conne
+711,mettez
+712,saura
+713,bretagne
+714,devinez
+715,"ya pii 
+jrigole"
+716,fausse
+717,zoom
+718,vous m’
+719,demandez
+720,https://docs.google.com/forms/d/1tfiatviulayn6rwuxxkv-yexzixa9rmonq3dk6ybk04/edit?chromeless=1
+721,telegral
+722,facebook
+723,telegram
+724,ah bah toi
+725,me
+726,envie
+727,hors
+728,personne
+729,viens
+730,viens de 12:45
+731,mdr pesquet
+732,italie
+733,"yo yo yo
+on me demande"
+734,tranks
+735,bon
+736,bah
+737,sympa
+738,mercii
+739,cheveux
+740,maëlle abadi
+741,roi
+742,kgb
+743,cricri
+744,chui cho
+745,franchement j’
+746,rigolez
+747,meilleure
+748,je fais une pancarte sauvez paf
+749,lundi
+750,perso
+751,sabaidi
+752,j’arrive !
+753,zuliani @simon laur
+754,nutella
+755,ah oui amenez jeux de société
+756,love letter
+757,et j'ai the mind
+758,concept
+759,je suis vraiment scandalisé
+760,mais bon c’
+761,vraiment
+762,évidemment je vais
+763,"julien
+on"
+764,rdv
+765,il va paniquer pour la sacro sainte
+766,leblanc avec ça
+767,soutien
+768,vero
+769,battez
+770,je dis pas de foutre bordel
+771,ramenez
+772,"contre toi
+"
+773,jérôme
+774,cercle
+775,battle
+776,parler
+777,il y a 3 semaines
+778,du coup résumons ce que vous demandez :  
+779,ensc c’
+780,viens @simon
+781,qu’on allait
+782,12:45
+783,merciiii
+784,laur calme toi
+785,apparemment personne n’
+786,sarah
+787,quel
+788,mdrrrr
+789,adrien
+790,fête n’
+791,le bar est
+792,fermé
+793,on compte sur vous pour venir gentiment
+794,mais bon
+795,oui j’
+796,julie juaneda
+797,théa
+798,pas payer
+799,bières
+800,ricard
+801,https://bordeaux-inp-fr.zoom.us/j/82145935950?pwd=b2rqunnzt2hiqzdeneztcwzfyjvpzz09
+802,nik
+803,"mdrrrr
+"
+804,gironde
+805,nouvelle aquitaine
+806,france
+807,region nouvelle
+808,merci bien !
+809,martin
+810,wtf
+811,"ah non attendez
+je me sios fait prank"
+812,oublié
+813,repond
+814,"et
+"
+815,ai eu
+816,et hier
+817,att
+818,bravoooooo
+819,félicitations
+820,risotto
+821,pol
+822,ben
+823,mardi
+824,tchatcheuse
+825,ah non attendez
+826,ah c'est un date entre vous
+827,outlander
+828,pumpkin
+829,erci !
+830,tu vas sur le trucs des exos
+831,va falloir
+832,ah ma commande
+833,17:40
+834,robin le carour
+835,gg
+836,je suis scandalisée mdr
+837,bah oui
+838,tu viens
+839,ptn
+840,"aled
+"
+841,arths 
+842,centrée
+843,et d’ailleurs
+844,"s
+j’"
+845,molière
+846,apoulpo 11
+847,mars
+848,salo
+849,connaît
+850,prépare
+851,"coucou marine
+justement"
+852,netflix
+853,"après jsp
+purée"
+854,letsgoo
+855,efficace
+856,wims
+857,qu’on a 5essais
+858,ah si
+859,rafraîchis
+860,coralie
+861,menteur @matthéo
+862,video
+863,stylax
+864,hello
+865,pcq
+866,savoir
+867,juste
+868,hey
+869,duboz
+870,thomas faure
+871,je ne le comprendrai jamais
+872,encore
+873,mais aled
+874,calmez
+875,jvais
+876,leclerc
+877,du rhum blanc 2l
+878,aïe
+879,pessac
+880,japacompri
+881,je parle de la d3a
+882,d’hier ?
+883,claverie
+884,osaka
+885,tp axure
+886,axure
+887,partie 2
+888,vues
+889,https://vimeo.com/488255957  partie 3
+890,lien
+891,https://vimeo.com/488277532
+892,partie 4
+893,https://vimeo.com/488283155  
+894,masters https://vimeo.com/488291661  
+895,partie 6
+896,dynamic
+897,partie 7
+898,repeaters https://vimeo.com/488307178
+899,m’énerver
+900,update
+901,ah ça serait cool alors !
+902,"ah
+je sais tout"
+903,devient vert
+904,ajouter
+905,ah tu pense
+906,hollywood
+907,vegas
+908,poulpas
+909,lâches
+910,dacc pour fixer un créneau lundi
+911,horaire+
+912,j'avais
+913,on l’
+914,ya zoe
+915,années précédentes
+916,rapports.ensc.fr
+917,jeudi midi
+918,et je donne ma procuration
+919,exterieures
+920,https://docs.google.com/document/d/1uk3cptisirkll9g3dre_e-sxkvipzxkqiuy5uilbaai/edit?fbclid=iwar1wokm97gulf32nl2d_yd0qtwdrkdmzdiw3dbq4ikkobjfqch5e8n6ebmw#
+921,https://us02web.zoom.us/j/82060015724?pwd=qvyrrelpm1nnkzblc0dgog1trxzbzz09
+922,cr
+923,tranquille c’
+924,dm
+925,le 6 mars
+926,ah voila
+927,discord
+928,vérifiez
+929,annulation
+930,wes
+931,nicooooooo
+932,qu'on en*
+933,du coup faudra un cameraman
+934,ag
+935,pc
+936,linux
+937,zoom pas
+938,hum
+939,niveau
+940,why not
+941,yen
+942,bye
+943,harry potter 7 n’
+944,hp7
+945,et
+946,cépafo
+947,"martin
+"
+948,du coup
+949,message
+950,yep
+951,je sais pas mettre les salles d'attente
+952,j'ai
+953,"coup
+voilà je peux"
+954,heureusement
+955,mon silence
+956,https://www.google.com/url?q=https://bordeaux-inp-fr.zoom.us/j/89654911621&sa=d&source=calendar&ust=1614418272368000&usg=aovvaw3zj537cf99u0fkmulpf86m
+957,https://zoom.us/j/99670528713?pwd=bjlkbwtzmhdyn29qsvdddzbyouprdz09
+958,intéressant
+959,violet
+960,gala
+961,benoît
+962,entrée
+963,plat
+964,dessert
+965,boisson
+966,pas
+967,chap on
+968,l'année
+969,chrystelle
+970,grosses voix
+971,live
+972,je vois
+973,on voit
+974,gneugneugneu
+975,c fo je
+976,on voit r
+977,"octoflix
+"
+978,tiens
+979,aled y’
+980,ayaya
+981,j'en connais 0
+982,ptn j’
+983,audrey
+984,"oups
+pas sure"
+985,hyper
+986,oscar
+987,tcha
+988,tcheu
+989,"octofliw
+octoflux
+flûte
+"
+990,octoflix
+991,méfait
+992,poulpywood
+993,j'ai envoyé ça à octoflix
+994,aaaaah
+995,j'
+996,m'
+997,"top
+"
+998,marseillais
+999,je fais apéro
+1000,ah merde
+1001,un max de dégâts
+1002,apéro
+1003,maiwen
+1004,mercredi
+1005,lotie
+1006,hugo
+1007,theo
+1008,poulpix
+1009,prejent
+1010,attend
+1011,le hugo de julien
+1012,conférence
+1013,"oups
+"
+1014,moi on me fait la vaisselle
+1015,faire
+1016,woa
+1017,hein
+1018,lucas tomas
+1019,"lydia
+"
+1020,bataille
+1021,tendu
+1022,oh je viens
+1023,"un truc
+"
+1024,evan
+1025,fillot de romain
+1026,chat
+1027,why
+1028,élise m’
+1029,on peut
+1030,comment
+1031,aussi
+1032,c lheure
+1033,lappel
+1034,arrêtez
+1035,que ça change
+1036,bonsoir
+1037,amen marion
+1038,nice
+1039,tant
+1040,tr c y’a
+1041,truc
+1042,"wiwi
+il"
+1043,je suis apparement
+1044,https://vm.tiktok.com/zmey2nmmp/
+1045,sont meilleures
+1046,vous
+1047,ca n’
+1048,ah bah là
+1049,jalouse
+1050,amenez
+1051,dem
+1052,jme
+1053,donc comptez
+1054,je me suis lavé
+1055,marc sangnier
+1056,sfr 63d8
+1057,appuyez
+1058,noé
+1059,boooooom
+1060,parize  
+1061,@juliette esrl
+1062,mr leblanc
+1063,ouu
+1064,je suis sur le podium les gars
+1065,"oups
+bon j’"
+1066,pâques
+1067,confessional
+1068,comme a secret
+1069,wiwi
+1070,idem
+1071,léo
+1072,j'ai peur de pas être
+1073,"engagement
+idem"
+1074,sheets
+1075,t'as plus de souvenirs
+1076,oups c’
+1077,ya un taxi
+1078,jvoulais
+1079,"er
+jamais"
+1080,un nain
+1081,sondage
+1082,bah jsuis chaud
+1083,je suis amoureux
+1084,tiktok
+1085,je la connais limite par cœur la liste de notre
+1086,noël c’
+1087,faure
+1088,chuicho
+1089,victorien
+1090,ya un doc
+1091,bouger
+1092,paques
+1093,jcapte
+1094,ça n’
+1095,jsuis 90e
+1096,bravo
+1097,started from the bottom
+1098,wec 2
+1099,avril
+1100,je vous aime bande de patates
+1101,juste paul
+1102,paris
+1103,wei gate
+1104,btw octoflix
+1105,it
+1106,foreuse
+1107,bataille navale
+1108,nous                              
+1109,ah bon ?
+1110,billard
+1111,moi devant la « 
+1112,mdrrr j’
+1113,balayettes
+1114,combien
+1115,captain
+1116,fatigué
+1117,tas
+1118,urban dictilnnary
+1119,1l
+1120,4l
+1121,prends
+1122,2l shweppes
+1123,j’ai ça j’
+1124,2l jsuis
+1125,jean zubieta
+1126,mélissa
+1127,help !
+1128,maintenant
+1129,"laur
+c’"
+1130,rue saint james
+1131,https://docs.google.com/spreadsheets/d/1x5xvv2r-lgst-g_lvp6p4m5ytlmjb0j_5vokuuikq6u/edit?usp=sharing
+1132,campagne
+1133,appelle romain
+1134,bisous
+1135,j'ai envie de me rendormir
+1136,attendez
+1137,ok j’
+1138,mdr t’
+1139,lou
+1140,berrocca
+1141,tabac
+1142,bizouuuu
+1143,simsim
+1144,ptdr thea
+1145,"wiwi ""ah wiwi"
+1146,drama yakoi
+1147,réponds
+1148,publi c’
+1149,les hollypoulpes
+1150,ah cool
+1151,je suis mort
+1152,vides
+1153,ah voila j’
+1154,parf
+1155,gin
+1156,freestyle
+1157,giiiiiin
+1158,lundi y’
+1159,tu venais
+1160,réunions tu
+1161,boue
+1162,patrie
+1163,voisine dessous
+1164,meilleure choe
+1165,wellington
+1166,soleil
+1167,faudrait
+1168,je sais plus si l'ag
+1169,et donc vous voulez pas poser de questions sur le wei donc ?
+1170,fin on va pas demander
+1171,heure 
+1172,participer
+1173,"zoom https://us02web.zoom.us/j/83322208300?pwd=bvfwztz2ag5tavo4thjfb1fsc0dvzz09
+@simon laur"
+1174,prix du wei
+1175,soit
+1176,wei&go
+1177,mdrrr d’
+1178,essayez
+1179,gneugneu
+1180,hugo 3
+1181,gala je meurs
+1182,coup julie
+1183,le problème c’
+1184,donc c’
+1185,cpbx
+1186,cl
+1187,grivel
+1188,ihs
+1189,matez
+1190,fake news
+1191,merci @antoine
+1192,recliquent
+1193,jbulteau@ensc.fr
+1194,l’ag
+1195,lucad tomas
+1196,flute
+1197,bah super
+1198,rester
+1199,hop j’
+1200,patriiiiiiiiiiiiiiiiiiiiiiiiiiiiick
+1201,hugo3
+1202,coup d'état
+1203,bugs
+1204,j'ai trop peur
+1205,ohhhhhh brigitte c’
+1206,m’ouvrir svp j’
+1207,antoine on t’
+1208,non
+1209,utile
+1210,soit heureuse
+1211,j’ai ma réponse
+1212,same je m’
+1213,boar dé bier
+1214,issou
+1215,zak
+1216,zack
+1217,jma il est mort ?
+1218,ciao
+1219,loosers
+1220,moi aussi
+1221,ça m’
+1222,je veux faire
+1223,club
+1224,antoinette
+1225,gens
+1226,12:30
+1227,oh
+1228,il
+1229,ou
+1230,le respo com
+1231,c bon
+1232,ptdrrrrrr
+1233,poulparty
+1234,remets
+1235,dites
+1236,shotgun @paul
+1237,"julien
+paint"
+1238,réunion
+1239,qui
+1240,dispo
+1241,wec le
+1242,weekend
+1243,c pa lé vacances
+1244,go faire
+1245,probablement la dernière fois de notre vie
+1246,manoar
+1247,quels 1a
+1248,"cho
+"
+1249,j'ai eu
+1250,versailles
+1251,planète
+1252,élise vilayleck
+1253,je sais que c'est dans htdocs
+1254,"ah
+jsp"
+1255,je sais que c'est pas un club
+1256,barthas
+1257,emma
+1258,je suis uniquement spectatrice habituellement
+1259,bé
+1260,genre l’
+1261,antoine barthas
+1262,mp
+1263,merci !!
+1264,fuck
+1265,tom duris
+1266,j'ai eu romain
+1267,"https://bordeaux-inp-fr.zoom.us/j/84024735940
+"
+1268,oskour
+1269,julien t’
+1270,rip
+1271,salles
+1272,je t’
+1273,nadege
+1274,déjà
+1275,je viens de le découvrir perso
+1276,genre coralie
+1277,et ça va sylvia
+1278,nadege m’
+1279,serieux
+1280,"gg
+viens"
+1281,peut
+1282,yep j’
+1283,sd 1 ça m’
+1284,décathlon
+1285,salut !
+1286,il y a des affaires
+1287,laissées
+1288,foyer
+1289,semaines
+1290,manifester
+1291,venir
+1292,communauté !
+1293,askip
+1294,jsais
+1295,donne
+1296,foucaud @fanny
+1297,merciiiii
+1298,australien
+1299,donnez
+1300,gère
+1301,je n’
+1302,gros t’
+1303,calabar
+1304,photoshop
+1305,vois
+1306,nanaanananana
+1307,brd c’
+1308,laquelle
+1309,"brd
+"
+1310,le wec
+1311,sébastien
+1312,"juliette
+j’"
+1313,joe
+1314,phone
+1315,munch
+1316,dommage jsuis
+1317,ah p3
+1318,tom
+1319,parts
+1320,haut*
+1321,tjrs
+1322,noice
+1323,tek
+1324,bci
+1325,lyon
+1326,... je n’
+1327,roh
+1328,juliette et moi on discutera
+1329,capacité
+1330,"du coup faites attention
+"
+1331,les
+1332,pulls
+1333,demain c'est encore
+1334,multiplier
+1335,please
+1336,bonnefon j’
+1337,"lea
+"
+1338,poulpablo
+1339,xbox
+1340,clara
+1341,co2
+1342,c c’
+1343,ah yes !
+1344,"merci
+"
+1345,c<=600
+1346,max 200b
+1347,"0.5c<=500
+c’"
+1348,pro
+1349,écoute
+1350,s110
+1351,m€
+1352,twh
+1353,boire ce soir
+1354,diluer c’
+1355,youhouuuu
+1356,énorme
+1357,jure tu balances
+1358,regardez
+1359,mooooh
+1360,m’interroge
+1361,"lourd
+je"
+1362,trop heureuse
+1363,@paul t’
+1364,apoulpo>
+1365,stand
+1366,rappelez
+1367,est
+1368,et faut virer tous les trucs inflammables genre les canapés askip
+1369,cayere
+1370,chsct
+1371,"1a
+mais les canapés frère"
+1372,askip julie
+1373,ouah
+1374,aaah
+1375,ah ouais on abort
+1376,"ah non
+"
+1377,"wtf
+celui la
 https://www.leboncoin.fr/offre/locations_gites/991599919?ac=749787903
 "
-721,La c'est un peu plus de 500
-722,Découvrez
-723,Paypal
-724,"Bdx
-https://paypal.me/pools/c/8xGtuVId7q
+1378,la c'est un peu plus de 500
+1379,découvrez
+1380,paypal
+1381,"bdx
+https://paypal.me/pools/c/8xgtuvid7q
 "
-725,Hop
-726,Ah j’
-727,PayPal
-728,Oui Mams
-729,Moi aussi je te paye sur lydia
-730,DONNEZ VOTRE ARGENT
-731,@Léa Grondin
-732,https://paypal.me/pools/c/8xGtuVId7q
-733,Tom ?
-734,SOUS
-735,BOOOKÉ
-736,WEEEEEEEC
-737,VNB
-738,"Mito
-Mais j’"
-739,T'as pas eu de l'inspi
-740,YouTube
-741,Original
-742,C ma mort
-743,Vidéo
-744,Pierre t’
-745,Foucaud la veste
-746,Gris
-747,TD
-748,Jauze
-749,Jeudi
-750,Large
-751,Kermess
-752,Retourne
-753,Kermes
-754,"Laura Scolan
+1382,oui mams
+1383,moi aussi je te paye sur lydia
+1384,donnez votre argent
+1385,https://paypal.me/pools/c/8xgtuvid7q
+1386,tom ?
+1387,sous
+1388,boooké
+1389,weeeeeeec
+1390,vnb
+1391,"mito
+mais j’"
+1392,t'as pas eu de l'inspi
+1393,original
+1394,c ma mort
+1395,vidéo
+1396,pierre t’
+1397,foucaud la veste
+1398,gris
+1399,jauze
+1400,jeudi
+1401,kermess
+1402,retourne
+1403,"laura scolan
 "
-755,Euh j’
-756,M c’
-757,Bdee
-758,Désolé
-759,ALED
-760,Viendez
-761,Grammy
-762,Deliveroo
-763,Mattheo
-764,Juju
-765,Saoulé
-766,"De
+1404,euh j’
+1405,m c’
+1406,bdee
+1407,désolé
+1408,viendez
+1409,grammy
+1410,deliveroo
+1411,juju
+1412,saoulé
+1413,"de
 "
-767,Ah oups
-768,"Bonsoir
-Du"
-769,Moi je suis chaud
-770,SIMON LAUR
-771,OÙ
-772,Octowood
-773,CM de Pesquet
-774,Fin j’
-775,IPhone
-776,Je suis scandalisée
-777,iPhones
-778,J'aurai du prétendre
-779,JBL
-780,Je m'en remets pas
-781,iPhone
-782,Vu que vous avez de riches partenaires
-783,Bon du coup
-784,Merde
-785,Blagueuse
-786,Mel
-787,Dis
-788,WEPA
-789,Jsp 10
-790,Monsieur Victorien
-791,Lea arrive et l’un de vous
-792,Paul j’
-793,Zut
-794,Antoine t'es
-795,Maths
-796,Oh j’
-797,Apoulpo 11
-798,Je suis pas si nulle
-799,"Ah
-Procédurale"
-800,Grosse
-801,CHAP
-802,KOLOK
-803,Et ils sortent le verre
-804,Lucie bannay
-805,Erwan
-806,Unity
-807,Constance
-808,Temporaire
-809,Je crois
-810,Maud
-811,Moi c'est bon
-812,Ah mdr ok
-813,Décalé
-814,Jure
-815,ÇA
-816,OK CA
-817,BIEN
-818,Minimum
-819,TPs
-820,Parize
-821,ENSC
-822,Smart
-823,Laura S
-824,Thomas A
-825,Camille D
-826,Y'
-827,QUI DONNE
-828,COCHER
-829,Sébastien Bertrand
-830,Si tu peux plus
-831,qu’
-832,Et qu’amenez vous ?
-833,Ouiiiiiii
-834,Yep!
-835,"Hummmm
+1414,ah oups
+1415,"bonsoir
+du"
+1416,moi je suis chaud
+1417,simon laur
+1418,où
+1419,octowood
+1420,cm de pesquet
+1421,fin j’
+1422,iphone
+1423,je suis scandalisée
+1424,iphones
+1425,j'aurai du prétendre
+1426,jbl
+1427,je m'en remets pas
+1428,vu que vous avez de riches partenaires
+1429,bon du coup
+1430,blagueuse
+1431,mel
+1432,wepa
+1433,jsp 10
+1434,monsieur victorien
+1435,lea arrive et l’un de vous
+1436,paul j’
+1437,zut
+1438,antoine t'es
+1439,maths
+1440,oh j’
+1441,je suis pas si nulle
+1442,"ah
+procédurale"
+1443,chap
+1444,kolok
+1445,et ils sortent le verre
+1446,lucie bannay
+1447,erwan
+1448,unity
+1449,constance
+1450,temporaire
+1451,maud
+1452,moi c'est bon
+1453,ah mdr ok
+1454,décalé
+1455,jure
+1456,ok ca
+1457,bien
+1458,minimum
+1459,tps
+1460,smart
+1461,laura s
+1462,thomas a
+1463,camille d
+1464,y'
+1465,qui donne
+1466,cocher
+1467,sébastien bertrand
+1468,si tu peux plus
+1469,et qu’amenez vous ?
+1470,ouiiiiiii
+1471,yep!
+1472,"hummmm
 "
-836,"Je sais po
+1473,"je sais po
 "
-837,Merci mago
-838,Jésus
-839,Pardonnez
-840,Tchatcheuse
-841,Super l’
-842,Mito
-843,"E
-D"
-844,Je sais que c’
-845,Élise
-846,Ricardo c’
-847,El
-848,Alvaro
-849,Merci c’
-850,"Oups
-J’"
-851,Élise chut
-852,Bottleworrrs 
-853,JOUER
-854,Répondez
-855,Chap
-856,Ok Juliette
-857,Propose
-858,Semaine du 03 mai
-859,Coline
-860,Ducoup
-861,Navy
-862,Laur on t’
-863,Merci @Simon Laur
-864,Télégram
-865,Facebook
-866,Abusez
-867,Sandrine
-868,Atelier
-869,MATLAB
-870,Imagine
-871,TP t’
-872,Trkl j’
-873,WE dernier
-874,Bibliothèque
-875,TCHATCHEUSE
-876,V and B
-877,De la bière artisanale et locale en canette
-878,Bouger A
-879,Mêmes
-880,m’as pas
-881,"Watipotes
+1474,merci mago
+1475,jésus
+1476,pardonnez
+1477,super l’
+1478,"e
+d"
+1479,je sais que c’
+1480,ricardo c’
+1481,el
+1482,alvaro
+1483,merci c’
+1484,"oups
+j’"
+1485,élise chut
+1486,bottleworrrs 
+1487,jouer
+1488,répondez
+1489,ok juliette
+1490,propose
+1491,semaine du 03 mai
+1492,coline
+1493,navy
+1494,laur on t’
+1495,merci @simon laur
+1496,télégram
+1497,abusez
+1498,atelier
+1499,matlab
+1500,imagine
+1501,tp t’
+1502,trkl j’
+1503,we dernier
+1504,bibliothèque
+1505,v and b
+1506,de la bière artisanale et locale en canette
+1507,bouger a
+1508,mêmes
+1509,m’as pas
+1510,"watipotes
 "
-882,AH MAIS CA POUVAIT ETRE UNE
-883,BLAGUE
-884,Si
-885,Merci Mams
-886,Merciiiiiiiii
-887,Fernand Lafargue
-888,Je le fais à 1€ la page
-889,Bah ça
-890,Juliette Paul
-891,Pouce
-892,REPONDEZ
-893,REPONDEZ SVP
-894,Pense
-895,Apres
-896,"Rue st James
+1511,ah mais ca pouvait etre une
+1512,blague
+1513,merci mams
+1514,merciiiiiiiii
+1515,fernand lafargue
+1516,je le fais à 1€ la page
+1517,bah ça
+1518,juliette paul
+1519,pouce
+1520,repondez
+1521,repondez svp
+1522,pense
+1523,"rue st james
 "
-897,ABSOLUMENT
-898,Sauf
-899,Autonomie
-900,JMA
-901,Oh c'est si loin ?
-902,Julien de @Tess
-903,Parize et @Paul
-904,Balance
-905,Pv
-906,Covid
-907,Trop hate
-908,Manu
-909,Dahl
-910,Gratin
-911,terre+autre
-912,Bah bof
-913,"Demain
-Mercredu"
-914,BDE 1A
-915,Moi j'ai dit à mon fillot
-916,V&B
-917,ARS
-918,Ya des cookies
-919,Emma Élise
-920,Nico D
-921,Laura G
-922,Bah jsp mais vous allez pas
-923,Okay lourd
-924,Melissa
-925,Bingo
-926,Oui   
-927,Ahahahah
-928,Wec
-929,Mhhh
-930,BAH
-931,VA Y SAOULE
-932,PAIERAI
-933,Choquée
-934,Ptdr Tracy
-935,prix du Airbnb
-936,Doctolib
-937,Mdrr
-938,Bereal
-939,"Mamsounette
-Trop"
-940,"Mdrr
-T"
-941,Loge
-942,Yviers
-943,Nouvelle
-944,Aquitaine
-945,France
-946,17/18h
-947,Imprimer
-948,Préparez
-949,Olivier de Carglass
-950,Je peux amener du nesquick et du café mais si vous voulez autre
-951,J’ai !
-952,UK
-953,"Emma
+1524,absolument
+1525,sauf
+1526,autonomie
+1527,oh c'est si loin ?
+1528,julien de @tess
+1529,parize et @paul
+1530,pv
+1531,covid
+1532,trop hate
+1533,manu
+1534,dahl
+1535,gratin
+1536,terre+autre
+1537,bah bof
+1538,"demain
+mercredu"
+1539,bde 1a
+1540,moi j'ai dit à mon fillot
+1541,ars
+1542,ya des cookies
+1543,emma élise
+1544,nico d
+1545,laura g
+1546,bah jsp mais vous allez pas
+1547,okay lourd
+1548,melissa
+1549,bingo
+1550,oui   
+1551,ahahahah
+1552,mhhh
+1553,va y saoule
+1554,paierai
+1555,choquée
+1556,ptdr tracy
+1557,prix du airbnb
+1558,doctolib
+1559,mdrr
+1560,bereal
+1561,"mamsounette
+trop"
+1562,"mdrr
+t"
+1563,loge
+1564,yviers
+1565,nouvelle
+1566,17/18h
+1567,imprimer
+1568,olivier de carglass
+1569,je peux amener du nesquick et du café mais si vous voulez autre
+1570,j’ai !
+1571,uk
+1572,"emma
 https://www.emmapruen.com/"
-954,J'étais en train de vous faire payer mon
-955,Chante
-956,Albane
-957,Je préfère préciser on sait jamais
-958,Martine
-959,Gaëlle
-960,DEVIENT
-961,Melchior
-962,Passez
-963,Wejdene
-964,l’ENSC c’
-965,Miam
-966,Wok merci
-967,Je ne sais pas trop
-968,Moi ça me
-969,Thx
-970,Edwige
-971,Oh tu sais
-972,Vu qu’on aborde
-973,CNN
-974,Victor
-975,EP
-976,"Attendez
+1573,j'étais en train de vous faire payer mon
+1574,chante
+1575,je préfère préciser on sait jamais
+1576,martine
+1577,gaëlle
+1578,devient
+1579,passez
+1580,wejdene
+1581,l’ensc c’
+1582,miam
+1583,wok merci
+1584,je ne sais pas trop
+1585,moi ça me
+1586,thx
+1587,edwige
+1588,oh tu sais
+1589,vu qu’on aborde
+1590,cnn
+1591,victor
+1592,ep
+1593,"attendez
 "
-977,Info
-978,Toujours croire fb
-979,Stylé
-980,"Wok
-C fay"
-981,https://bordeaux-inp-fr.zoom.us/j/8736794409
-982,Nicooooo
-983,Ahahhah
-984,Mao
-985,Carapace
-986,Tod
-987,"ToAd
-Vous me dégoûtez"
-988,Coquille
-989,toAst
-990,Ouai
-991,"Mdrr
+1594,toujours croire fb
+1595,stylé
+1596,"wok
+c fay"
+1597,https://bordeaux-inp-fr.zoom.us/j/8736794409
+1598,nicooooo
+1599,ahahhah
+1600,mao
+1601,carapace
+1602,tod
+1603,"toad
+vous me dégoûtez"
+1604,coquille
+1605,toast
+1606,ouai
+1607,"mdrr
 "
-992,Romain t’
-993,Plan échoué
-994,"Phacochère
-Putain"
-995,Rom1
-996,Romain c’
-997,Pose
-998,MDR
-999,DINGUE
-1000,BOUM
-1001,QUEL PLAISIR
-1002,CHEH
-1003,CHEEHHH
-1004,Gnagna
-1005,l’Energie
-1006,Danone
-1007,Charly
-1008,Matlab
-1009,Drive
-1010,Top
-1011,Je suis pas sûr de l’
-1012,Cracias
-1013,Allan
-1014,16:30
-1015,Ça RY
-1016,Merci Simon
-1017,"Ptin
-Jsavais"
-1018,Mdr Audrey
-1019,Ohlala
-1020,JSP
-1021,Zetes
-1022,Qu'on sache
-1023,CB
-1024,PARDON
-1025,Seum
-1026,Tracy
-1027,Jte
-1028,Allo
-1029,Je croyais
-1030,qu’on valide notre
-1031,Ca marche
-1032,générique de Wanda
-1033,Certeins
-1034,Lea
-1035,"coup svp
+1608,romain t’
+1609,plan échoué
+1610,"phacochère
+putain"
+1611,rom1
+1612,romain c’
+1613,pose
+1614,dingue
+1615,boum
+1616,quel plaisir
+1617,cheh
+1618,cheehhh
+1619,gnagna
+1620,l’energie
+1621,danone
+1622,charly
+1623,drive
+1624,top
+1625,je suis pas sûr de l’
+1626,cracias
+1627,allan
+1628,ça ry
+1629,merci simon
+1630,"ptin
+jsavais"
+1631,mdr audrey
+1632,ohlala
+1633,zetes
+1634,qu'on sache
+1635,cb
+1636,pardon
+1637,seum
+1638,tracy
+1639,jte
+1640,allo
+1641,je croyais
+1642,qu’on valide notre
+1643,générique de wanda
+1644,certeins
+1645,lea
+1646,"coup svp
 "
-1036,Thai
-1037,Garonne
-1038,http://www.cmls.polytechnique.fr/perso/tringali/documents/st_exupery_le_petit_prince.pdf
-1039,Qui RU
-1040,Bravo @Antoine Parize
-1041,Lespinet
-1042,Mercii
-1043,Musée*
-1044,Tupperware
-1045,Merci @Elise Cadet
-1046,Windows j’
-1047,Ouvre
-1048,Essaie
-1049,Affichage d’
-1050,Bruno
-1051,12:40
-1052,AUTOMATIQUE
-1053,ALORS QUE
-1054,PUIS
-1055,DEBUT
-1056,SEMESTRE
-1057,Coralie
-1058,MOINS
-1059,Be
-1060,Jeudi c'
-1061,Le M blanc SAV
-1062,Europe
-1063,4 L bleu marine
-1064,2 S
-1065,M noir bref on est bon
+1647,thai
+1648,garonne
+1649,http://www.cmls.polytechnique.fr/perso/tringali/documents/st_exupery_le_petit_prince.pdf
+1650,qui ru
+1651,bravo @antoine parize
+1652,lespinet
+1653,musée*
+1654,tupperware
+1655,merci @elise cadet
+1656,windows j’
+1657,ouvre
+1658,essaie
+1659,affichage d’
+1660,bruno
+1661,12:40
+1662,automatique
+1663,alors que
+1664,puis
+1665,debut
+1666,semestre
+1667,moins
+1668,be
+1669,corrections.7z
+1670,esrl @simon
+1671,deviner
+1672,foucaud @margot
+1673,foucaud @albane
+1674,livraison
+1675,nul
+1676,jeudi c'
+1677,le m blanc sav
+1678,4 l bleu marine
+1679,2 s
+1680,m noir bref on est bon

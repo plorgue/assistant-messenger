@@ -18,7 +18,7 @@ Rq: L'ensemble des messages déjà annotés sont dans ./messages/messages0.csv
 """
 
 # recupération des messages scrappés
-with open('./messages/18-04-2021_21-00-58__4573.json', encoding="utf8") as f:
+with open('./messages/BDE_8223.json', encoding="utf8") as f:
   data = json.load(f)
 
 # index des messages déjà présenté
@@ -37,7 +37,7 @@ while txt != 'exit':
       while(rd in indices):
         rd = random.randint(0,len(data))
       msg = data[rd]['what'].replace('\n',' ')
-      is_msg_ok = 'http://' not in msg and 'https://' not in msg and msg != "GIPHY" and msg != "Tenor GIF Keyboard" and len(msg) > 2
+      is_msg_ok = data[rd]['whatType'] == "Texte" and len(msg) > 2
     
     # affichage du message des feedback éventuelle associé
     print(f"{n}: {msg}")

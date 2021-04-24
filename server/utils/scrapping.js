@@ -232,7 +232,7 @@ exports.scrapping = async function (
           what === "Tenor GIF Keyboard" ||
           what === "GIPHY" ||
           what.includes("http") ||
-          what.includes("Écouter 0 :00 / 0 :00")
+          what.includes("Écouter 0 :00 /")
         ) {
           whatType = "Non Texte";
         } else {

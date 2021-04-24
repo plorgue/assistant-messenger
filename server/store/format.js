@@ -1,23 +1,6 @@
 const fs = require("fs");
 
-let path = "./bde_conv_5132";
-
-// let e = {
-//   who: "Moi",
-//   when: "18 mars",
-//   whatType: "Texte",
-//   what:
-//     "mdrrr la question se pose\n" +
-//     "non en vrai c'est comme ç apour tout le monde chez n'importe quel fournisseur c'est infernal",
-//   feedback: ["😂"],
-//   raw:
-//     "Date d’envoi de votre message : 18 mars\n" +
-//     "mdrrr la question se pose\n" +
-//     "2\n" +
-//     "Date d’envoi de votre message : 18 mars\n" +
-//     "non en vrai c'est comme ç apour tout le monde chez n'importe quel fournisseur c'est infernal",
-// };
-// console.log(new Date(formatWhen(e)).getFullYear());
+let path = "./20-04-2021_02-04-26__8225";
 
 let data = JSON.parse(fs.readFileSync(path + ".json", "utf8"));
 console.log(data.length);
@@ -27,10 +10,11 @@ let b = 0;
 let c = 0;
 data.forEach((element) => {
   if (
-    element.what.includes("http") ||
-    element.what.includes("GIPHY") ||
-    element.what.includes("Tenor GIF Keyboard") ||
-    element.what.includes("Écouter 0 :00 / 0 :00")
+    element.whatType === "Texte" &&
+    (element.what.includes("http") ||
+      element.what.includes("GIPHY") ||
+      element.what.includes("Tenor GIF Keyboard") ||
+      element.what.includes("Écouter 0 :00 /"))
   ) {
     element.whatType = "Non Texte";
     c++;
@@ -38,6 +22,7 @@ data.forEach((element) => {
   if (!isValid(element.when)) {
     let tmp = formatWhen(element);
     if (isValid(tmp)) {
+      element.when = tmp;
       data_r.push(randomSecond(element));
       b++;
     } else {
@@ -51,20 +36,14 @@ data.forEach((element) => {
 console.log(
   `Messages formattés: ${b}, messages toujours invalide: ${a}, autre formatage: ${c}`
 );
-if (a) {
-  console.log(`${a} messages non valides`);
-  console.log(`Avant: ${data.length}. Après: ${data_r.length}`);
-} else {
-  fs.writeFileSync(path + "_r.json", JSON.stringify(data_r));
-  console.log("Changements sauvés");
-}
+console.log(`${a} messages non valides`);
+console.log(`Avant: ${data.length}. Après: ${data_r.length}`);
+fs.writeFileSync(path + "_r.json", JSON.stringify(data_r));
+console.log("Changements sauvés");
 
 function randomSecond(element) {
   let d = new Date(element.when);
-  console.log("---");
-  console.log(d);
   d.setSeconds(Math.floor(Math.random() * 60)).toString();
-  console.log(d);
   element.when = d.toString();
   return element;
 }

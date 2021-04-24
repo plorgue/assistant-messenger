@@ -74,6 +74,10 @@ Phase 3: plusieurs choix
 
 ## Description du dépot
 
+### Les branches
+
+La seule différence entre les branches `main` et `main_light` et que `main_light` n'a pas de dossier `sentiment/models_weights`. Les poids du modèle fine-tuned sont stockés dans un fihier .h5 volumunieux > 100Mb.
+
 ### Les dossiers
 
 \server contient l'api qui envoi les messages scrapés
@@ -86,22 +90,43 @@ Phase 3: plusieurs choix
 
 Pour tester le projet il faut:
 
-- m'envoyer un mail (paullorgue@gmail.com) pour avoir le mot de passe permettant de récupérer les messages de mon compte pour quelques heures(c'est pas mon mdp Facebook)
 - avoir node d'installé et un gestionnaire de paquet (j'utilise npm)
 - avoir un compte Facebook et des conversations de groupe sur Messenger (les conversations avec un seul autre interlocuteur ne sont pas compatible)
 - avoir installé Vue CLI : `npm install -g @vue/cli`
-- ..avoir certainement autre chose que j'ai pas remarqué
 
-Procédure pour tester:
+Pour cloner le projet:
+
+- Avec le modèle fine-tuned (banche `main`)  
+  Il faut avoir installer l'extension [lfs](https://git-lfs.github.com/) (Large File Storage) de git sinon `git lfs install`  
+  Utiliser le git bash pour clone (personnelement avec powershell cela ne marche pas):  
+  `git clone git@github.com:plorgue/assistant-messenger.git`
+
+- Sans le modèle fine-tuned (branche `main_light`)
+  `git clone -b main_light --single-branch git@github.com:plorgue/assistant-messenger.git`
+
+Procédure pour tester la partie site, server:
 
 - cloner le dépot
 - exécuter la commande `npm install` dans les répertoires `site\` et `server\`
 - exécuter simultanément (dans deux invites de commande): `npm run serve` et `node server.js` respectivement dans les repertoires `site\` et `server\`
 - ouvrir son navigateur et aller à l'adresse: http://localhost:8080/
 
-### Warning
+Procédure pour tester la partie analyse de sentiment
+
+- avoir [python](https://www.python.org/downloads/) installé
+- avoir [pip](https://pip.pypa.io/en/stable/installing/) installé
+- avoir installé les librairies suivantes:
+  - [numpy](https://numpy.org/install/): `pip install numpy`
+  - [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html#installing-from-pypi): `pip install pandas`
+  - [matplotlib]
+  - [sklearn]
+  - [seaborn]
+  - [tensorflow]
+  - [transformers]
+
+<!-- ### Warning
 
 Ce projet est avant tout destiné à un usage personnel donc les url des conversations que je souhaite analyser sont associés à un bouton sur le côté droit et un code PIN me suffit pour appeler l'api. ( pas besoin de rentrer le mot de passe de 36 caractères ni de coller le lien de la conv qui m'intéresse )
-Je suis rapidement en train d'ajouter une fonctionnalités "visiteur" pour pouvoir analyser une conversation sur un autre compte Facebook (en entrant mot de passe FB et identifiant)
+Je suis rapidement en train d'ajouter une fonctionnalités "visiteur" pour pouvoir analyser une conversation sur un autre compte Facebook (en entrant mot de passe FB et identifiant) -->
 
 <!-- De plus n'ayant pas testé avec d'autres comptes Facebook que le mien je ne suis pas sur que le scrapping de page Messenger de ces autres comptes fonctionne (si le compte n'est pas configuré en français, pas sur que ça marche par exemple) -->

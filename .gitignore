@@ -25,8 +25,7 @@ sentiments/data/*.csv
 sentiments/data/*.jsonl
 sentiments/data/*.pickle
 sentiments/.vscode
-
-
+sentiments/entities/entities_final_non_censure.json
 
 !package-lock.json
 !package.json

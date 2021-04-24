@@ -11,6 +11,8 @@ Il faut plusieurs informations autour de chaque message:
 - les réactions,
 - le contenu.
 
+8225 on était récupéré sur une de mes conversations.
+
 ### 2 Traiter ces messages et afficher des graphiques sympa
 
 Utilisation de plotly.js pour tracer l'évolution des différents critères au cours du temps.
@@ -19,11 +21,23 @@ On peut visualiser:
 - la fréquence de réception messages,
 - la fréquence de réaction sous les messages
 - la fréquence de réaction typée "sérieuse"
-- qui parle le plus et dans quelle proportion ?
+- le nombre de message envoyer par chaque personne
 
-### 3 Analyse du contenu - NLP
+### 3 Analyse du contenu - sentiments
 
-🚧👷‍♂️ Travail en cours 👷‍♂️🚧
+L'analyse du contenu se base sur de l'analyse de sentiments.
+D'un côté on associe à chaque messages un sentiement positif 1 ou négatif 0 et de l'autre on extrait de chaque message les entitées citées (personnes, lieux, objets/concepts marquant). Ainsi on obtient une correspondance sentiment / entitée. En comptant le nombre de sentiment positif / négatif associé à chaque entité puis en faisant la différence on obtient un tableau avec en haut les entitées regroupement le plus de sentiments positifs, et en bas le plus de sentiments négatifs. Pour une corpus de messages provenant d'une conversation Messenger cela permet de mettre en avant ce que le groupe préfère et ce qu'il aime le moins sur la periode converte par les messages.
+
+Cette troisième partie ne fait pas lieu d'une quelconque représentation sur le site.
+
+## Techniques
+
+La récupération des messages se fait au travers d'une api accessible par un serveur Express. Le messages sont extraits directement des pages web des conversation Messenger grace à un navigateur Headless: Puppeteer.
+
+L'affichage se fait grace à un site one-page en VueJS. Les graphiques sont dessinés avec la librairie Plotly.
+
+L'analyse de sentiment est développé en Python avec la plateforme TensorFlow. Je me suis inspiré du travail de [Theophile Blard](https://github.com/TheophileBlard/french-sentiment-analysis-with-bert) pour fine tune un model [camembert](https://huggingface.co/jplu/tf-camembert-base) pré-entrainé. J'ai utilisé différent jeu de données: [tweets FR](https://www.kaggle.com/hbaflast/french-twitter-sentiment-analysis), [commentaire allocine](https://github.com/huggingface/datasets/blob/master/datasets/allocine/dummy/allocine/1.0.0/dummy_data.zip)
+L'extraction des entitées des messages et faites grossièrement avec spaCy puis retraité et améliroé à la main.
 
 <!-- ## Avancement
 
@@ -66,19 +80,7 @@ Phase 3: plusieurs choix
 
 \site contient le site VueJS qui traite et affiche ces messages
 
-### Les dépendances
-
-Site:
-
-- Vue
-- Plotly
-
-Server:
-
-- Express
-- Puppeteer
-- Cors
-- (Crypto) ça dépend les versions
+\sentiements contient les scripts permettant l'analyse de sentiements d'un jeu de messages provenant d'une conversation
 
 ### Installation et tests
 

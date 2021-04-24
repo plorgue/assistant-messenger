@@ -3,6 +3,7 @@ archiveHTML/
 archiveMESSAGES/
 utils/
 server/store/old/
+server/*.png
 test-1.js
 test-2.js
 test-3.js

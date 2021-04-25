@@ -134,35 +134,36 @@ export default {
       } else {
         //Adj 12h-15h ...  Lun XX 12h15-12h30
         let deca = 0;
+        let nb_pas_par_jour = 24 / this.pas;
         if (this.pas > 1) {
-          deca = 24 / this.pas - Math.ceil((now.getHours() + 0.1) / this.pas);
+          deca = nb_pas_par_jour - Math.ceil((now.getHours() + 0.1) / this.pas);
         } else {
           deca =
-            24 / this.pas -
+            nb_pas_par_jour -
             now.getHours() / this.pas -
             Math.ceil(now.getMinutes() / (this.pas * 60));
         }
 
         for (let i = min - deca; i <= max - deca; i++) {
-          if (i <= 0 && i >= -(24 / this.pas) + 1)
+          if (i <= 0 && i >= -nb_pas_par_jour + 1)
             text.push(
               `Ajd ${this.formatHours(
                 (24 + (i - 1) * this.pas) % 24
               )}-${this.formatHours((24 + i * this.pas) % 24)}`
             );
-          else if (i <= -(24 / this.pas) && i >= -((24 / this.pas) * 2) + 1)
+          else if (i <= -nb_pas_par_jour && i >= -(nb_pas_par_jour * 2) + 1)
             text.push(
               `Hier ${this.formatHours(
-                (24 + ((i % (24 / this.pas)) - 1) * this.pas) % 24
+                (24 + ((i % nb_pas_par_jour) - 1) * this.pas) % 24
               )}-${this.formatHours(
-                (24 + (i % (24 / this.pas)) * this.pas) % 24
+                (24 + (i % nb_pas_par_jour) * this.pas) % 24
               )}`
             );
           else {
             let d = new Date(now);
-            d.setDate(d.getDate() + Math.trunc(i / 4));
-            let t1 = (24 + ((i % (24 / this.pas)) - 1) * this.pas) % 24;
-            let t2 = (24 + (i % (24 / this.pas)) * this.pas) % 24;
+            d.setDate(d.getDate() + Math.trunc(i / nb_pas_par_jour));
+            let t1 = (24 + ((i % nb_pas_par_jour) - 1) * this.pas) % 24;
+            let t2 = (24 + (i % nb_pas_par_jour) * this.pas) % 24;
             if (this.pas >= 1) {
               text.push(`${jours[d.getDay()]} ${d.getDate()} ${t1}h-${t2}h`);
             } else {

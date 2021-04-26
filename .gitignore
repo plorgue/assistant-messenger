@@ -29,4 +29,4 @@ sentiments/entities/entities_final_non_censure.json
 
 !package-lock.json
 !package.json
-!sentiments/models_weights/f179_count8000_epo20_batch4.h5
+# !sentiments/models_weights/f179_count8000_epo20_batch4.h5

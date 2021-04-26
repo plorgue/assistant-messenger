@@ -4,23 +4,16 @@
 
 ### 1. Récupérer les messages d'une conversation Messenger
 
-Il faut plusieurs informations autour de chaque message:
-
-- l'auteur,
-- l'heure d'envoie,
-- les réactions,
-- le contenu.
-
-8225 on était récupéré sur une de mes conversations.
+Un message correspond au contenu à proprement dit mais aussi aux métadonnées qui l'accompagne: l'auteur, la date et l'horraire de réception ainsi que les réations des autres membres de la conversation.
 
 ### 2 Traiter ces messages et afficher des graphiques sympa
 
-Utilisation de plotly.js pour tracer l'évolution des différents critères au cours du temps.
-On peut visualiser:
+Je mets en avant quelques messages remarquables: celui qui a le plus de réactions, celui qui a le plus de pouces et celui le plus long.
+
+Aussi j'affiche l'évolution de différents critères au cours du temps. On peut visualiser:
 
 - la fréquence de réception messages,
-- la fréquence de réaction sous les messages
-- la fréquence de réaction typée "sérieuse"
+- la fréquence de réaction sous les messages dont la part de réactions classées comme "sérieuses"
 - le nombre de message envoyer par chaque personne
 
 ### 3 Analyse du contenu - sentiments
@@ -32,7 +25,7 @@ Les résultats de cette partie ne sont pas affichés sur le site.
 
 ## Techniques
 
-La récupération des messages se fait au travers d'une api accessible par un serveur Express. Le messages sont extraits directement des pages web des conversation Messenger grace à un navigateur Headless: Puppeteer.
+La récupération des messages se fait au travers d'une api accessible par un serveur Express qui utilise Puppeteer pour extraire les messages du code HTML du site de Messenger.
 
 L'affichage se fait grace à un site one-page en VueJS. Les graphiques sont dessinés avec la librairie Plotly.
 
@@ -80,7 +73,7 @@ La seule différence entre les branches `main` et `main_light` et que `main_ligh
 
 ## Les dossiers
 
-\server contient l'api qui envoi les messages scrapés
+\server contient l'api qui envoit les messages scrapés
 
 \site contient le site VueJS qui traite et affiche ces messages
 

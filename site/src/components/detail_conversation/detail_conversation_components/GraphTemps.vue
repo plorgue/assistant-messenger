@@ -32,7 +32,7 @@ export default {
       var trace1 = {
         x: this.data1,
         y: y,
-        name: "Total réaction",
+        name: "Total réactions",
         autobinx: false,
         histnorm: "count",
         marker: {

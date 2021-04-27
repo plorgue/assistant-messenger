@@ -5,9 +5,7 @@
       :data1="data"
       :pas="pas"
       :title="`Fréquence de messages type sérieux`"
-      :xlabel="
-        `Temps depuis l'envoie: graduation*${pas}h (une barre = ${pas}h)`
-      "
+      :xlabel="`Temps depuis l'envoi: graduation*${pas}h (une barre = ${pas}h)`"
       :ylabel="`Nombre de réactions`"
       color1="rgba(46,139,87,1)"
     />

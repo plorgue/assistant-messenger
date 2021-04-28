@@ -5,9 +5,7 @@
       :data1="data"
       :pas="pas"
       title="Fréquence de nouveaux messages"
-      :xlabel="
-        `Temps depuis l'envoie: graduation*${pas}h (une barre = ${pas}h)`
-      "
+      :xlabel="`Temps depuis l'envoi: graduation*${pas}h (une barre = ${pas}h)`"
       ylabel="Nombre de messages"
       color1="rgba(54, 168, 235, 1)"
     />

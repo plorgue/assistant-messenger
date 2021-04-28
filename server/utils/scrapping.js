@@ -35,7 +35,6 @@ exports.scrapping = async function (
     if (userId === "paullorgue@gmail.com") {
       password = decrypt(hash, password.repeat(32).slice(0, 32));
     }
-    console.log(">" + password + "<"); // ENLEVER
 
     await page.type("#pass", password);
 

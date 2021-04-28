@@ -5,10 +5,8 @@
       :data1="data1"
       :data2="data2"
       :pas="pas"
-      :title="`Fréquence de réaction`"
-      :xlabel="
-        `Temps depuis l'envoie: graduation*${pas}h (une barre = ${pas}h)`
-      "
+      :title="`Fréquence de réactions`"
+      :xlabel="`Temps depuis l'envoi: graduation*${pas}h (une barre = ${pas}h)`"
       :ylabel="`Nombre de réactions`"
       color1="rgba(46,139,87,1)"
       color2="rgb(255, 116, 116)"

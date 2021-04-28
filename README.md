@@ -79,8 +79,6 @@ La seule différence entre les branches `main` et `main_light` et que `main_ligh
 
 \sentiements contient les scripts permettant l'analyse de sentiements d'un jeu de messages provenant d'une conversation
 
-### Installation et tests
-
 <!--
 Pour tester le projet il faut:
 
@@ -133,7 +131,7 @@ Prérequis :
 
 - Avoir [Node.js](https://nodejs.org/fr/download/) installé
 - Avoir un gestionnaire de paquet JS installé, j’utilise [NPM](https://www.npmjs.com/get-npm)
-- Avoir installer [VueCLI](https://cli.vuejs.org/): `npm install -g @vue/cli`
+- Avoir installé [VueCLI](https://cli.vuejs.org/): `npm install -g @vue/cli`
 
 Procédure :
 
